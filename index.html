@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Bootstrap 101 Template</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+	<!-- Bootstrap -->
+	<link href="node_modules\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		/* --------------------------------------------------------------------------------
+ NAVBAR 
+----------------------------------------------------------------------------------*/
+		.navbar-brand {
+			padding-top: 16px;
+		}
+
+		/* --------------------------------------------------------------------------------
+CATEGORY PILLS
+----------------------------------------------------------------------------------*/
+		#category-pills-bottom {
+			display: none;
+		}
+
+		.category-tabs-wrap .category-tabs {
+			border-bottom: none;
+		}
+
+		/* .category-pills-fixer {
+			top: 40px;
+		} */
+
+		.category-container {
+			background-color: #fff;
+			padding-left: 0;
+			padding-right: 0;
+			z-index: 10;
+			width: 100%;
+			border-bottom: none;
+			margin-top: unset !important;
+		}
+
+		.category-tabs>li>a {
+			margin-right: 4px;
+			line-height: 1.42857143;
+			border: unset !important;
+			border-radius: 30px !important;
+			font-weight: 400;
+			display: inline-block !important;
+			white-space: nowrap;
+		}
+
+		.container.hide-mobile-p {
+			height: 42px;
+		}
+
+		.category-tabs {
+			overflow-y: auto;
+			overflow-x: auto;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-wrap: nowrap;
+			cursor: pointer;
+			padding-bottom: 4px;
+			scrollbar-width: none !important;
+		}
+
+		.nav.nav-tabs.justify-content-center.category-tabs {
+			overflow-y: hidden;
+			font-size: 12px;
+		}
+
+		#custom-dropdown {
+			top: 60px;
+		}
+
+		#location-dropdown {
+			width: 16px;
+		}
+
+		/* LOCATION MARKER  */
+		#location-dropdown.open #dropdownMenu-loc+#custom-dropdown:hover {
+			opacity: 1
+		}
+
+		.location-marker,
+		#location-marker {
+			position: absolute;
+			right: -42px;
+			color: #222;
+			top: 15px;
+			width: 200px;
+		}
+
+		#dropdownMenu-loc {
+			border: none;
+			padding: 0px;
+			line-height: unset;
+			outline: none;
+			font-size: 12px;
+		}
+
+		#location-marker img {
+			width: 12px;
+			margin: 0 4px;
+		}
+
+		#custom-dropdown .divider {
+			background-color: #505050;
+		}
+
+		#custom-dropdown {
+			background-color: #222;
+			text-align: center;
+			top: 16px;
+			left: -10px;
+			position: relative;
+			padding: 20px 0px !important;
+			max-width: 120px;
+			overflow: visible;
+		}
+
+		#location-dropdown .open {
+			float: none;
+		}
+
+		#custom-dropdown::before {
+			content: "";
+			height: 16px;
+			width: 16px;
+			background-color: #222;
+			position: absolute;
+			top: -8px;
+			/* left: 50%; */
+			transform: translateX(-50%) rotate(45deg);
+		}
+
+		#custom-dropdown li a {
+			color: #fff;
+		}
+
+		#custom-dropdown>li>a:focus,
+		#custom-dropdown>li>a:hover {
+			color: var(--primary-color) !important;
+			text-decoration: none;
+			background: #222 !important;
+		}
+
+		.btn.dropdown-toggle.location-btn:hover,
+		.btn.dropdown-toggle.location-btn:focus,
+		.btn.dropdown-toggle.location-btn:active,
+		.btn.dropdown-toggle.location-btn:visited {
+			background-color: transparent;
+			box-shadow: none;
+		}
+
+		.caret.location-caret,
+		#location-caret {
+			border-top: 1px solid #666;
+			border-right: 0px solid transparent;
+			border-left: 1px solid #666;
+			position: relative;
+			margin: 0;
+			height: 12px;
+			width: 12px;
+			transform: rotate(130deg);
+			transition: all 0.6s;
+			margin-top: 0;
+			margin-left: 4px;
+		}
+
+		#location-marker:hover #location-caret {
+			transform: rotate(220deg);
+			margin-top: -8px;
+		}
+
+		/* Navigation Pills  */
+		.category-container .tab-pane.active {
+			background-color: white;
+			max-width: 100%;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		.trigger {
+			padding: 8px !important;
+		}
+
+		.tabbable {
+			position: relative;
+			max-width: min-content;
+			margin: 0 auto 0 auto;
+		}
+
+		.category-container .tab-content {
+			position: absolute;
+			top: 38px;
+			z-index: 10;
+			width: 100%;
+		}
+
+		.category-container .tab-content UL>li>a {
+			color: #222;
+			text-decoration: none;
+			padding-bottom: 2px;
+			position: relative;
+		}
+
+		.category-container .tab-content UL>li>a:hover {
+			color: #000000;
+			font-weight: 500;
+		}
+
+		.category-container .tab-content UL>li {
+			padding-bottom: 16px;
+			list-style: none;
+			padding-right: 30px;
+		}
+
+		.hide-me {
+			display: none;
+		}
+
+		.category-container .tab-pane>ul {
+			padding-left: 0;
+		}
+
+		.all {
+			padding: 20px 20px 16px 40px;
+			white-space: nowrap;
+		}
+
+		.all a {
+			color: #000000;
+			font-weight: 700;
+			position: relative;
+		}
+
+		.all a:hover {
+			text-decoration: none;
+		}
+
+		.menu-content-wrapper {
+			display: flex;
+			width: 100%;
+			position: relative;
+		}
+
+		.tab-content-close-x {
+			position: absolute;
+			right: 16px;
+			top: 16px;
+			z-index: 2;
+		}
+
+		.menu-content-left {
+			display: flex;
+			flex-direction: column;
+			margin-right: 10%;
+			border-right: 1px solid #eee;
+			background-color: var(--off-white-1);
+		}
+
+		.menu-content-left ul {
+			padding-left: 40px
+		}
+
+		.menu-content-left ul a {
+			font-weight: 400;
+			white-space: nowrap
+		}
+
+		.menu-content-left ul a:hover {
+			font-weight: 300;
+			white-space: nowrap;
+			color: var(--primary-dark-grey);
+		}
+
+		.menu-content-right {
+			padding: 30px 30px 30px 0;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			white-space: nowrap;
+		}
+
+		.menu-content-right img {
+			justify-content: center;
+			width: 80%;
+			opacity: 0.4;
+		}
+
+		/* Scrollbar */
+		::-webkit-scrollbar {
+			height: 2px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: rgb(204, 204, 204);
+			background-clip: content-box;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #999999;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #464646;
+		}
+
+		/* --------------------------------------------------------------------------------
+3.1 Category Pills MEDIA QUERIES
+----------------------------------------------------------------------------------*/
+		@media only screen and (max-width: 768px) {
+			.category-tabs {
+				justify-content: flex-start;
+				-ms-overflow-style: none !important;
+				scrollbar-width: none !important;
+			}
+		}
+
+		@media only screen and (max-width: 540px) {
+			.menu-content-right {
+				display: none;
+			}
+
+			.menu-content-left {
+				width: 100%;
+				height: min-height;
+				background: var(--off-white-1);
+				color: #fff;
+				margin-right: 0 !important;
+			}
+
+			.container-fluid.category-container {
+				position: relative !important;
+				width: 100%;
+				/* padding-top: 40px; */
+				margin-top: unset !important;
+			}
+
+			.category-tabs {
+				justify-content: flex-start;
+				-ms-overflow-style: none !important;
+				scrollbar-width: none !important;
+			}
+
+			.hide-mobile-p {
+				padding: 0;
+				margin: 0;
+			}
+
+			.tab-content {
+				top: 42px;
+			}
+
+			/* Category Tabs Fade-in Fade-out on horizontal scroll  */
+			.category-tabs-wrap {
+				position: relative;
+			}
+
+			.category-tabs-wrap::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 3rem;
+				background-image: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+				transition: all linear 0.3s;
+			}
+
+			.category-tabs-wrap::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 3rem;
+				background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+				transition: all linear 0.3s;
+			}
+
+			.category-tabs-wrap.scrolled-right::after {
+				background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+			}
+
+			.category-tabs-wrap.scrolled-left::before {
+				background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+				z-index: 10;
+			}
+		}
+
+		@media (max-width:1120px) and (min-width:410px) {
+			.reimagine_header_container {
+				flex-wrap: wrap;
+			}
+		}
+
+		@media (max-width: 1120px) {
+			.reimagine_category-pills-container {
+				order: 4 !important;
+				border-top: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+			}
+
+			#navbar-search {
+				top: -10px;
+			}
+
+			.reimagine_header_container {
+				border-bottom: none;
+			}
+
+
+			.navbar-brand {
+				padding-top: 15px;
+			}
+		}
+
+		@media only screen and (max-width: 320px) {
+			.menu-content-left {
+				margin-right: 0 !important;
+				min-width: 50%;
+				height: 120vh;
+			}
+		}
+
+		@media only screen and (max-width: 1024px) {
+
+			.location-marker,
+			#location-marker {
+				right: 80px;
+				width: 16px
+			}
+
+			#custom-dropdown {
+				left: -70px;
+			}
+
+			.caret.location-caret,
+			#location-caret,
+			.location-text {
+				display: none;
+			}
+		}
+
+		@media only screen and (max-width: 880px) {
+			.location-marker {
+				display: none;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav style="display: flex;justify-content: space-between;background-color: #fff; align-items: center; align-content: center;"
+		class="navbar navbar-fixed-top">
+		<div>
+			<div class="reimagine_header_container"
+				style="display: flex;justify-content: space-between;width: 100vw; height: 64px; border-bottom: 1px solid #ccc;">
+
+				<!-- CATEGORY PILLS -->
+				<div class="reimagine_category-pills-container"
+					style="order: 2; flex: 1 1 auto; display: flex; align-items: center; align-content: center;">
+					<div class="container-fluid category-container category-pills-fixer" id="tablist">
+						<div class="hide-mobile-p">
+							<div class="col-12">
+								<div class="tabbable">
+									<div class="category-tabs-wrap">
+										<div class="category-tabs-wrap">
+											<ul class="nav nav-tabs justify-content-center category-tabs">
+												<li> <a class="trigger" data-target="#tab" data-toggle="tab"
+														role="button">New Arrivals</a> </li>
+												<li> <a class="trigger" data-target="#tab-" data-toggle="tab"
+														role="button">Donation</a> </li>
+												<li> <a class="trigger" data-target="#tab-Fruit" data-toggle="tab"
+														role="button">Fruit</a> </li>
+												<li> <a class="trigger" data-target="#tab-Meat-Dairy" data-toggle="tab"
+														role="button">Meat &amp; Dairy</a> </li>
+												<li> <a class="trigger" data-target="#tab-Miscellaneous"
+														data-toggle="tab" role="button">Miscellaneous</a> </li>
+												<li> <a class="trigger" data-target="#tab-Pantry" data-toggle="tab"
+														role="button">Pantry</a> </li>
+												<li class=""> <a class="trigger" data-target="#tab-PetFood"
+														data-toggle="tab" role="button" aria-expanded="false">Pet
+														Food</a> </li>
+												<li class=""> <a class="trigger" data-target="#tab-Seafood"
+														data-toggle="tab" role="button"
+														aria-expanded="false">Seafood</a> </li>
+												<li class="active"> <a class="trigger" data-target="#tab-Vegetables"
+														data-toggle="tab" role="button"
+														aria-expanded="true">Vegetables</a> </li>
+											</ul>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane collapse" id="tab-">
+											<div class="menu-content-wrapper">
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=">All
+															Donation</a></p>
+													<ul>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img src="Home/assets/menu-.svg">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane collapse" id="tab-Fruit">
+											<div class="menu-content-wrapper">
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=Fruit">All
+															Fruit</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Apples">Apples</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Apricots">Apricots</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Blueberries">Blueberries</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Cherries-pie">Cherries
+																(pie)</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Crab-Apples">Crab
+																Apples</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Cranberries">Cranberries</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Currants">Currants</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Grapes">Grapes</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Kiwi">Kiwi</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Melons">Melons</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Peaches">Peaches</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Raspberries">Raspberries</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Strawberries">Strawberries</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img src="Home/assets/menu-Fruit.svg">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane collapse" id="tab-Meat-Dairy">
+											<div class="menu-content-wrapper">
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=Meat-Dairy">All
+															Meat &amp; Dairy</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Beef">Beef</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Dairy-Products">Dairy
+																Products</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Eggs">Eggs</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Goat">Goat</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Lamb">Lamb</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Pork">Pork</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-and-Dairy_Salmon">Salmon</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Turkey">Turkey</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img
+														src="Home/assets/menu-Meat-Dairy.svg"> </div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane collapse" id="tab-Miscellaneous">
+											<div class="menu-content-wrapper">
+												<div class="menu-content-left">
+													<p class="all"><a
+															href="?ProdType=All&amp;Category=Miscellaneous">All
+															Miscellaneous</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Miscellaneous_Grains">Grains</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Miscellaneous_Mushrooms">Mushrooms</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Miscellaneous_Nuts">Nuts</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img
+														src="Home/assets/menu-Miscellaneous.svg"> </div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane collapse" id="tab-Pantry">
+											<div class="menu-content-wrapper">
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=Pantry">All
+															Pantry</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Honey">Honey</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Jam">Jam</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Oil">Oil</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Rice">Rice</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Spices">Spices</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Tea">Tea</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Vinegar">Vinegar</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img src="Home/assets/menu-Pantry.svg">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane collapse" id="tab-PetFood">
+											<div class="menu-content-wrapper">
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=PetFood">All Pet
+															Food</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=PetFood_CatFood">Cat
+																Food</a></li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img
+														src="Home/assets/menu-PetFood.svg"> </div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane collapse" id="tab-Seafood">
+											<div class="menu-content-wrapper">
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=Seafood">All
+															Seafood</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Seafood_Crab">Crab</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Seafood_Herring">Herring</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img
+														src="Home/assets/menu-Seafood.svg"> </div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane collapse active" id="tab-Vegetables">
+											<div class="menu-content-wrapper">
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=Vegetables">All
+															Vegetables</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Artichokes">Artichokes</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Beets">Beets</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Carrots">Carrots</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Corn">Corn</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Cucumbers">Cucumbers</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Leeks">Leeks</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Lettuce">Lettuce</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Mushrooms">Mushrooms</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Parsley">Parsley</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Potatoes-Red-Russet-Yellow">Potatoes
+																- Red/Russet/Yellow</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Potatoes-White">Potatoes
+																- White</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Pumpkin">Pumpkin</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Radishes">Radishes</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Salad-Greens">Salad
+																Greens</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Tomatoes">Tomatoes</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img
+														src="Home/assets/menu-Vegetables.svg"> </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="reimagine_icon-group" style="order:3; display: flex; 				
+				align-content: center;
+				align-items: center;
+				min-width: 230px;
+				justify-content: space-evenly;
+				flex-wrap: nowrap;
+				">
+
+					<span class="nav-rewards-icon-wrapper" style="border: 1px solid #eee; border-radius: 4px;">
+						999 <span><i class="fas fa-star"></i></span>
+					</span>
+					<span class="nav-user-icon"><i class="fas fa-user"></i></span>
+					<span class="nav-cart-icon"><i class="fas fa-shopping-cart"></i></span>
+					<span class="nav-search-icon"><i class="fas fa-search" data-toggle="collapse"
+							data-target="#navbar-search" aria-expanded="true" aria-controls="navbar"></i></span>
+					<button type="button" data-toggle="collapse" data-target="#navbar-search" aria-expanded="true"
+						aria-controls="navbar" style="width: 48px;height: 40px;" class="navbar-toggle-new"> <span
+							class="sr-only">Toggle
+							navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span> </button>
+				</div>
+
+				<a class="navbar-brand" href="#"><img src="default_300px.png" alt="Logo" style="width: 150px;"></a>
+			</div>
+			<div id="navbar-search" aria-expanded="true" class="navbar collapse in">
+				<form class="navbar-form reimagine_navbar-form" style="padding: 0; margin: 0">
+					<div class="form-group reimagine_form_group" style="display: block;">
+						<input type="search" placeholder="What are you looking for?"
+							class="form-control reimagine_form_control"
+							style="border-radius: 0; border: unset; border-bottom: 1px solid #ccc; box-shadow: none; height: 50px; display: block; width: 100vw; text-align: center; position: relative; z-index: 10;">
+					</div>
+
+				</form>
+			</div>
+			<!--/.navbar-collapse -->
+		</div>
+	</nav>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
