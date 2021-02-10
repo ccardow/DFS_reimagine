@@ -8,6 +8,9 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>Bootstrap 101 Template</title>
 
+	<!-- ICONS  -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
 	<!-- Bootstrap -->
@@ -24,8 +27,63 @@
 		/* --------------------------------------------------------------------------------
  NAVBAR 
 ----------------------------------------------------------------------------------*/
+		body {
+			background-color: #464646;
+		}
+
 		.navbar-brand {
 			padding-top: 16px;
+		}
+
+		.icon-bar_middle {
+			top: 10px;
+
+		}
+
+		.navbar-toggle-new::before,
+		.icon-bar_middle {
+			position: absolute;
+			left: 0;
+			width: 22px;
+			height: 2px;
+			background-color: #000;
+		}
+
+		.navbar-toggle-new::before {
+			content: "";
+			top: 4px;
+			transform-origin: 0 0;
+			transition: all .3s ease-out;
+		}
+
+		.icon-bar_middle::after {
+			content: "";
+			position: absolute;
+			top: 6px;
+			left: 0;
+			width: 22px;
+			height: 2px;
+			background-color: #000;
+			transform-origin: 0 100%;
+			transition: all .3s ease-out;
+		}
+
+		#navbar-reimagine-menu {
+			position: absolute;
+			right: 0;
+			background-color: #fff;
+			border-radius: 0;
+		}
+
+		ul.reimagine_menu {
+			padding-left: 0;
+			margin-bottom: 0
+		}
+
+		ul.reimagine_menu li {
+			list-style: none;
+			border-bottom: 1px solid #ccc;
+			padding: 8px 50px;
 		}
 
 		/* --------------------------------------------------------------------------------
@@ -51,6 +109,10 @@ CATEGORY PILLS
 			width: 100%;
 			border-bottom: none;
 			margin-top: unset !important;
+		}
+
+		.category-container.tab-pane.active {
+			z-index: 12;
 		}
 
 		.category-tabs>li>a {
@@ -470,11 +532,11 @@ CATEGORY PILLS
 </head>
 
 <body>
-	<nav style="display: flex;justify-content: space-between;background-color: #fff; align-items: center; align-content: center;"
+	<nav style="display: flex;justify-content: space-between; align-items: center; align-content: center; position: relative;"
 		class="navbar navbar-fixed-top">
 		<div>
 			<div class="reimagine_header_container"
-				style="display: flex;justify-content: space-between;width: 100vw; height: 64px; border-bottom: 1px solid #ccc;">
+				style="display: flex;justify-content: space-between;width: 100vw; height: 64px; border-bottom: 1px solid #ccc; background-color: #fff">
 
 				<!-- CATEGORY PILLS -->
 				<div class="reimagine_category-pills-container"
@@ -783,28 +845,48 @@ CATEGORY PILLS
 				flex-wrap: nowrap;
 				">
 
-					<span class="nav-rewards-icon-wrapper" style="border: 1px solid #eee; border-radius: 4px;">
-						999 <span><i class="fas fa-star"></i></span>
+					<span class="nav-rewards-icon-wrapper"
+						style="border: 1px solid #ccc; border-radius: 4px; padding: 1px 4px; display: flex; align-content: center; align-items: center;">
+						999 <span><i class="zmdi zmdi-star" style="font-size: 10px; padding-left: 2px;"></i></span>
 					</span>
-					<span class="nav-user-icon"><i class="fas fa-user"></i></span>
-					<span class="nav-cart-icon"><i class="fas fa-shopping-cart"></i></span>
-					<span class="nav-search-icon"><i class="fas fa-search" data-toggle="collapse"
-							data-target="#navbar-search" aria-expanded="true" aria-controls="navbar"></i></span>
-					<button type="button" data-toggle="collapse" data-target="#navbar-search" aria-expanded="true"
-						aria-controls="navbar" style="width: 48px;height: 40px;" class="navbar-toggle-new"> <span
-							class="sr-only">Toggle
-							navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span> </button>
+					<span class="nav-user-icon"><i class="zmdi zmdi-account" style="font-size: 20px;"></i></span>
+					<span class="nav-cart-icon" style="font-size: 18px;"><i class="zmdi zmdi-shopping-cart"></i></span>
+					<span class="nav-search-icon" style="font-size: 20px;"><i class="zmdi zmdi-search"
+							data-toggle="collapse" data-target="#navbar-search" aria-expanded="true"
+							aria-controls="navbar"></i></span>
+
+					<!-- HAMBURGER			 -->
+					<div type="button" data-toggle="collapse" data-target="#navbar-reimagine-menu" aria-expanded="true"
+						aria-controls="navbar" style="position: relative; width: 22px;height: 22px;"
+						class="navbar-toggle-new"> <span class="sr-only">Toggle
+							navigation</span>
+
+						<span class="icon-bar_middle" style="position: absolute;
+							left: 0;
+							width: 22px;
+							height: 2px;
+							background-color: #000;">
+						</span>
+					</div>
 				</div>
 
 				<a class="navbar-brand" href="#"><img src="default_300px.png" alt="Logo" style="width: 150px;"></a>
 			</div>
-			<div id="navbar-search" aria-expanded="true" class="navbar collapse in">
+			<!-- DROPDOWN MENU  -->
+			<div id="navbar-reimagine-menu" aria-expanded="false" class="navbar collapse">
+				<ul class="reimagine_menu">
+					<li><a href="/FarmDirectory">Farm Directory</a></li>
+					<li><a href="/SellDirect">Sell Direct</a></li>
+					<li><a href="/Restaurants">Restaurants</a></li>
+				</ul>
+			</div>
+			<!-- SEARCH  -->
+			<div id="navbar-search" aria-expanded="false" class="navbar collapse" style="border: none;">
 				<form class="navbar-form reimagine_navbar-form" style="padding: 0; margin: 0">
 					<div class="form-group reimagine_form_group" style="display: block;">
 						<input type="search" placeholder="What are you looking for?"
 							class="form-control reimagine_form_control"
-							style="border-radius: 0; border: unset; border-bottom: 1px solid #ccc; box-shadow: none; height: 50px; display: block; width: 100vw; text-align: center; position: relative; z-index: 10;">
+							style="border-radius: 0; border: none; border-bottom: 1px solid #ccc; box-shadow: none; height: 50px; display: block; width: 100%; text-align: center; position: relative; z-index: 10; padding: 0;">
 					</div>
 
 				</form>
