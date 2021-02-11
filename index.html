@@ -40,13 +40,14 @@
 
 		}
 
+
 		.navbar-toggle-new::before,
 		.icon-bar_middle {
 			position: absolute;
 			left: 0;
 			width: 22px;
 			height: 2px;
-			background-color: #000;
+			background-color: #4884C2;
 		}
 
 		.navbar-toggle-new::before {
@@ -56,23 +57,42 @@
 			transition: all .3s ease-out;
 		}
 
-		.icon-bar_middle::after {
+		.navbar-toggle-new-close::before {
+			transform: rotate(45deg);
+			width: 20px;
+		}
+
+		.navbar-toggle-new::after {
 			content: "";
 			position: absolute;
-			top: 6px;
+			top: 16px;
 			left: 0;
 			width: 22px;
 			height: 2px;
-			background-color: #000;
+			background-color: #4884C2;
 			transform-origin: 0 100%;
 			transition: all .3s ease-out;
 		}
 
-		#navbar-reimagine-menu {
+		.navbar-toggle-new-close::after {
+			transform: rotate(-45deg) translateY(3px) translateX(-3px);
+			width: 21px;
+			top: 14px;
+		}
+
+		.navbar-toggle-new-close .icon-bar_middle {
+			width: 0 !important;
+			opacity: 0;
+		}
+
+
+		#navbar-reimagine-menu,
+		#navbar-reimagine-profile {
 			position: absolute;
 			right: 0;
 			background-color: #fff;
 			border-radius: 0;
+			z-index: 10;
 		}
 
 		ul.reimagine_menu {
@@ -83,12 +103,83 @@
 		ul.reimagine_menu li {
 			list-style: none;
 			border-bottom: 1px solid #ccc;
-			padding: 8px 50px;
+			padding: 10px 0 10px 8px;
+			width: 200px;
+		}
+
+		.cart-items-ticker {
+			font-size: 8px;
+			font-weight: 700;
+			position: absolute;
+			border-radius: 50%;
+			background-color: #F68B21;
+			color: #fff;
+			padding: 1px;
+		}
+
+		#nav-user-icon,
+		.nav-cart-icon,
+		.nav-search-icon {
+			color: #4884C2;
+		}
+
+		#nav-user-icon .zmdi.zmdi-close {
+			font-size: 22px !important;
+		}
+
+		@media (max-width:1044px) and (min-width:320px) {
+			.reimagine_header_container {
+				flex-wrap: wrap;
+			}
+		}
+
+		@media (max-width: 1044px) {
+			.reimagine_category-pills-container {
+				order: 4 !important;
+				border-top: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+			}
+
+			#navbar-search {
+				top: -10px;
+			}
+
+			.reimagine_header_container {
+				border-bottom: none;
+			}
+
+
+			.navbar-brand {
+				padding-top: 15px;
+			}
+
+			#navbar-reimagine-menu,
+			#navbar-reimagine-profile {
+				top: 87px;
+			}
+		}
+
+		@media (max-width: 410px) {
+
+			.reimagine_icon-group {
+				min-width: 140px !important;
+			}
+
+			.nav-rewards-icon-wrapper {
+				display: none !important;
+			}
 		}
 
 		/* --------------------------------------------------------------------------------
 CATEGORY PILLS
 ----------------------------------------------------------------------------------*/
+
+		.category-dropdown-close-icon {
+			position: absolute;
+			right: 16px;
+			top: 16px;
+		}
+
 		#category-pills-bottom {
 			display: none;
 		}
@@ -109,6 +200,7 @@ CATEGORY PILLS
 			width: 100%;
 			border-bottom: none;
 			margin-top: unset !important;
+
 		}
 
 		.category-container.tab-pane.active {
@@ -469,32 +561,6 @@ CATEGORY PILLS
 			}
 		}
 
-		@media (max-width:1120px) and (min-width:410px) {
-			.reimagine_header_container {
-				flex-wrap: wrap;
-			}
-		}
-
-		@media (max-width: 1120px) {
-			.reimagine_category-pills-container {
-				order: 4 !important;
-				border-top: 1px solid #ccc;
-				border-bottom: 1px solid #ccc;
-			}
-
-			#navbar-search {
-				top: -10px;
-			}
-
-			.reimagine_header_container {
-				border-bottom: none;
-			}
-
-
-			.navbar-brand {
-				padding-top: 15px;
-			}
-		}
 
 		@media only screen and (max-width: 320px) {
 			.menu-content-left {
@@ -550,8 +616,7 @@ CATEGORY PILLS
 											<ul class="nav nav-tabs justify-content-center category-tabs">
 												<li> <a class="trigger" data-target="#tab" data-toggle="tab"
 														role="button">New Arrivals</a> </li>
-												<li> <a class="trigger" data-target="#tab-" data-toggle="tab"
-														role="button">Donation</a> </li>
+
 												<li> <a class="trigger" data-target="#tab-Fruit" data-toggle="tab"
 														role="button">Fruit</a> </li>
 												<li> <a class="trigger" data-target="#tab-Meat-Dairy" data-toggle="tab"
@@ -566,29 +631,19 @@ CATEGORY PILLS
 												<li class=""> <a class="trigger" data-target="#tab-Seafood"
 														data-toggle="tab" role="button"
 														aria-expanded="false">Seafood</a> </li>
-												<li class="active"> <a class="trigger" data-target="#tab-Vegetables"
+												<li class=""> <a class="trigger" data-target="#tab-Vegetables"
 														data-toggle="tab" role="button"
 														aria-expanded="true">Vegetables</a> </li>
 											</ul>
 										</div>
 									</div>
-									<div class="tab-content" id="tab-content">
-										<div class="tab-pane collapse" id="tab-">
-											<div class="menu-content-wrapper">
-												<div class="menu-content-left">
-													<p class="all"><a href="?ProdType=All&amp;Category=">All
-															Donation</a></p>
-													<ul>
-													</ul>
-												</div>
-												<div class="menu-content-right"> <img src="Home/assets/menu-.svg">
-												</div>
-											</div>
-										</div>
-									</div>
+
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane collapse" id="tab-Fruit">
 											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon">
+													<i class="zmdi zmdi-close"></i>
+												</div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=Fruit">All
 															Fruit</a></p>
@@ -642,6 +697,9 @@ CATEGORY PILLS
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane collapse" id="tab-Meat-Dairy">
 											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon">
+													<i class="zmdi zmdi-close"></i>
+												</div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=Meat-Dairy">All
 															Meat &amp; Dairy</a></p>
@@ -680,6 +738,9 @@ CATEGORY PILLS
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane collapse" id="tab-Miscellaneous">
 											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon">
+													<i class="zmdi zmdi-close"></i>
+												</div>
 												<div class="menu-content-left">
 													<p class="all"><a
 															href="?ProdType=All&amp;Category=Miscellaneous">All
@@ -704,6 +765,9 @@ CATEGORY PILLS
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane collapse" id="tab-Pantry">
 											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon">
+													<i class="zmdi zmdi-close"></i>
+												</div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=Pantry">All
 															Pantry</a></p>
@@ -739,6 +803,9 @@ CATEGORY PILLS
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane collapse" id="tab-PetFood">
 											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon">
+													<i class="zmdi zmdi-close"></i>
+												</div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=PetFood">All Pet
 															Food</a></p>
@@ -756,6 +823,9 @@ CATEGORY PILLS
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane collapse" id="tab-Seafood">
 											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon">
+													<i class="zmdi zmdi-close"></i>
+												</div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=Seafood">All
 															Seafood</a></p>
@@ -774,8 +844,11 @@ CATEGORY PILLS
 										</div>
 									</div>
 									<div class="tab-content" id="tab-content">
-										<div class="tab-pane collapse active" id="tab-Vegetables">
+										<div class="tab-pane collapse" id="tab-Vegetables">
 											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon">
+													<i class="zmdi zmdi-close"></i>
+												</div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=Vegetables">All
 															Vegetables</a></p>
@@ -846,14 +919,18 @@ CATEGORY PILLS
 				">
 
 					<span class="nav-rewards-icon-wrapper"
-						style="border: 1px solid #ccc; border-radius: 4px; padding: 1px 4px; display: flex; align-content: center; align-items: center;">
-						999 <span><i class="zmdi zmdi-star" style="font-size: 10px; padding-left: 2px;"></i></span>
+						style="border: 1px solid #ccc; border-radius: 4px; padding: 1px 4px; display: flex; align-content: center; align-items: center; font-size: 12px">
+						999 <span><i class="zmdi zmdi-star"
+								style="color: #F68B21; font-size: 10px; padding-left: 2px;"></i></span>
 					</span>
-					<span class="nav-user-icon"><i class="zmdi zmdi-account" style="font-size: 20px;"></i></span>
-					<span class="nav-cart-icon" style="font-size: 18px;"><i class="zmdi zmdi-shopping-cart"></i></span>
-					<span class="nav-search-icon" style="font-size: 20px;"><i class="zmdi zmdi-search"
-							data-toggle="collapse" data-target="#navbar-search" aria-expanded="true"
-							aria-controls="navbar"></i></span>
+					<span id="nav-user-icon" data-toggle="collapse" data-target="#navbar-reimagine-profile"
+						aria-expanded="true" aria-controls="navbar"><i class="zmdi zmdi-account"
+							style="font-size: 20px;"></i></span>
+					<span class="nav-cart-icon" style="font-size: 18px;"><i class="zmdi zmdi-shopping-cart"></i><span
+							class="cart-items-ticker">20</span></span>
+					<span class="nav-search-icon" data-toggle="collapse" data-target="#navbar-search"
+						aria-expanded="true" aria-controls="navbar" style="font-size: 20px;"><i
+							class="zmdi zmdi-search"></i></span>
 
 					<!-- HAMBURGER			 -->
 					<div type="button" data-toggle="collapse" data-target="#navbar-reimagine-menu" aria-expanded="true"
@@ -865,14 +942,22 @@ CATEGORY PILLS
 							left: 0;
 							width: 22px;
 							height: 2px;
-							background-color: #000;">
+							background-color: #4884C2;">
 						</span>
 					</div>
 				</div>
 
 				<a class="navbar-brand" href="#"><img src="default_300px.png" alt="Logo" style="width: 150px;"></a>
 			</div>
-			<!-- DROPDOWN MENU  -->
+			<!-- DROPDOWN MENU Profile Sign Up and Sign IN  -->
+			<div id="navbar-reimagine-profile" aria-expanded="false" class="navbar collapse">
+				<ul class="reimagine_menu">
+					<li><a href="/Login">Sign In</a></li>
+					<li><a href="/Sign Up">Sign Up</a></li>
+
+				</ul>
+			</div>
+			<!-- DROPDOWN MENU Basic Nav  -->
 			<div id="navbar-reimagine-menu" aria-expanded="false" class="navbar collapse">
 				<ul class="reimagine_menu">
 					<li><a href="/FarmDirectory">Farm Directory</a></li>
@@ -880,13 +965,13 @@ CATEGORY PILLS
 					<li><a href="/Restaurants">Restaurants</a></li>
 				</ul>
 			</div>
-			<!-- SEARCH  -->
-			<div id="navbar-search" aria-expanded="false" class="navbar collapse" style="border: none;">
+			<!-- DROPDOWN MENU SEARCH  -->
+			<div id="navbar-search" aria-expanded="false" class="navbar collapse" style="border: none; z-index: 11;">
 				<form class="navbar-form reimagine_navbar-form" style="padding: 0; margin: 0">
 					<div class="form-group reimagine_form_group" style="display: block;">
 						<input type="search" placeholder="What are you looking for?"
 							class="form-control reimagine_form_control"
-							style="border-radius: 0; border: none; border-bottom: 1px solid #ccc; box-shadow: none; height: 50px; display: block; width: 100%; text-align: center; position: relative; z-index: 10; padding: 0;">
+							style="border-radius: 0; border: none; border-bottom: 1px solid #ccc; box-shadow: none; height: 50px; display: block; width: 100%; text-align: center; position: relative;  padding: 0;">
 					</div>
 
 				</form>
@@ -900,6 +985,16 @@ CATEGORY PILLS
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
 	<script src="main.js"></script>
+	<!-- CHANGE USER ICON TO X  -->
+	<script>
+		$('#nav-user-icon').click(function () {
+			$("i", this).toggleClass("zmdi zmdi-account zmdi zmdi-close");
+		});
+		$('.navbar-toggle-new').click(function () {
+			$(this).toggleClass("navbar-toggle-new-open navbar-toggle-new-close");
+		});
+
+	</script>
 </body>
 
 </html>

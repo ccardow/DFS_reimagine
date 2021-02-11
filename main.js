@@ -33,11 +33,11 @@
 ======================================*/
 //Category function
 function setContainerScroll($container) {
-        var $this=$container,
-        scrollLeft=$this.scrollLeft(),
-        maxScrollWidth=$this.innerWidth(),
-        maxScrollAmt=$this.find("ul").prop("scrollWidth")-maxScrollWidth;
-    if (scrollLeft>=maxScrollAmt) {
+	var $this = $container,
+		scrollLeft = $this.scrollLeft(),
+		maxScrollWidth = $this.innerWidth(),
+		maxScrollAmt = $this.find("ul").prop("scrollWidth") - maxScrollWidth;
+	if (scrollLeft >= maxScrollAmt) {
 		$this.closest(".category-tabs-wrap").addClass("scrolled-right");
 	} else {
 		$this.closest(".category-tabs-wrap").removeClass("scrolled-right");
@@ -49,7 +49,7 @@ function setContainerScroll($container) {
 	}
 }
 
-$(function() {
+$(function () {
 	$(".category-tabs").each(function () {
 		$(this).wrap("<div class='category-tabs-wrap'></div>");
 		setContainerScroll($(this));
@@ -62,21 +62,23 @@ $(function() {
 	$(".category-tabs").on("scroll", function () {
 		setContainerScroll($(this));
 	});
-        $(".cart-toggler").append("<span class='in-cart-ticker'>10</span>");
+	$(".cart-toggler").append("<span class='in-cart-ticker'>10</span>");
 	$(".navbar-toggle").prepend("<span class='cart-insertion'></span>");
-	
-	$(".cart-insertion").click(function(e) {
+
+	$(".cart-insertion").click(function (e) {
 		e.preventDefault();
 		e.stopPropagation();
 	});
-    
+
 	$(".cart-insertion").append("<span class='in-cart-ticker'>10</span>");
 
 	$(document).on("click", ".nav-link.active", function () {
 		console.log("click");
-		var href=$(this).attr("href").substring(1);
+		var href = $(this).attr("href").substring(1);
 		$(this).removeClass("active");
-		$(".category-container#tablist .tab-pane[id=" + href + "]").removeClass("active");
+		$(".category-container#tablist .tab-pane[id=" + href + "]").removeClass(
+			"active"
+		);
 		console.log("link");
 	});
 
@@ -95,19 +97,11 @@ $(function() {
 			$(tabContentSelector).removeClass("active");
 			$(".category-tabs > li").removeClass("active");
 		});
-
 	});
-	
-	
+
 	/* ********************************************
 		6. ScrollUp
 	******************************************** */
-	$.scrollUp({
-		scrollText: '<i class="zmdi zmdi-chevron-up"></i>',
-		easingType: 'linear',
-		scrollSpeed: 900,
-		animation: 'fade'
-	});
 
 	/* ********************************************
 		8. Treeview active
@@ -117,35 +111,31 @@ $(function() {
 		DO NOT REMOVE. Used to insert span before hamburger toggler, prevent propagation and then go to checkout. 
 	******************************************** */
 
-
-
 	/* ********************************************
 		13. Cart Plus Minus Button
 	******************************************** */
 	$(".cart-plus-minus").prepend('<div class="dec qtybutton">-</div>');
 	$(".cart-plus-minus").append('<div class="inc qtybutton">+</div>');
-	$(".qtybutton").on("click", function() {
+	$(".qtybutton").on("click", function () {
 		var $button = $(this);
 		var oldValue = $button.parent().find("input").val();
 		if ($button.text() == "+") {
 			var newVal = parseFloat(oldValue) + 1;
-		}else {
-            
-            if (oldValue > 0) {
-                var newVal = parseFloat(oldValue) - 1;
-            } 
-            else {
-                newVal = 0;
-            }
-        }
+		} else {
+			if (oldValue > 0) {
+				var newVal = parseFloat(oldValue) - 1;
+			} else {
+				newVal = 0;
+			}
+		}
 		$button.parent().find("input").val(newVal);
 	});
 
 	/* ********************************************
 		14. bootstrap accordion one open at a time
 	******************************************** */
-	$('.payment-title a').on('click', function (e) {
-		if($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
+	$(".payment-title a").on("click", function (e) {
+		if ($(this).parents(".panel").children(".panel-collapse").hasClass("in")) {
 			e.stopPropagation();
 		}
 		// You can also add preventDefault to remove the anchor behavior that makes
@@ -156,31 +146,28 @@ $(function() {
 	/* ********************************************
 		15. Cart tab menu active
 	******************************************** */
-	$('.cart-tab li a').on("click", function(){
-
+	$(".cart-tab li a").on("click", function () {
 		$(this).addClass("active");
-		$(this).parent('li').prevAll('li').find('a').addClass("active");
-		$(this).parent('li').nextAll('li').find('a').removeClass("active");
+		$(this).parent("li").prevAll("li").find("a").addClass("active");
+		$(this).parent("li").nextAll("li").find("a").removeClass("active");
 	});
 
-/* ********************************************
+	/* ********************************************
     18. STICKY sticky-header
 ******************************************** */
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 1){  
-            $('#sticky-header').addClass("sticky");
-        }
-        else{
-            $('#sticky-header').removeClass("sticky");
-        }
-    });
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 1) {
+			$("#sticky-header").addClass("sticky");
+		} else {
+			$("#sticky-header").removeClass("sticky");
+		}
+	});
 	/* ********************************************************* */
-	;function closeModal(){
+	function closeModal() {
 		$("iframe").attr("src", $("iframe").attr("src"));
 	}
 
-
-	$(document).scroll(function() {
+	$(document).scroll(function () {
 		var y = $(this).scrollTop();
 		if (y > 600) {
 			$(".fixed-CTA").fadeIn();
@@ -188,8 +175,8 @@ $(function() {
 			$(".fixed-CTA").fadeOut();
 		}
 	});
-	
-	$(".cart-toggler").click(function(e) {
+
+	$(".cart-toggler").click(function (e) {
 		e.preventDefault();
 	});
 	$(".cart-toggler").click(function (e) {
@@ -207,9 +194,13 @@ $(function() {
 		$("#cart-dropdown").removeClass("show-cart").fadeIn(5000);
 	});
 
-	$(".navbar-nav [role='banner']").append("<span class='navbar-donation-wrapper' data-toggle='tooltip' data-placement='bottom' title='Your Loyalty Points'>999<span class='navbar-donation-icon'><svg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 24 24' fill='#DAA520' stroke='#DAA520' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-star'><polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'></polygon></svg></span></span>");
+	$(".navbar-nav [role='banner']").append(
+		"<span class='navbar-donation-wrapper' data-toggle='tooltip' data-placement='bottom' title='Your Loyalty Points'>999<span class='navbar-donation-icon'><svg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 24 24' fill='#DAA520' stroke='#DAA520' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-star'><polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'></polygon></svg></span></span>"
+	);
 
-	$(".cart-insertion").prepend("<span class='navbar-donation-wrapper__mobile' data-toggle='tooltip' data-placement='bottom' title='Your Loyalty Points'>999<span class='navbar-donation-icon__mobile'><svg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 24 24' fill='#DAA520' stroke='#DAA520' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-star'><polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'></polygon></svg></span></span>");
+	$(".cart-insertion").prepend(
+		"<span class='navbar-donation-wrapper__mobile' data-toggle='tooltip' data-placement='bottom' title='Your Loyalty Points'>999<span class='navbar-donation-icon__mobile'><svg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 24 24' fill='#DAA520' stroke='#DAA520' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-star'><polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'></polygon></svg></span></span>"
+	);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -233,8 +224,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		var lazyloadThrottleTimeout;
 		lazyloadImages = document.querySelectorAll(".lazy");
 
-		;
-
 		function lazyload() {
 			if (lazyloadThrottleTimeout) {
 				clearTimeout(lazyloadThrottleTimeout);
@@ -243,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			lazyloadThrottleTimeout = setTimeout(function () {
 				var scrollTop = window.pageYOffset;
 				lazyloadImages.forEach(function (img) {
-					if (img.offsetTop < (window.innerHeight + scrollTop)) {
+					if (img.offsetTop < window.innerHeight + scrollTop) {
 						img.src = img.dataset.src;
 						img.classList.remove("lazy");
 					}
