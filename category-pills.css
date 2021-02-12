@@ -1,0 +1,429 @@
+/* --------------------------------------------------------------------------------
+CATEGORY PILLS DO NOT IMPORT !!!
+----------------------------------------------------------------------------------*/
+
+.category-dropdown-close-icon {
+	position: absolute;
+	right: 16px;
+	top: 16px;
+}
+
+#category-pills-bottom {
+	display: none;
+}
+
+.category-tabs-wrap .category-tabs {
+	border-bottom: none;
+}
+
+/* .category-pills-fixer {
+	top: 40px;
+} */
+
+.category-container {
+	background-color: #fff;
+	padding-left: 0;
+	padding-right: 0;
+	z-index: 10;
+	width: 100%;
+	border-bottom: none;
+	margin-top: unset !important;
+}
+
+.category-container.tab-pane.active {
+	z-index: 12;
+}
+
+.category-tabs > li > a {
+	margin-right: 4px;
+	line-height: 1.42857143;
+	border: unset !important;
+	border-radius: 30px !important;
+	font-weight: 400;
+	display: inline-block !important;
+	white-space: nowrap;
+}
+
+.container.hide-mobile-p {
+	height: 42px;
+}
+
+.category-tabs {
+	overflow-y: auto;
+	overflow-x: auto;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
+	cursor: pointer;
+	padding-bottom: 4px;
+	scrollbar-width: none !important;
+}
+
+.nav.nav-tabs.justify-content-center.category-tabs {
+	overflow-y: hidden;
+	font-size: 12px;
+}
+
+#custom-dropdown {
+	top: 60px;
+}
+
+#location-dropdown {
+	width: 16px;
+}
+
+/* LOCATION MARKER  */
+#location-dropdown.open #dropdownMenu-loc + #custom-dropdown:hover {
+	opacity: 1;
+}
+
+.location-marker,
+#location-marker {
+	position: absolute;
+	right: -42px;
+	color: #222;
+	top: 15px;
+	width: 200px;
+}
+
+#dropdownMenu-loc {
+	border: none;
+	padding: 0px;
+	line-height: unset;
+	outline: none;
+	font-size: 12px;
+}
+
+#location-marker img {
+	width: 12px;
+	margin: 0 4px;
+}
+
+#custom-dropdown .divider {
+	background-color: #505050;
+}
+
+#custom-dropdown {
+	background-color: #222;
+	text-align: center;
+	top: 16px;
+	left: -10px;
+	position: relative;
+	padding: 20px 0px !important;
+	max-width: 120px;
+	overflow: visible;
+}
+
+#location-dropdown .open {
+	float: none;
+}
+
+#custom-dropdown::before {
+	content: "";
+	height: 16px;
+	width: 16px;
+	background-color: #222;
+	position: absolute;
+	top: -8px;
+	/* left: 50%; */
+	transform: translateX(-50%) rotate(45deg);
+}
+
+#custom-dropdown li a {
+	color: #fff;
+}
+
+#custom-dropdown > li > a:focus,
+#custom-dropdown > li > a:hover {
+	color: var(--primary-color) !important;
+	text-decoration: none;
+	background: #222 !important;
+}
+
+.btn.dropdown-toggle.location-btn:hover,
+.btn.dropdown-toggle.location-btn:focus,
+.btn.dropdown-toggle.location-btn:active,
+.btn.dropdown-toggle.location-btn:visited {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.caret.location-caret,
+#location-caret {
+	border-top: 1px solid #666;
+	border-right: 0px solid transparent;
+	border-left: 1px solid #666;
+	position: relative;
+	margin: 0;
+	height: 12px;
+	width: 12px;
+	transform: rotate(130deg);
+	transition: all 0.6s;
+	margin-top: 0;
+	margin-left: 4px;
+}
+
+#location-marker:hover #location-caret {
+	transform: rotate(220deg);
+	margin-top: -8px;
+}
+
+/* Navigation Pills  */
+.category-container .tab-pane.active {
+	background-color: white;
+	max-width: 100%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.trigger {
+	padding: 8px !important;
+}
+
+.tabbable {
+	position: relative;
+	max-width: min-content;
+	margin: 0 auto 0 auto;
+}
+
+.category-container .tab-content {
+	position: absolute;
+	top: 38px;
+	z-index: 10;
+	width: 100%;
+}
+
+.category-container .tab-content UL > li > a {
+	color: #222;
+	text-decoration: none;
+	padding-bottom: 2px;
+	position: relative;
+}
+
+.category-container .tab-content UL > li > a:hover {
+	color: #000000;
+	font-weight: 500;
+}
+
+.category-container .tab-content UL > li {
+	padding-bottom: 16px;
+	list-style: none;
+	padding-right: 30px;
+}
+
+.hide-me {
+	display: none;
+}
+
+.category-container .tab-pane > ul {
+	padding-left: 0;
+}
+
+.all {
+	padding: 20px 20px 16px 40px;
+	white-space: nowrap;
+}
+
+.all a {
+	color: #000000;
+	font-weight: 700;
+	position: relative;
+}
+
+.all a:hover {
+	text-decoration: none;
+}
+
+.menu-content-wrapper {
+	display: flex;
+	width: 100%;
+	position: relative;
+}
+
+.tab-content-close-x {
+	position: absolute;
+	right: 16px;
+	top: 16px;
+	z-index: 2;
+}
+
+.menu-content-left {
+	display: flex;
+	flex-direction: column;
+	margin-right: 10%;
+	border-right: 1px solid #eee;
+	background-color: var(--off-white-1);
+}
+
+.menu-content-left ul {
+	padding-left: 40px;
+}
+
+.menu-content-left ul a {
+	font-weight: 400;
+	white-space: nowrap;
+}
+
+.menu-content-left ul a:hover {
+	font-weight: 300;
+	white-space: nowrap;
+	color: var(--primary-dark-grey);
+}
+
+.menu-content-right {
+	padding: 30px 30px 30px 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	white-space: nowrap;
+}
+
+.menu-content-right img {
+	justify-content: center;
+	width: 80%;
+	opacity: 0.4;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+	height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: rgb(204, 204, 204);
+	background-clip: content-box;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #999999;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #464646;
+}
+
+/* --------------------------------------------------------------------------------
+3.1 Category Pills MEDIA QUERIES DO NOT IMPORT!
+----------------------------------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+	.category-tabs {
+		justify-content: flex-start;
+		-ms-overflow-style: none !important;
+		scrollbar-width: none !important;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.menu-content-right {
+		display: none;
+	}
+
+	.menu-content-left {
+		width: 100%;
+		height: min-height;
+		background: var(--off-white-1);
+		color: #fff;
+		margin-right: 0 !important;
+	}
+
+	.container-fluid.category-container {
+		position: relative !important;
+		width: 100%;
+		/* padding-top: 40px; */
+		margin-top: unset !important;
+	}
+
+	.category-tabs {
+		justify-content: flex-start;
+		-ms-overflow-style: none !important;
+		scrollbar-width: none !important;
+	}
+
+	.hide-mobile-p {
+		padding: 0;
+		margin: 0;
+	}
+
+	.tab-content {
+		top: 42px;
+	}
+
+	/* Category Tabs Fade-in Fade-out on horizontal scroll  */
+	.category-tabs-wrap {
+		position: relative;
+	}
+
+	.category-tabs-wrap::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 3rem;
+		background-image: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+		transition: all linear 0.3s;
+	}
+
+	.category-tabs-wrap::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 3rem;
+		background-image: linear-gradient(
+			to right,
+			rgba(255, 255, 255, 0),
+			rgba(255, 255, 255, 0)
+		);
+		transition: all linear 0.3s;
+	}
+
+	.category-tabs-wrap.scrolled-right::after {
+		background-image: linear-gradient(
+			to left,
+			rgba(255, 255, 255, 0),
+			rgba(255, 255, 255, 0)
+		);
+	}
+
+	.category-tabs-wrap.scrolled-left::before {
+		background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+		z-index: 10;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.menu-content-left {
+		margin-right: 0 !important;
+		min-width: 50%;
+		height: 120vh;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.location-marker,
+	#location-marker {
+		right: 80px;
+		width: 16px;
+	}
+
+	#custom-dropdown {
+		left: -70px;
+	}
+
+	.caret.location-caret,
+	#location-caret,
+	.location-text {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 880px) {
+	.location-marker {
+		display: none;
+	}
+}
