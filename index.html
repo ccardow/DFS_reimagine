@@ -26,12 +26,14 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<style>
-		/* --------------------------------------------------------------------------------
- NAVBAR 
-----------------------------------------------------------------------------------*/
+		/* BODY COLOR FOR PRESENTATION ONLY. DO NOT IMPORT!!! */
 		body {
 			background-color: #464646;
 		}
+
+		/* --------------------------------------------------------------------------------
+ NAVBAR 
+----------------------------------------------------------------------------------*/
 
 		.navbar-brand {
 			padding-top: 16px;
@@ -158,6 +160,15 @@
 			#reimagine_navbar-menu,
 			#reimagine_navbar-profile {
 				top: 87px;
+			}
+		}
+
+		@media (max-width: 600px) {
+
+			#reimagine_navbar-menu,
+			#reimagine_navbar-profile,
+			ul.reimagine_menu li {
+				width: 100%;
 			}
 		}
 
