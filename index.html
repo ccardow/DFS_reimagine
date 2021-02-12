@@ -88,8 +88,8 @@
 		}
 
 
-		#navbar-reimagine-menu,
-		#navbar-reimagine-profile {
+		#reimagine_navbar-menu,
+		#reimagine_navbar-profile {
 			position: absolute;
 			right: 0;
 			background-color: #fff;
@@ -155,8 +155,8 @@
 				padding-top: 15px;
 			}
 
-			#navbar-reimagine-menu,
-			#navbar-reimagine-profile {
+			#reimagine_navbar-menu,
+			#reimagine_navbar-profile {
 				top: 87px;
 			}
 		}
@@ -173,7 +173,7 @@
 		}
 
 		/* --------------------------------------------------------------------------------
-CATEGORY PILLS
+CATEGORY PILLS DO NOT IMPORT !!!
 ----------------------------------------------------------------------------------*/
 
 		.category-dropdown-close-icon {
@@ -481,7 +481,7 @@ CATEGORY PILLS
 		}
 
 		/* --------------------------------------------------------------------------------
-3.1 Category Pills MEDIA QUERIES
+3.1 Category Pills MEDIA QUERIES DO NOT IMPORT!
 ----------------------------------------------------------------------------------*/
 		@media only screen and (max-width: 768px) {
 			.category-tabs {
@@ -596,17 +596,116 @@ CATEGORY PILLS
 				display: none;
 			}
 		}
+
+		/* MOVED OVER  */
+		.reimagine_navbar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			align-content: center;
+			position: relative;
+		}
+
+		.reimagine_header_container {
+			display: flex;
+			justify-content: space-between;
+			width: 100vw;
+			height: 64px;
+			border-bottom: 1px solid #ccc;
+			background-color: #fff;
+		}
+
+		.reimagine_icon-group {
+			order: 3;
+			display: flex;
+			align-content: center;
+			align-items: center;
+			min-width: 230px;
+			justify-content: space-evenly;
+			flex-wrap: nowrap;
+		}
+
+		.nav-rewards-icon-wrapper {
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			padding: 1px 4px;
+			display: flex;
+			align-content: center;
+			align-items: center;
+			font-size: 12px
+		}
+
+		.nav-rewards-icon-wrapper i {
+			color: #F68B21;
+			font-size: 10px;
+			padding-left: 2px;
+		}
+
+		#nav-user-icon i {
+			font-size: 20px;
+		}
+
+		.nav-cart-icon {
+			font-size: 18px;
+		}
+
+		.nav-search-icon {
+			font-size: 20px;
+		}
+
+		.navbar-toggle-new {
+			position: relative;
+			width: 22px;
+			height: 22px;
+		}
+
+		.icon-bar_middle {
+			position: absolute;
+			left: 0;
+			width: 22px;
+			height: 2px;
+			background-color: #4884C2;
+		}
+
+		.navbar-brand img {
+			width: 150px;
+		}
+
+		#navbar-search {
+			border: none;
+			z-index: 11;
+		}
+
+		form.reimagine_navbar-form {
+			padding: 0;
+			margin: 0;
+		}
+
+		.form-group.reimagine_form_group {
+			display: block;
+		}
+
+		input.form-control.reimagine_form_control {
+			border-radius: 0;
+			border: none;
+			border-bottom: 1px solid #ccc;
+			box-shadow: none;
+			height: 50px;
+			display: block;
+			width: 100%;
+			text-align: center;
+			position: relative;
+			padding: 0;
+		}
 	</style>
 </head>
 
 <body>
-	<nav style="display: flex;justify-content: space-between; align-items: center; align-content: center; position: relative;"
-		class="navbar navbar-fixed-top">
+	<nav class="navbar navbar-fixed-top reimagine_navbar">
 		<div>
-			<div class="reimagine_header_container"
-				style="display: flex;justify-content: space-between;width: 100vw; height: 64px; border-bottom: 1px solid #ccc; background-color: #fff">
+			<div class="reimagine_header_container">
 
-				<!-- CATEGORY PILLS -->
+				<!-- CATEGORY PILLS FOR POSITION ONLY. DO NOT IMPORT INTO PROC. USE Nav Pill injection {? ?} -->
 				<div class="reimagine_category-pills-container"
 					style="order: 2; flex: 1 1 auto; display: flex; align-items: center; align-content: center; width: 100%;">
 					<div class="container-fluid category-container category-pills-fixer" id="tablist">
@@ -912,55 +1011,40 @@ CATEGORY PILLS
 						</div>
 					</div>
 				</div>
-				<div class="reimagine_icon-group" style="order:3; display: flex; 				
-				align-content: center;
-				align-items: center;
-				min-width: 230px;
-				justify-content: space-evenly;
-				flex-wrap: nowrap;
-				">
-
-					<span class="nav-rewards-icon-wrapper"
-						style="border: 1px solid #ccc; border-radius: 4px; padding: 1px 4px; display: flex; align-content: center; align-items: center; font-size: 12px">
-						999 <span><i class="zmdi zmdi-star"
-								style="color: #F68B21; font-size: 10px; padding-left: 2px;"></i></span>
+				<!-- END OF CATEGORY PILLS FOR POSITION ONLY. DO NOT IMPORT INTO PROC. USE Nav Pill injection {? ?} -->
+				<div class="reimagine_icon-group">
+					<span class="nav-rewards-icon-wrapper">
+						999 <span><i class="zmdi zmdi-star"></i></span>
 					</span>
-					<span id="nav-user-icon" data-toggle="collapse" data-target="#navbar-reimagine-profile"
-						aria-expanded="true" aria-controls="navbar"><i class="zmdi zmdi-account"
-							style="font-size: 20px;"></i></span>
-					<span class="nav-cart-icon" style="font-size: 18px;"><i class="zmdi zmdi-shopping-cart"></i><span
+					<span id="nav-user-icon" data-toggle="collapse" data-target="#reimagine_navbar-profile"
+						aria-expanded="true" aria-controls="navbar"><i class="zmdi zmdi-account"></i></span>
+					<span class="nav-cart-icon"><i class="zmdi zmdi-shopping-cart"></i><span
 							class="cart-items-ticker">20</span></span>
 					<span class="nav-search-icon" data-toggle="collapse" data-target="#navbar-search"
-						aria-expanded="true" aria-controls="navbar" style="font-size: 20px;"><i
-							class="zmdi zmdi-search"></i></span>
+						aria-expanded="true" aria-controls="navbar"><i class="zmdi zmdi-search"></i></span>
 
 					<!-- HAMBURGER			 -->
-					<div type="button" data-toggle="collapse" data-target="#navbar-reimagine-menu" aria-expanded="true"
-						aria-controls="navbar" style="position: relative; width: 22px;height: 22px;"
-						class="navbar-toggle-new"> <span class="sr-only">Toggle
+					<div type="button" data-toggle="collapse" data-target="#reimagine_navbar-menu" aria-expanded="true"
+						aria-controls="navbar" class="navbar-toggle-new"> <span class="sr-only">Toggle
 							navigation</span>
 
-						<span class="icon-bar_middle" style="position: absolute;
-							left: 0;
-							width: 22px;
-							height: 2px;
-							background-color: #4884C2;">
+						<span class="icon-bar_middle">
 						</span>
 					</div>
 				</div>
 
-				<a class="navbar-brand" href="#"><img src="default_300px.png" alt="Logo" style="width: 150px;"></a>
+				<a class="navbar-brand" href="#"><img src="default_300px.png" alt="Logo"></a>
 			</div>
 			<!-- DROPDOWN MENU Profile Sign Up and Sign IN  -->
-			<div id="navbar-reimagine-profile" aria-expanded="false" class="navbar collapse">
-				<ul class="reimagine_menu">
+			<div id="reimagine_navbar-profile" aria-expanded="false" class="navbar collapse">
+				<ul class="reimagine_menu reimagine_menu-profile">
 					<li><a href="/Login">Sign In</a></li>
 					<li><a href="/Sign Up">Sign Up</a></li>
 
 				</ul>
 			</div>
 			<!-- DROPDOWN MENU Basic Nav  -->
-			<div id="navbar-reimagine-menu" aria-expanded="false" class="navbar collapse">
+			<div id="reimagine_navbar-menu" aria-expanded="false" class="navbar collapse">
 				<ul class="reimagine_menu">
 					<li><a href="/FarmDirectory">Farm Directory</a></li>
 					<li><a href="/SellDirect">Sell Direct</a></li>
@@ -968,14 +1052,12 @@ CATEGORY PILLS
 				</ul>
 			</div>
 			<!-- DROPDOWN MENU SEARCH  -->
-			<div id="navbar-search" aria-expanded="false" class="navbar collapse" style="border: none; z-index: 11;">
-				<form class="navbar-form reimagine_navbar-form" style="padding: 0; margin: 0">
-					<div class="form-group reimagine_form_group" style="display: block;">
+			<div id="navbar-search" aria-expanded="false" class="navbar collapse">
+				<form class="navbar-form reimagine_navbar-form">
+					<div class="form-group reimagine_form_group">
 						<input type="search" placeholder="What are you looking for?"
-							class="form-control reimagine_form_control"
-							style="border-radius: 0; border: none; border-bottom: 1px solid #ccc; box-shadow: none; height: 50px; display: block; width: 100%; text-align: center; position: relative;  padding: 0;">
+							class="form-control reimagine_form_control">
 					</div>
-
 				</form>
 			</div>
 			<!--/.navbar-collapse -->
