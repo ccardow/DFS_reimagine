@@ -2,208 +2,215 @@
  REIMAGINE NAVBAR 
 ----------------------------------------------------------------------------------*/
 .reimagine_navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	position: relative;
 }
 .reimagine_header_container {
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  height: 64px;
-  border-bottom: 1px solid #ccc;
-  background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+	height: 64px;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
 }
 /*ICON GROUP*/
 .reimagine_icon-group {
-  order: 3;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  min-width: 230px;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
+	order: 3;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	min-width: 230px;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
 }
 .nav-rewards-icon-wrapper {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 1px 4px;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  font-size: 12px
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 1px 4px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	font-size: 12px;
 }
 .nav-rewards-icon-wrapper i {
-  color: #F68B21;
-  font-size: 10px;
-  padding-left: 2px;
+	color: #f68b21;
+	font-size: 10px;
+	padding-left: 2px;
 }
 #nav-user-icon i {
-  font-size: 20px;
+	font-size: 20px;
 }
 #nav-user-icon .zmdi.zmdi-close {
-  font-size: 22px !important;
+	font-size: 22px !important;
 }
 /*CART ICON WITH TICKER */
 .nav-cart-icon {
-  font-size: 18px;
+	font-size: 18px;
 }
 .cart-items-ticker {
-  font-size: 8px;
-  font-weight: 700;
-  position: absolute;
-  border-radius: 50%;
-  background-color: #F68B21;
-  color: #fff;
-  padding: 1px;
+	font-size: 8px;
+	font-weight: 700;
+	position: absolute;
+	border-radius: 50%;
+	background-color: #f68b21;
+	color: #fff;
+	padding: 1px;
 }
 .nav-search-icon {
-  font-size: 20px;
+	font-size: 20px;
 }
-#nav-user-icon, .nav-cart-icon, .nav-search-icon {
-  color: #4884C2;
+#nav-user-icon,
+.nav-cart-icon,
+.nav-search-icon {
+	color: #4884c2;
 }
 /*BRAND LOGO */
 .navbar-brand {
-  padding-top: 16px;
+	padding-top: 16px;
 }
 .navbar-brand img {
-  width: 150px;
+	width: 150px;
 }
 /*NAVBAR SEARCH FORM */
 #navbar-search {
-  border: none;
-  z-index: 11;
+	border: none;
+	z-index: 11;
 }
 form.reimagine_navbar-form {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 .form-group.reimagine_form_group {
-  display: block;
+	display: block;
 }
 input.form-control.reimagine_form_control {
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  box-shadow: none;
-  height: 50px;
-  display: block;
-  width: 100%;
-  text-align: center;
-  position: relative;
-  padding: 0;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	box-shadow: none;
+	height: 50px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	position: relative;
+	padding: 0;
 }
 /*TOGGLE */
 .navbar-toggle-new {
-  position: relative;
-  width: 22px;
-  height: 22px;
+	position: relative;
+	width: 22px;
+	height: 22px;
 }
 .icon-bar_middle {
-  position: absolute;
-  left: 0;
-  width: 22px;
-  height: 2px;
-  background-color: #4884C2;
+	position: absolute;
+	left: 0;
+	width: 22px;
+	height: 2px;
+	background-color: #4884c2;
 }
 .icon-bar_middle {
-  top: 10px;
+	top: 10px;
 }
-.navbar-toggle-new::before, .icon-bar_middle {
-  position: absolute;
-  left: 0;
-  width: 22px;
-  height: 2px;
-  background-color: #4884C2;
+.navbar-toggle-new::before,
+.icon-bar_middle {
+	position: absolute;
+	left: 0;
+	width: 22px;
+	height: 2px;
+	background-color: #4884c2;
 }
 .navbar-toggle-new::before {
-  content: "";
-  top: 4px;
-  transform-origin: 0 0;
-  transition: all .3s ease-out;
+	content: "";
+	top: 4px;
+	transform-origin: 0 0;
+	transition: all 0.3s ease-out;
 }
 .navbar-toggle-new-close::before {
-  transform: rotate(45deg);
-  width: 20px;
+	transform: rotate(45deg);
+	width: 20px;
 }
 .navbar-toggle-new::after {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 0;
-  width: 22px;
-  height: 2px;
-  background-color: #4884C2;
-  transform-origin: 0 100%;
-  transition: all .3s ease-out;
+	content: "";
+	position: absolute;
+	top: 16px;
+	left: 0;
+	width: 22px;
+	height: 2px;
+	background-color: #4884c2;
+	transform-origin: 0 100%;
+	transition: all 0.3s ease-out;
 }
 .navbar-toggle-new-close::after {
-  transform: rotate(-45deg) translateY(3px) translateX(-3px);
-  width: 21px;
-  top: 14px;
+	transform: rotate(-45deg) translateY(3px) translateX(-3px);
+	width: 21px;
+	top: 14px;
 }
 .navbar-toggle-new-close .icon-bar_middle {
-  width: 0 !important;
-  opacity: 0;
+	width: 0 !important;
+	opacity: 0;
 }
 /*DROP-DOWN MENUS */
-#reimagine_navbar-menu, #reimagine_navbar-profile {
-  position: absolute;
-  right: 0;
-  background-color: #fff;
-  border-radius: 0;
-  z-index: 10;
+#reimagine_navbar-menu,
+#reimagine_navbar-profile {
+	position: absolute;
+	right: 0;
+	background-color: #fff;
+	border-radius: 0;
+	z-index: 10;
 }
 ul.reimagine_menu {
-  padding-left: 0;
-  margin-bottom: 0
+	padding-left: 0;
+	margin-bottom: 0;
 }
 ul.reimagine_menu li {
-  list-style: none;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0 10px 8px;
-  width: 200px;
+	list-style: none;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0 10px 8px;
+	width: 200px;
 }
 /* --------------------------------------------------------------------------------
  Navbar MEDIA QUERIES
 ----------------------------------------------------------------------------------*/
-@media (max-width:993px) and (min-width:320px) {
-  .reimagine_header_container {
-    flex-wrap: wrap;
-  }
+@media (max-width: 1100px) and (min-width: 320px) {
+	.reimagine_header_container {
+		flex-wrap: wrap;
+	}
 }
-@media (max-width: 993px) {
-  .reimagine_category-pills-container {
-    order: 4 !important;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-  }
-  #navbar-search {
-    top: -10px;
-  }
-  .reimagine_header_container {
-    border-bottom: none;
-  }
-  .navbar-brand {
-    padding-top: 15px;
-  }
-  #reimagine_navbar-menu, #reimagine_navbar-profile {
-    top: 87px;
-  }
+@media (max-width: 1100px) {
+	.reimagine_category-pills-container {
+		order: 4 !important;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
+	#navbar-search {
+		top: -10px;
+	}
+	.reimagine_header_container {
+		border-bottom: none;
+	}
+	.navbar-brand {
+		padding-top: 15px;
+	}
+	#reimagine_navbar-menu,
+	#reimagine_navbar-profile {
+		top: 87px;
+	}
 }
 @media (max-width: 600px) {
-  #reimagine_navbar-menu, #reimagine_navbar-profile, ul.reimagine_menu li {
-    width: 100%;
-  }
+	#reimagine_navbar-menu,
+	#reimagine_navbar-profile,
+	ul.reimagine_menu li {
+		width: 100%;
+	}
 }
 @media (max-width: 410px) {
-  .reimagine_icon-group {
-    min-width: 140px !important;
-  }
-  .nav-rewards-icon-wrapper {
-    display: none !important;
-  }
+	.reimagine_icon-group {
+		min-width: 140px !important;
+	}
+	.nav-rewards-icon-wrapper {
+		display: none !important;
+	}
 }

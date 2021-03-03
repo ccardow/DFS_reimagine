@@ -18,6 +18,7 @@
 	<link href="bootstrap.min.css" rel="stylesheet">
 	<!-- FOR LOCAL ONLY. DO NOT IMPORT THE FOLLOWING STYLESHEETS AS THEY WILL EVENTUALLY BE IN GLOBAL.CSS -->
 	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://dfsdev.webnow.cc/Templates/App/css/custom.css">
 	<link rel="stylesheet" href="reimagine_nav.css">
 	<link rel="stylesheet" href="category-pills.css">
 </head>
@@ -27,42 +28,43 @@
 		<div>
 			<div class="reimagine_header_container">
 
-				<!-- CATEGORY PILLS FOR POSITION ONLY. DO NOT IMPORT INTO PROC. USE Nav Pill injection {? ?} -->
+
 				<div class="reimagine_category-pills-container"
 					style="order: 2; flex: 1 1 auto; display: flex; align-items: center; align-content: center; width: 100%;">
-					<div class="container-fluid category-container category-pills-fixer" id="tablist">
+					<div class="container-fluid category-container category-pills-fixer reimagine_category-container"
+						id="tablist">
 						<div class="hide-mobile-p">
 							<div class="col-12">
 								<div class="tabbable">
 									<div class="category-tabs-wrap">
-										<div class="category-tabs-wrap">
-											<ul class="nav nav-tabs justify-content-center category-tabs">
-												<li> <a class="trigger" data-target="#tab" data-toggle="tab"
-														role="button">New Arrivals</a> </li>
+										<ul
+											class="nav nav-tabs justify-content-center category-tabs reimagine_category-tabs">
+											<li> <a class="trigger" data-target="#tab" data-toggle="tab"
+													role="button">New Arrivals</a> </li>
 
-												<li> <a class="trigger" data-target="#tab-Fruit" data-toggle="tab"
-														role="button">Fruit</a> </li>
-												<li> <a class="trigger" data-target="#tab-Meat-Dairy" data-toggle="tab"
-														role="button">Meat &amp; Dairy</a> </li>
-												<li> <a class="trigger" data-target="#tab-Miscellaneous"
-														data-toggle="tab" role="button">Miscellaneous</a> </li>
-												<li> <a class="trigger" data-target="#tab-Pantry" data-toggle="tab"
-														role="button">Pantry</a> </li>
-												<li class=""> <a class="trigger" data-target="#tab-PetFood"
-														data-toggle="tab" role="button" aria-expanded="false">Pet
-														Food</a> </li>
-												<li class=""> <a class="trigger" data-target="#tab-Seafood"
-														data-toggle="tab" role="button"
-														aria-expanded="false">Seafood</a> </li>
-												<li class=""> <a class="trigger" data-target="#tab-Vegetables"
-														data-toggle="tab" role="button"
-														aria-expanded="true">Vegetables</a> </li>
-											</ul>
-										</div>
+											<li> <a class="trigger" data-target="#tab-Fruit" data-toggle="tab"
+													role="button">Fruit</a> </li>
+											<li> <a class="trigger" data-target="#tab-Meat-Dairy" data-toggle="tab"
+													role="button">Meat &amp; Dairy</a> </li>
+											<li> <a class="trigger" data-target="#tab-Miscellaneous" data-toggle="tab"
+													role="button">Miscellaneous</a> </li>
+											<li> <a class="trigger" data-target="#tab-Pantry" data-toggle="tab"
+													role="button">Pantry</a> </li>
+											<li class=""> <a class="trigger" data-target="#tab-PetFood"
+													data-toggle="tab" role="button" aria-expanded="false">Pet
+													Food</a> </li>
+											<li class=""> <a class="trigger" data-target="#tab-Seafood"
+													data-toggle="tab" role="button" aria-expanded="false">Seafood</a>
+											</li>
+											<li class=""> <a class="trigger" data-target="#tab-Vegetables"
+													data-toggle="tab" role="button" aria-expanded="true">Vegetables</a>
+											</li>
+										</ul>
 									</div>
 
+
 									<div class="tab-content" id="tab-content">
-										<div class="tab-pane collapse" id="tab-Fruit">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Fruit">
 											<div class="menu-content-wrapper">
 												<div class="category-dropdown-close-icon">
 													<i class="zmdi zmdi-close"></i>
@@ -118,7 +120,7 @@
 										</div>
 									</div>
 									<div class="tab-content" id="tab-content">
-										<div class="tab-pane collapse" id="tab-Meat-Dairy">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Meat-Dairy">
 											<div class="menu-content-wrapper">
 												<div class="category-dropdown-close-icon">
 													<i class="zmdi zmdi-close"></i>
@@ -159,7 +161,7 @@
 										</div>
 									</div>
 									<div class="tab-content" id="tab-content">
-										<div class="tab-pane collapse" id="tab-Miscellaneous">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Miscellaneous">
 											<div class="menu-content-wrapper">
 												<div class="category-dropdown-close-icon">
 													<i class="zmdi zmdi-close"></i>
@@ -186,7 +188,7 @@
 										</div>
 									</div>
 									<div class="tab-content" id="tab-content">
-										<div class="tab-pane collapse" id="tab-Pantry">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Pantry">
 											<div class="menu-content-wrapper">
 												<div class="category-dropdown-close-icon">
 													<i class="zmdi zmdi-close"></i>
@@ -224,7 +226,7 @@
 										</div>
 									</div>
 									<div class="tab-content" id="tab-content">
-										<div class="tab-pane collapse" id="tab-PetFood">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-PetFood">
 											<div class="menu-content-wrapper">
 												<div class="category-dropdown-close-icon">
 													<i class="zmdi zmdi-close"></i>
@@ -244,7 +246,7 @@
 										</div>
 									</div>
 									<div class="tab-content" id="tab-content">
-										<div class="tab-pane collapse" id="tab-Seafood">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Seafood">
 											<div class="menu-content-wrapper">
 												<div class="category-dropdown-close-icon">
 													<i class="zmdi zmdi-close"></i>
@@ -267,7 +269,7 @@
 										</div>
 									</div>
 									<div class="tab-content" id="tab-content">
-										<div class="tab-pane collapse" id="tab-Vegetables">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Vegetables">
 											<div class="menu-content-wrapper">
 												<div class="category-dropdown-close-icon">
 													<i class="zmdi zmdi-close"></i>
@@ -355,7 +357,7 @@
 					</div>
 				</div>
 
-				<a class="navbar-brand" href="#"><img src="default_300px.png" alt="Logo"></a>
+				<a class="navbar-brand reimagine_navbar-brand" href="#"><img src="default_300px.png" alt="Logo"></a>
 			</div>
 			<!-- DROPDOWN MENU Profile Sign Up and Sign IN  -->
 			<div id="reimagine_navbar-profile" aria-expanded="false" class="navbar collapse">
