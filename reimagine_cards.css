@@ -1,0 +1,295 @@
+.reimagine_product-card {
+	height: 522px;
+	box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	border-radius: 4px;
+	margin-bottom: 30px;
+}
+
+.reimagine_product-card:hover {
+	box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.1);
+}
+
+.reimagine_product-card-image {
+	width: 100%;
+	height: 260px;
+	position: relative;
+	overflow: hidden;
+}
+
+.reimagine_product-card-image img {
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+}
+
+.reimagine_in-cart-check {
+	position: absolute;
+	color: var(--secondary-color);
+	font-size: 24px;
+	top: 8px;
+	left: 8px;
+	background-color: #fff;
+	border-radius: 100%;
+	width: 28px;
+	height: 28px;
+	text-align: center;
+}
+
+.reimagine_in-cart-check > i {
+	vertical-align: top;
+	padding-top: 2px;
+}
+
+.reimagine_product-card-ribbon {
+	height: 30px;
+	width: 220px;
+	font-weight: 600;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	z-index: 2;
+	transform: rotate(45deg);
+	right: -64px;
+	top: 24px;
+}
+
+.reimagine_product-card_membership {
+	position: absolute;
+	bottom: 0;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 100%;
+}
+
+.reimagine_product-card-info-wrapper {
+	padding: 10px;
+	position: relative;
+	height: 260px;
+}
+
+p.reimagine_product-card-title {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.2em;
+	text-align: center;
+	line-height: 1.2;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	margin: -5px 0 0 0;
+}
+
+p.reimagine_card-vendor-name {
+	font-size: 12px;
+	text-align: center;
+	font-weight: 400;
+	color: var(--light-grey);
+	margin: 0;
+	padding: 0;
+}
+
+p.reimagine_card-vendor-name.sm {
+	font-size: 10px;
+}
+
+.reimagine_stars-review-row {
+	text-align: center;
+}
+
+.reimagine_card-product-price {
+	font-size: 3em;
+	font-weight: 700;
+	text-align: center;
+	line-height: 0.6;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+.reimagine_card-product-regular-price {
+	font-size: 0.4em;
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+	color: var(--light-grey);
+}
+
+a.reimagine_card-button {
+	position: absolute;
+	display: block;
+	width: 80%;
+	bottom: 8px;
+	height: 50px;
+	font-size: 20px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 30px;
+	font-weight: 500;
+	margin: 0 auto;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.reimagine_card-button.add-to-cart {
+	border: 1px solid var(--primary-color);
+}
+
+.reimagine_card-button.in-cart {
+	border: 1px solid var(--secondary-color);
+}
+
+.reimagine_card-button.in-cart:hover {
+	color: var(--secondary-color);
+	background-color: #4885c20e;
+}
+
+.reimagine_card-button.add-to-cart:hover {
+	background-color: #fadbbb24;
+}
+
+.reimagine_card-button.sold-out:hover {
+	background-color: var(--light-grey);
+	color: #fff;
+}
+
+a.reimagine_card-button:hover,
+a.reimagine_card-button:active,
+a.reimagine_card-button:visited {
+	text-decoration: none;
+}
+
+.row.display-flex.reimagine_panel-row > [class*="col-"] {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	position: relative;
+}
+
+.panel.reimagine_panel-prod-item {
+	width: 165px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	height: 270px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.panel.reimagine_panel-prod-item:hover {
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.reimagine_panel-prod-image {
+	overflow: hidden;
+	width: 100%;
+	height: 130px;
+	position: relative;
+}
+
+.reimagine_panel-prod-image img {
+	width: 100%;
+	height: 130px;
+	object-fit: cover;
+}
+
+.reimagine_panel-sm-ribbon {
+	position: absolute;
+	font-weight: 600;
+	font-size: 0.9em;
+	width: 130px;
+	text-align: center;
+	transform: rotate(45deg);
+	top: 24px;
+	right: -30px;
+}
+
+.reimagine_panel-card_membership {
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 0.8em;
+	width: 100%;
+	text-align: center;
+}
+
+.reimagine_panel_card_info-wrapper {
+	padding: 5px;
+	position: relative;
+	height: 132px;
+}
+
+.reimagine_panel-card-title {
+	text-align: center;
+	font-weight: 600;
+	display: -webkit-box;
+	line-height: 1;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+
+.reimagine_stars-review-row-sm {
+	margin-top: -4px;
+}
+
+.reimagine_stars-review-row-sm span,
+.reimagine_stars-review-row-sm span i {
+	color: var(--primary-color);
+	font-size: 0.7em;
+}
+
+p.reimagine_panel-card-product-price {
+	font-weight: 600;
+	font-size: 1.3em;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+span.reimagine_panel-card-product-regular-price {
+	font-size: 0.6em;
+	margin-top: -6px;
+	color: var(--primary-medium-grey);
+	font-weight: 400;
+}
+
+.reimagine_panel-card-button {
+	position: absolute;
+	height: 36px;
+	box-shadow: none;
+	text-align: center;
+	pointer-events: auto;
+	transition: background-color 0.2s;
+	border-radius: 40px;
+	bottom: 0;
+	width: calc(100% - 10px);
+	font-weight: 500;
+}
+
+.reimagine_panel-card-button.add-to-cart {
+	border: 1px solid var(--primary-color);
+}
+
+.reimagine_panel-card-button.add-to-cart:hover {
+	background-color: #fadbbb24;
+}
+
+.reimagine_panel-card-button.in-cart {
+	border: 1px solid var(--secondary-color);
+}
+
+.reimagine_panel-card-button.sold-out:hover {
+	background-color: var(--light-grey);
+}
+
+@media (max-width: 600px) {
+	.reimagine_product-card_membership {
+		font-size: 0.7em;
+	}
+}

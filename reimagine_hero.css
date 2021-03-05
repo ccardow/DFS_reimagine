@@ -1,0 +1,61 @@
+.reimagine_hero-row {
+	display: flex;
+}
+.reimagine_hero-content {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+.reimagine_hero-image {
+	flex: 1 1 auto;
+}
+.reimagine_hero-image img {
+	width: 100%;
+}
+h1.reimagine_hero-header {
+	color: var(--light-grey);
+	line-height: 0.8;
+	font-size: 550%;
+}
+p.reimagine_hero-subhead {
+	color: var(--light-grey);
+}
+
+button.reimagine_primary-btn {
+	color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	border-radius: 30px;
+	font-family: alternate-gothic-compressed;
+	font-size: 1.5em;
+	padding: 6px 20px 4px 20px;
+	display: block;
+	margin-top: 20px;
+	transition: all 0.5s ease-in-out;
+}
+
+button.reimagine_primary-btn:hover {
+	background-color: #fadbbb24;
+}
+
+@media (max-width: 1100px) {
+	.reimagine_hero-row {
+		margin-top: 30px;
+	}
+}
+
+@media (max-width: 992px) {
+	.reimagine_hero-row {
+		flex-direction: column;
+	}
+	.reimagine_hero-content {
+		margin-top: 30px;
+		width: 90%;
+	}
+	h1.reimagine_hero-header,
+	p.reimagine_hero-subhead {
+		text-align: center;
+	}
+	button.reimagine_primary-btn {
+		margin: 20px auto 0 auto;
+	}
+}

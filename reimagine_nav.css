@@ -78,6 +78,7 @@
 #navbar-search {
 	border: none;
 	z-index: 11;
+	margin-bottom: 5px;
 }
 form.reimagine_navbar-form {
 	padding: 0;
@@ -164,12 +165,22 @@ input.form-control.reimagine_form_control {
 ul.reimagine_menu {
 	padding-left: 0;
 	margin-bottom: 0;
+	border: 1px solid var(--off-white-1);
 }
 ul.reimagine_menu li {
 	list-style: none;
 	border-bottom: 1px solid #ccc;
 	padding: 10px 0 10px 8px;
 	width: 200px;
+}
+
+/* MOVE THE FOLLOWING TO CATEGORY PILLS  */
+.category-dropdown-close-icon {
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	font-size: 1.6em;
+	color: var(--lighter-grey);
 }
 /* --------------------------------------------------------------------------------
  Navbar MEDIA QUERIES
