@@ -55,6 +55,49 @@
 		.reimagine_section.featured-in>.reimagine_section-header {
 			margin-bottom: 20px;
 		}
+
+		.reimagine_testimonial-row {
+			display: flex;
+			justify-items: center;
+			justify-content: center;
+		}
+
+		.reimagine_testimonial-row>item {
+			display: flex;
+		}
+
+		.reimagine_testimonial .reimagine_lp-testimonial-item-content {
+			border: 1px solid var(--lighter-grey);
+			border-radius: 20px;
+			display: flex;
+			flex-direction: column;
+			padding: 80px 15px 20px;
+			margin-top: -70px;
+			margin-bottom: 20px;
+		}
+
+		.reimagine_testimonial.text-center.lp-testimonial-col {
+			max-width: 90%;
+		}
+
+		@media (max-width: 992px) {
+			#reimagine_hero-carousel.slide>ol.carousel-indicators {
+				bottom: 36px;
+			}
+
+			#reimagine_hero-carousel.slide>ol.carousel-indicators li {
+				background-color: var(--off-white-1);
+			}
+
+			#reimagine_hero-carousel.slide>ol.carousel-indicators li.active {
+				background-color: var(--lighter-grey);
+			}
+
+			.reimagine_testimonial-row {
+				flex-direction: column;
+
+			}
+		}
 	</style>
 </head>
 
@@ -889,46 +932,55 @@
 			<h3 class="reimagine_section-header">
 				WHY OUR CUSTOMERS LOVE US
 			</h3>
-			<div class="item active">
-				<div class="col-md-4 text-center lp-testimonial-col"> <img class="img-circle lp-img-circle"
-						src="/Charleston/assets/Images/Rhiannon-Mairi-200px.jpg" alt="Generic placeholder image"
-						width="140" height="140">
-					<div class="lp-testimonial-item-content">
-						<p>I had a fantastic experience with DirectFood.store! I missed the drop-off and they rearranged
-							it
-							for me with no issue, whatsoever. The food is delicious, and I love that it’s local! I’ll
-							definitely be purchasing from DirectFood.store in future.</p>
-						<h4>Rhiannon</h4>
+			<div class="reimagine_testimonial-row display-flex">
+				<div class="item active">
+					<div class="reimagine_testimonial text-center lp-testimonial-col"> <img
+							class="img-circle lp-img-circle" src="assets/Rhiannon-Mairi-200px.jpg"
+							alt="Generic placeholder image" width="140" height="140">
+						<div class="reimagine_lp-testimonial-item-content">
+							<p>I had a fantastic experience with DirectFood.store! I missed the drop-off and they
+								rearranged
+								it
+								for me with no issue, whatsoever. The food is delicious, and I love that it’s local!
+								I’ll
+								definitely be purchasing from DirectFood.store in future.</p>
+							<h4>Rhiannon</h4>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="reimagine_testimonial text-center lp-testimonial-col"> <img
+							class="img-circle lp-img-circle" src="assets/chelsea-200px.jpg"
+							alt="Generic placeholder image" width="140" height="140">
+						<div class="reimagine_lp-testimonial-item-content">
+							<p>Absolutely loved my experience with DirectFood.store. Their products came on time and the
+								website
+								was super easy to navigate to place my order. The instructions were super easy as to
+								when my
+								order would come. All the product was super fresh and delicious! No complaints here!</p>
+							<h4>Chelsea</h4>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="reimagine_testimonial text-center lp-testimonial-col"> <img
+							class="img-circle lp-img-circle" src="assets/tina-200px.jpg" alt="Generic placeholder image"
+							width="140" height="140">
+						<div class="reimagine_lp-testimonial-item-content">
+							<p>Ordered a variety of items, everything was delivered within a few days. Delivery driver
+								was
+								very
+								friendly. Loved the variety and uniqueness of products offered. Especially love the farm
+								to
+								table concept and being able to support our community farmers. Will definitely order
+								again
+							</p>
+							<h4>Tina</h4>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="item">
-				<div class="col-md-4 text-center lp-testimonial-col"> <img class="img-circle lp-img-circle"
-						src="/Charleston/assets/Images/chelsea-200px.jpg" alt="Generic placeholder image" width="140"
-						height="140">
-					<div class="lp-testimonial-item-content">
-						<p>Absolutely loved my experience with DirectFood.store. Their products came on time and the
-							website
-							was super easy to navigate to place my order. The instructions were super easy as to when my
-							order would come. All the product was super fresh and delicious! No complaints here!</p>
-						<h4>Chelsea</h4>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="col-md-4 text-center lp-testimonial-col"> <img class="img-circle lp-img-circle"
-						src="/Charleston/assets/Images/tina-200px.jpg" alt="Generic placeholder image" width="140"
-						height="140">
-					<div class="lp-testimonial-item-content">
-						<p>Ordered a variety of items, everything was delivered within a few days. Delivery driver was
-							very
-							friendly. Loved the variety and uniqueness of products offered. Especially love the farm to
-							table concept and being able to support our community farmers. Will definitely order again
-						</p>
-						<h4>Tina</h4>
-					</div>
-				</div>
-			</div>
+
 		</section>
 
 	</div>
