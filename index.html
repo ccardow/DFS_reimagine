@@ -24,6 +24,10 @@
 	<link rel="stylesheet" href="reimagine_cards.css">
 	<style>
 		/* ADD TO HOME IN CUSTOM CSS  */
+		.reimagine_container-wide {
+			max-width: 1300px;
+		}
+
 		.reimagine_section {
 			border-top: 1px solid var(--light-grey);
 			margin-top: 80px;
@@ -49,7 +53,7 @@
 		}
 
 		#reimagine_hero-carousel.slide>ol.carousel-indicators {
-			bottom: -8px;
+			bottom: 40px;
 		}
 
 		.reimagine_section.shop-category {
@@ -59,6 +63,17 @@
 
 		.category-row {
 			margin-top: 20px;
+		}
+
+		.reimagine_featuredin-item {
+			background-color: var(--lighter-grey);
+			text-align: center;
+			height: 46px;
+		}
+
+		.reimagine_featured-logo {
+			max-height: 36px;
+			padding: 10px 0 0 0px;
 		}
 
 		.reimagine_section.featured-in>.reimagine_section-header {
@@ -83,11 +98,26 @@
 			padding: 80px 15px 20px;
 			margin-top: -70px;
 			margin-bottom: 20px;
+
 		}
 
 		.reimagine_testimonial.text-center.lp-testimonial-col {
 			max-width: 90%;
 			margin: auto;
+		}
+
+		.reimagine_lp-testimonial-item-content h4 {
+			position: relative;
+		}
+
+		.reimagine_lp-testimonial-item-content h4::before {
+			content: "";
+			position: absolute;
+			height: 2px;
+			background-color: var(--primary-color);
+			left: 40%;
+			right: 40%;
+			bottom: 36px;
 		}
 
 		.reimagine_marketing-block {
@@ -171,12 +201,32 @@
 			color: #fff;
 		}
 
+		@media (min-width: 1400px) {
+
+			.container,
+			.reimagine_header_container {
+				width: 1300px;
+			}
+		}
+
+		@media (max-width: 992px) {
+			.hidden-md-down {
+				display: none
+			}
+		}
+
+		@media (min-width: 768px) {
+			.hidden-md-up {
+				display: none;
+			}
+		}
+
 
 
 
 		@media (max-width: 992px) {
 			#reimagine_hero-carousel.slide>ol.carousel-indicators {
-				bottom: 36px;
+				bottom: -40px;
 			}
 
 			#reimagine_hero-carousel.slide>ol.carousel-indicators li {
@@ -199,7 +249,7 @@
 	<!-- START NAV  -->
 	<nav class="navbar navbar-fixed-top reimagine_navbar">
 		<div>
-			<div class="reimagine_header_container">
+			<div class="reimagine_header_container container">
 				<!-- CATEGORY PILLS STARTS  -->
 				<div class="reimagine_category-pills-container"
 					style="order: 2; flex: 1 1 auto; display: flex; align-items: center; align-content: center; width: 100%;">
@@ -606,6 +656,45 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="row hidden-md-down">
+					<div class="col col-sm-2 text-center">
+						<h5 style="padding-top:4px">
+							AS FEATURED IN
+						</h5>
+					</div>
+					<a href="https://betakit.com/digital-technology-supercluster-invests-30-million-in-17-projects-through-covid-19-program/"
+						target="__blank">
+						<div class="col col-sm-2 reimagine_featuredin-item">
+							<img class="reimagine_featured-logo" alt="Betakit" src="assets/betakit_White.png">
+						</div>
+					</a>
+					<a href="https://www.bloomberg.com/press-releases/2020-09-10/directfood-store-selected-for-1m-co-investment-from-the-digital-technology-supercluster-to-secure-the-food-supply-chain"
+						target="__blank">
+						<div class="col col-sm-2 reimagine_featuredin-item">
+							<img class="reimagine_featured-logo" alt="Bloomberg" src="assets/bloomberg_White.png">
+						</div>
+					</a>
+					<a href="https://www.newsfilecorp.com/release/63582/DirectFood.store-Selected-for-1M-CoInvestment-from-the-Digital-Technology-Supercluster-to-Secure-the-Food-Supply-Chain"
+						target="__blank">
+						<div class="col col-sm-2 reimagine_featuredin-item">
+							<img class="reimagine_featured-logo" alt="Newsfile Corp" src="assets/logo__White.png">
+						</div>
+					</a>
+					<a href="https://www.thepacker.com/news/retail/directfoodstore-platform-expands-south-carolina"
+						target="__blank">
+						<div class="col col-sm-2 reimagine_featuredin-item">
+							<img class="reimagine_featured-logo" alt="The Packer" src="assets/the-packer_White.png">
+						</div>
+					</a>
+					<a href="https://ca.finance.yahoo.com/news/directfood-store-selected-1m-co-235200482.html"
+						target="__blank">
+						<div class="col col-sm-2 reimagine_featuredin-item">
+							<img class="reimagine_featured-logo" alt="Yahoo News" src="assets/yahoo_White.png">
+						</div>
+					</a>
+
+				</div>
 			</div>
 
 			<!-- Left and right controls -->
@@ -619,10 +708,50 @@
 			</a> -->
 		</div>
 
+		<div class="row hidden-md-up mt-40">
+			<div class="col col-sm-2 text-center">
+				<h5 style="padding-top:4px">
+					AS FEATURED IN
+				</h5>
+			</div>
+			<a href="https://betakit.com/digital-technology-supercluster-invests-30-million-in-17-projects-through-covid-19-program/"
+				target="__blank">
+				<div class="col col-sm-2 reimagine_featuredin-item">
+					<img class="reimagine_featured-logo" alt="Betakit" src="assets/betakit_White.png">
+				</div>
+			</a>
+			<a href="https://www.bloomberg.com/press-releases/2020-09-10/directfood-store-selected-for-1m-co-investment-from-the-digital-technology-supercluster-to-secure-the-food-supply-chain"
+				target="__blank">
+				<div class="col col-sm-2 reimagine_featuredin-item">
+					<img class="reimagine_featured-logo" alt="Bloomberg" src="assets/bloomberg_White.png">
+				</div>
+			</a>
+			<a href="https://www.newsfilecorp.com/release/63582/DirectFood.store-Selected-for-1M-CoInvestment-from-the-Digital-Technology-Supercluster-to-Secure-the-Food-Supply-Chain"
+				target="__blank">
+				<div class="col col-sm-2 reimagine_featuredin-item">
+					<img class="reimagine_featured-logo" alt="Newsfile Corp" src="assets/logo__White.png">
+				</div>
+			</a>
+			<a href="https://www.thepacker.com/news/retail/directfoodstore-platform-expands-south-carolina"
+				target="__blank">
+				<div class="col col-sm-2 reimagine_featuredin-item">
+					<img class="reimagine_featured-logo" alt="The Packer" src="assets/the-packer_White.png">
+				</div>
+			</a>
+			<a href="https://ca.finance.yahoo.com/news/directfood-store-selected-1m-co-235200482.html" target="__blank">
+				<div class="col col-sm-2 reimagine_featuredin-item">
+					<img class="reimagine_featured-logo" alt="Yahoo News" src="assets/yahoo_White.png">
+				</div>
+			</a>
+
+		</div>
+
 
 	</div>
 
 	<!-- END HERO  -->
+
+
 
 	<!-- START FEATURED CARD COMPONENT  -->
 
@@ -918,28 +1047,28 @@
 			</h3>
 
 			<div class="row category-row">
-				<div class="col-xs-6 col-md-2 text-center category-wrapper">
+				<div class="col-xs-6 col-sm-4 text-center category-wrapper">
 					<div class="category-img-wrapper fruits">
 						<a href="/Marketplace?ProdType=All&amp;SortBy=Name&amp;Category=Fruit&amp;View=grid-view"><img
 								src="assets/fruits-bowl.png" alt="Fruit"></a>
 					</div>
 					Fruit
 				</div>
-				<div class="col-xs-6 col-md-2 text-center">
+				<div class="col-xs-6 col-sm-4 text-center">
 					<div class="category-img-wrapper meat">
 						<a href="/Marketplace?ProdType=All&amp;Category=Meat-Seafood&amp;View=grid-view"><img
 								src="assets/meat.png" alt="Meat"></a>
 					</div>
 					Meat
 				</div>
-				<div class="col-xs-6 col-md-2 text-center">
+				<div class="col-xs-6 col-sm-4 text-center">
 					<div class="category-img-wrapper vegetables">
 						<a href="/Marketplace?ProdType=All&amp;SortBy=Name&amp;Category=Vegetables&amp;View=grid-view"><img
 								src="assets/veggies.png" alt="Vegetables"></a>
 					</div>
 					Vegetables
 				</div>
-				<div class="col-xs-6 col-md-2 text-center">
+				<div class="col-xs-6 col-sm-4 text-center">
 					<div class="category-img-wrapper honey">
 						<a
 							href="/Marketplace?ProdType=All&amp;SortBy=Name&amp;Category=Pantry_Honey&amp;View=grid-view"><img
@@ -947,14 +1076,14 @@
 					</div>
 					Honey
 				</div>
-				<div class="col-xs-6 col-md-2 text-center">
+				<div class="col-xs-6 col-sm-4 text-center">
 					<div class="category-img-wrapper oil-spices">
 						<a href="/Marketplace?ProdType=All&amp;SortBy=Name&amp;Category=Condiments&amp;View=grid-view"><img
 								src="assets/spices-oil.png" alt="Oil and Spices"></a>
 					</div>
 					Oil &amp; Spices
 				</div>
-				<div class="col-xs-6 col-md-2 text-center">
+				<div class="col-xs-6 col-sm-4 text-center">
 					<div class="category-img-wrapper tea">
 						<a href="/Marketplace?ProdType=All&amp;SortBy=Name&amp;Category=Pantry_Tea&amp;View=grid-view"><img
 								src="assets/tea.png" alt="Tea"></a>
@@ -967,58 +1096,6 @@
 
 	</div>
 	<!-- END SHOP BY CATEGORY  -->
-
-	<!-- START AS FEATURED IN  -->
-	<div class="container">
-		<section class="reimagine_section featured-in">
-			<h3 class="reimagine_section-header">
-				AS FEATURED IN
-			</h3>
-			<div class="row">
-				<a href="https://betakit.com/digital-technology-supercluster-invests-30-million-in-17-projects-through-covid-19-program/"
-					target="__blank">
-					<div class="col-md-4 featuredin-item">
-						<img class="featured-logo" alt="Betakit" src="assets/betakit_White.png">
-					</div>
-				</a>
-				<a href="https://www.bloomberg.com/press-releases/2020-09-10/directfood-store-selected-for-1m-co-investment-from-the-digital-technology-supercluster-to-secure-the-food-supply-chain"
-					target="__blank">
-					<div class="col-md-4 featuredin-item">
-						<img class="featured-logo" alt="Bloomberg" src="assets/bloomberg_White.png">
-					</div>
-				</a>
-				<a href="https://www.canhealth.com/2020/08/12/supercluster-announces-new-projects-to-fight-virus/"
-					target="__blank">
-					<div class="col-md-4 featuredin-item">
-						<img class="featured-logo" alt="Canadian Healthcare Technology"
-							src="assets/canhealth_White.png">
-					</div>
-				</a>
-			</div>
-			<div class="row">
-				<a href="https://www.newsfilecorp.com/release/63582/DirectFood.store-Selected-for-1M-CoInvestment-from-the-Digital-Technology-Supercluster-to-Secure-the-Food-Supply-Chain"
-					target="__blank">
-					<div class="col-md-4 featuredin-item">
-						<img class="featured-logo" alt="Newsfile Corp" src="assets/logo__White.png">
-					</div>
-				</a>
-				<a href="https://www.thepacker.com/news/retail/directfoodstore-platform-expands-south-carolina"
-					target="__blank">
-					<div class="col-md-4 featuredin-item">
-						<img class="featured-logo" alt="The Packer" src="assets/the-packer_White.png">
-					</div>
-				</a>
-				<a href="https://ca.finance.yahoo.com/news/directfood-store-selected-1m-co-235200482.html"
-					target="__blank">
-					<div class="col-md-4 featuredin-item">
-						<img class="featured-logo" alt="Yahoo News" src="assets/yahoo_White.png">
-					</div>
-				</a>
-			</div>
-		</section>
-
-	</div>
-	<!-- END AS FEATURED IN  -->
 
 	<!-- START TESTIMONIALS  -->
 	<div class="container">

@@ -7,14 +7,16 @@
 	align-items: center;
 	align-content: center;
 	position: relative;
+	width: 100%;
+	border-bottom: 1px solid var(--lighter-grey);
 }
 .reimagine_header_container {
 	display: flex;
 	justify-content: space-between;
-	width: 100vw;
 	height: 64px;
-	border-bottom: 1px solid #ccc;
 	background-color: #fff;
+	padding-left: 0;
+	padding-right: 0;
 }
 /*ICON GROUP*/
 .reimagine_icon-group {
@@ -23,7 +25,7 @@
 	align-content: center;
 	align-items: center;
 	min-width: 230px;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	flex-wrap: nowrap;
 }
 .nav-rewards-icon-wrapper {
@@ -70,6 +72,9 @@
 /*BRAND LOGO */
 .navbar-brand {
 	padding-top: 16px;
+	margin-right: auto;
+	padding-left: 0;
+	padding-right: 0;
 }
 .navbar-brand img {
 	width: 150px;
@@ -96,7 +101,7 @@ input.form-control.reimagine_form_control {
 	display: block;
 	width: 100%;
 	text-align: center;
-	position: relative;
+	position: absolute;
 	padding: 0;
 }
 /*TOGGLE */
@@ -195,6 +200,9 @@ ul.reimagine_menu li {
 		order: 4 !important;
 		border-top: 1px solid #ccc;
 		border-bottom: 1px solid #ccc;
+	}
+	.reimagine_navbar {
+		border-bottom: none;
 	}
 	#navbar-search {
 		top: -10px;

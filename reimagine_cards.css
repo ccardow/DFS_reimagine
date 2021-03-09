@@ -1,3 +1,8 @@
+.reimagine_panel-row {
+	max-width: 95vw;
+	overflow: hidden;
+}
+
 .reimagine_product-card {
 	height: 522px;
 	box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1);
@@ -168,6 +173,7 @@ a.reimagine_card-button:visited {
 	width: 100%;
 	justify-content: space-between;
 	position: relative;
+	min-width: 164px;
 }
 
 .panel.reimagine_panel-prod-item {
