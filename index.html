@@ -248,7 +248,7 @@
 			}
 		}
 
-
+		/* NEEDED  */
 		@media (min-width: 1400px) {
 
 			.container,
@@ -1477,6 +1477,16 @@
 	<script src="main.js"></script>
 	<!-- CHANGE USER ICON TO X **** PLEASE IMPORT INTO MAIN.JS -->
 	<script>
+		//  NEEDS WORK 
+		$(document).ready(function () {
+			$(".category-dropdown-close-icon").click(function () {
+				var tabContentId = $(this).parent().attr("href");
+				$(this).parent().parent().remove(); //remove li of tab
+				$(tabContentId).remove(); //remove respective tab content
+			});
+		});
+
+
 		$('#nav-user-icon').click(function () {
 			$("i", this).toggleClass("zmdi zmdi-account zmdi zmdi-close");
 		});
