@@ -209,6 +209,45 @@
 			color: #fff;
 		}
 
+		/* ADD TO CATEGORY PILLS  */
+
+		.menu-content-right {
+			display: none;
+		}
+
+		/* REPLACE IN CATEGORY PILLS  */
+		.menu-content-left {
+			display: flex;
+			flex-direction: column;
+			margin-right: 10%;
+			border-right: none;
+			background-color: #fff;
+		}
+
+		.category-container .tab-content {
+			position: absolute;
+			top: 49px;
+			z-index: 10;
+			width: 50%;
+		}
+
+		.category-container .tab-pane.active {
+			background-color: white;
+			box-shadow: 4px 4px 8px rgb(0 0 0 / 10%);
+		}
+
+		@media (max-width: 1100px) {
+			.category-container .tab-content {
+				top: 35px;
+			}
+		}
+
+		@media (max-width: 600px) {
+			.category-container .tab-content {
+				width: 100%;
+			}
+		}
+
 
 		@media (min-width: 1400px) {
 
@@ -294,8 +333,14 @@
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Fruit">
 											<div class="menu-content-wrapper">
-												<div class="category-dropdown-close-icon"> <i
-														class="zmdi zmdi-close"></i> </div>
+												<div class="category-dropdown-close-icon"> <svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=Fruit">All
 															Fruit</a></p>
@@ -349,8 +394,14 @@
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Meat-Dairy">
 											<div class="menu-content-wrapper">
-												<div class="category-dropdown-close-icon"> <i
-														class="zmdi zmdi-close"></i> </div>
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=Meat-Dairy">All
 															Meat &amp; Dairy</a></p>
@@ -389,8 +440,14 @@
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Miscellaneous">
 											<div class="menu-content-wrapper">
-												<div class="category-dropdown-close-icon"> <i
-														class="zmdi zmdi-close"></i> </div>
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
 												<div class="menu-content-left">
 													<p class="all"><a
 															href="?ProdType=All&amp;Category=Miscellaneous">All
@@ -415,8 +472,14 @@
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Pantry">
 											<div class="menu-content-wrapper">
-												<div class="category-dropdown-close-icon"> <i
-														class="zmdi zmdi-close"></i> </div>
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=Pantry">All
 															Pantry</a></p>
@@ -452,8 +515,14 @@
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane reimagine_tab-pane collapse" id="tab-PetFood">
 											<div class="menu-content-wrapper">
-												<div class="category-dropdown-close-icon"> <i
-														class="zmdi zmdi-close"></i> </div>
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=PetFood">All Pet
 															Food</a></p>
@@ -471,8 +540,14 @@
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Seafood">
 											<div class="menu-content-wrapper">
-												<div class="category-dropdown-close-icon"> <i
-														class="zmdi zmdi-close"></i> </div>
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=Seafood">All
 															Seafood</a></p>
@@ -493,8 +568,14 @@
 									<div class="tab-content" id="tab-content">
 										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Vegetables">
 											<div class="menu-content-wrapper">
-												<div class="category-dropdown-close-icon"> <i
-														class="zmdi zmdi-close"></i> </div>
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
 												<div class="menu-content-left">
 													<p class="all"><a href="?ProdType=All&amp;Category=Vegetables">All
 															Vegetables</a></p>
