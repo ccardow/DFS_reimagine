@@ -5,7 +5,7 @@
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
-	position: relative;
+	position: fixed;
 	width: 100%;
 	border-bottom: 1px solid var(--lighter-grey);
 }
@@ -172,17 +172,17 @@ input.form-control.reimagine_form_control {
 	background-color: #fff;
 	border-radius: 0;
 	z-index: 10;
+	min-width: 320px;
 }
 ul.reimagine_menu {
 	padding-left: 0;
 	margin-bottom: 0;
-	border: 1px solid var(--off-white-1);
 }
 ul.reimagine_menu li {
 	list-style: none;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid var(--off-white-1);
 	padding: 10px 0 10px 8px;
-	width: 200px;
+	width: 100%;
 }
 
 /* MOVE THE FOLLOWING TO CATEGORY PILLS  */
