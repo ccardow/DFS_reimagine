@@ -51,6 +51,7 @@
 /*CART ICON WITH TICKER */
 .nav-cart-icon {
 	font-size: 18px;
+	position: relative;
 }
 .cart-items-ticker {
 	font-size: 8px;
@@ -60,6 +61,8 @@
 	background-color: #f68b21;
 	color: #fff;
 	padding: 1px;
+	left: 14px;
+	top: 6px;
 }
 .nav-search-icon {
 	font-size: 20px;
@@ -125,7 +128,7 @@ input.form-control.reimagine_form_control {
 	position: absolute;
 	left: 0;
 	width: 22px;
-	height: 2px;
+	height: 1.5px;
 	background-color: #4884c2;
 }
 .navbar-toggle-new::before {
@@ -144,7 +147,7 @@ input.form-control.reimagine_form_control {
 	top: 16px;
 	left: 0;
 	width: 22px;
-	height: 2px;
+	height: 1.5px;
 	background-color: #4884c2;
 	transform-origin: 0 100%;
 	transition: all 0.3s ease-out;
