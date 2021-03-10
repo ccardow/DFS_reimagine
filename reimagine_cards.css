@@ -1,6 +1,6 @@
 .reimagine_panel-row {
 	max-width: 95vw;
-	overflow: hidden;
+	overflow-x: scroll;
 }
 
 .reimagine_product-card {
