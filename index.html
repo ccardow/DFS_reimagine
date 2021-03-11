@@ -236,6 +236,25 @@
 			box-shadow: 4px 4px 8px rgb(0 0 0 / 10%);
 		}
 
+		/* Hide scrollbar for Chrome, Safari and Opera */
+		.category-wrapper::-webkit-scrollbar {
+			height: 0;
+		}
+
+		.reimagine_panel-row::-webkit-scrollbar,
+		.reimagine_category-tabs::-webkit-scrollbar {
+			height: 0;
+		}
+
+		/* Hide scrollbar for IE, Edge and Firefox */
+		.reimagine_panel-row,
+		.reimagine_category-tabs {
+			-ms-overflow-style: none;
+			/* IE and Edge */
+			scrollbar-width: none;
+			/* Firefox */
+		}
+
 		@media (max-width: 1100px) {
 			.category-container .tab-content {
 				top: 35px;
