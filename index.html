@@ -1479,12 +1479,15 @@
 	<script>
 		//  NEEDS WORK 
 		$(document).ready(function () {
+
 			$(".category-dropdown-close-icon").click(function () {
-				var tabContentId = $(this).parent().attr("href");
-				$(this).parent().parent().remove(); //remove li of tab
-				$(tabContentId).remove(); //remove respective tab content
+
+				$(".category-tabs > li").removeClass("active");
+				$(tabContentSelector).removeClass("active");
 			});
 		});
+
+
 
 
 		$('#nav-user-icon').click(function () {
