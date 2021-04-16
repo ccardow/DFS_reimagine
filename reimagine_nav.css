@@ -5,9 +5,11 @@
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
-	position: fixed;
+	position: -webkit-sticky;
+	position: sticky;
 	width: 100%;
 	border-bottom: 1px solid var(--lighter-grey);
+	top: 0;
 }
 .reimagine_header_container {
 	display: flex;

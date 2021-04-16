@@ -313,6 +313,47 @@
 
 			}
 		}
+
+		/* START OF CSS FOR CHECKOUT  */
+		.reimagine_ghost-button {
+			border: 1px solid;
+			border-radius: 30px;
+			padding: 10px 16px;
+		}
+
+		.reimagine_cart-items {
+			border-right: 1px solid var(--lighter-grey);
+		}
+
+		p.reimagine_cart-breadcrumb {
+			padding-bottom: 30px;
+		}
+
+		p.reimagine_cart-header {
+			font-weight: 700;
+			font-size: 1.2em;
+		}
+
+		.reimagine_cart-product-image-wrapper {
+			width: 240px;
+		}
+
+		.reimagine_cart-product-image-wrapper img {
+			width: 100%;
+			object-fit: scale-down;
+		}
+
+		@media (min-width: 1200px) {
+			.reimagine_cart-items {
+				padding-right: 50px;
+			}
+		}
+
+		@media (max-width: 1199px) {
+			.reimagine_cart-items {
+				border-right: none;
+			}
+		}
 	</style>
 </head>
 
@@ -734,169 +775,50 @@
 	</nav>
 	<!-- END NAV  -->
 
-
-	<!-- START HERO  -->
-
-	<div class="container">
-
-		<div id="reimagine_hero-carousel" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#reimagine_hero-carousel" data-slide-to="0" class="active"></li>
-				<li data-target="#reimagine_hero-carousel" data-slide-to="1"></li>
-				<li data-target="#reimagine_hero-carousel" data-slide-to="2"></li>
-			</ol>
-
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner">
-				<div class="item active">
-					<!-- Content goes in here  -->
-					<div class="row reimagine_hero-row">
-						<div class=" col col-md-9 reimagine_hero-image">
-							<img src="assets/reimagine_hero.jpg" class="img-responsive" alt="Table of Food">
+	<!-- START YOUR CART COMPONENT  -->
+	<section class="your-cart">
+		<div class="container">
+			<div class="row">
+				<h1 class="text-center">YOUR CART</h1>
+			</div>
+			<div class="row u-padding-15">
+				<div class="col col-lg-7 reimagine_cart-items">
+					<div class="row">
+						<div class="col light-grey">
+							<p class="reimagine_cart-breadcrumb">
+								&xlarr;Continue Shopping
+								<button class="reimagine_ghost-button light-grey float-right">
+									CLEAR CART
+								</button>
+							</p>
 						</div>
-						<div class="col col-md-3 reimagine_hero-content">
-							<div class="reimagine_hero-ribbon">
-								CURRATED LOCAL FOOD
+
+						<div class="row">
+							<p class="reimagine_cart-header">
+								PRODUCTS IN YOUR CART
+							</p>
+							<div class="col col-sm-8 display-flex">
+								<div class="reimagine_cart-product-image-wrapper">
+									<img src="/assets/sample-product-card-image.jpg" alt="Product Image">
+								</div>
+								<p class="reimagine_cart-product-name">
+									LEAN SIRLOIN STEAK - 40 ounces
+								</p>
 							</div>
-							<h1 class="reimagine_hero-header">TRULY&nbsp;FARM TO&nbsp;TABLE</h1>
-							<p class="reimagine_hero-subhead">Fresh,&nbsp;Local&nbsp;& Organic&nbsp;Food
-								Directly&nbsp;from&nbsp;Farmers.</p>
-							<a href="#"><button class="reimagine_primary-btn" role="button">SHOP NOW</button></a>
+							<div class="col col-sm-4">
+								test 2
+							</div>
 						</div>
+
 					</div>
 				</div>
-
-				<div class="item">
-					<!-- Content goes in here  -->
-					<div class="row reimagine_hero-row">
-						<div class=" col col-md-9 reimagine_hero-image">
-							<img src="assets/reimagine_hero.jpg" class="img-responsive" alt="Table of Food">
-						</div>
-						<div class="col col-md-3 reimagine_hero-content">
-							<div class="reimagine_hero-ribbon">
-								CURRATED LOCAL FOOD
-							</div>
-							<h1 class="reimagine_hero-header">TRULY&nbsp;FARM TO&nbsp;TABLE</h1>
-							<p class="reimagine_hero-subhead">Fresh,&nbsp;Local&nbsp;& Organic&nbsp;Food
-								Directly&nbsp;from&nbsp;Farmers.</p>
-							<a href="#"><button class="reimagine_primary-btn" role="button">SHOP NOW</button></a>
-						</div>
-					</div>
-				</div>
-
-				<div class="item">
-					<!-- Content goes in here  -->
-					<div class="row reimagine_hero-row">
-						<div class=" col col-md-9 reimagine_hero-image">
-							<img src="assets/reimagine_hero.jpg" class="img-responsive" alt="Table of Food">
-						</div>
-						<div class="col col-md-3 reimagine_hero-content">
-							<div class="reimagine_hero-ribbon">
-								CURRATED LOCAL FOOD
-							</div>
-							<h1 class="reimagine_hero-header">TRULY&nbsp;FARM TO&nbsp;TABLE</h1>
-							<p class="reimagine_hero-subhead">Fresh,&nbsp;Local&nbsp;& Organic&nbsp;Food
-								Directly&nbsp;from&nbsp;Farmers.</p>
-							<a href="#"><button class="reimagine_primary-btn" role="button">SHOP NOW</button></a>
-						</div>
-					</div>
-				</div>
-
-				<div class="row hidden-md-down">
-					<div class="col col-sm-2 text-center">
-						<h5 style="padding-top:4px">
-							AS FEATURED IN
-						</h5>
-					</div>
-					<a href="https://betakit.com/digital-technology-supercluster-invests-30-million-in-17-projects-through-covid-19-program/"
-						target="__blank">
-						<div class="col col-sm-2 reimagine_featuredin-item">
-							<img class="reimagine_featured-logo" alt="Betakit" src="assets/betakit_White.png">
-						</div>
-					</a>
-					<a href="https://www.bloomberg.com/press-releases/2020-09-10/directfood-store-selected-for-1m-co-investment-from-the-digital-technology-supercluster-to-secure-the-food-supply-chain"
-						target="__blank">
-						<div class="col col-sm-2 reimagine_featuredin-item">
-							<img class="reimagine_featured-logo" alt="Bloomberg" src="assets/bloomberg_White.png">
-						</div>
-					</a>
-					<a href="https://www.newsfilecorp.com/release/63582/DirectFood.store-Selected-for-1M-CoInvestment-from-the-Digital-Technology-Supercluster-to-Secure-the-Food-Supply-Chain"
-						target="__blank">
-						<div class="col col-sm-2 reimagine_featuredin-item">
-							<img class="reimagine_featured-logo" alt="Newsfile Corp" src="assets/logo__White.png">
-						</div>
-					</a>
-					<a href="https://www.thepacker.com/news/retail/directfoodstore-platform-expands-south-carolina"
-						target="__blank">
-						<div class="col col-sm-2 reimagine_featuredin-item">
-							<img class="reimagine_featured-logo" alt="The Packer" src="assets/the-packer_White.png">
-						</div>
-					</a>
-					<a href="https://ca.finance.yahoo.com/news/directfood-store-selected-1m-co-235200482.html"
-						target="__blank">
-						<div class="col col-sm-2 reimagine_featuredin-item">
-							<img class="reimagine_featured-logo" alt="Yahoo News" src="assets/yahoo_White.png">
-						</div>
-					</a>
+				<div class="col col-lg-5" style="background-color: pink;">
 
 				</div>
 			</div>
 
-			<!-- Left and right controls -->
-			<!-- <a class="left carousel-control" href="#reimagine_hero-carousel" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#reimagine_hero-carousel" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				<span class="sr-only">Next</span>
-			</a> -->
 		</div>
-
-		<div class="row hidden-md-up mt-40">
-			<div class="col col-sm-2 text-center">
-				<h5 style="padding-top:4px">
-					AS FEATURED IN
-				</h5>
-			</div>
-			<a href="https://betakit.com/digital-technology-supercluster-invests-30-million-in-17-projects-through-covid-19-program/"
-				target="__blank">
-				<div class="col col-sm-2 reimagine_featuredin-item">
-					<img class="reimagine_featured-logo" alt="Betakit" src="assets/betakit_White.png">
-				</div>
-			</a>
-			<a href="https://www.bloomberg.com/press-releases/2020-09-10/directfood-store-selected-for-1m-co-investment-from-the-digital-technology-supercluster-to-secure-the-food-supply-chain"
-				target="__blank">
-				<div class="col col-sm-2 reimagine_featuredin-item">
-					<img class="reimagine_featured-logo" alt="Bloomberg" src="assets/bloomberg_White.png">
-				</div>
-			</a>
-			<a href="https://www.newsfilecorp.com/release/63582/DirectFood.store-Selected-for-1M-CoInvestment-from-the-Digital-Technology-Supercluster-to-Secure-the-Food-Supply-Chain"
-				target="__blank">
-				<div class="col col-sm-2 reimagine_featuredin-item">
-					<img class="reimagine_featured-logo" alt="Newsfile Corp" src="assets/logo__White.png">
-				</div>
-			</a>
-			<a href="https://www.thepacker.com/news/retail/directfoodstore-platform-expands-south-carolina"
-				target="__blank">
-				<div class="col col-sm-2 reimagine_featuredin-item">
-					<img class="reimagine_featured-logo" alt="The Packer" src="assets/the-packer_White.png">
-				</div>
-			</a>
-			<a href="https://ca.finance.yahoo.com/news/directfood-store-selected-1m-co-235200482.html" target="__blank">
-				<div class="col col-sm-2 reimagine_featuredin-item">
-					<img class="reimagine_featured-logo" alt="Yahoo News" src="assets/yahoo_White.png">
-				</div>
-			</a>
-
-		</div>
-
-
-	</div>
-
-	<!-- END HERO  -->
-
+	</section>
 
 
 	<!-- START FEATURED CARD COMPONENT  -->
@@ -904,7 +826,289 @@
 	<div class="container">
 		<section class="reimagine_section featured-products">
 			<h3 class="reimagine_section-header">
-				FEATURED PRODUCTS
+				BUY AGAIN
+			</h3>
+			<div class="row display-flex reimagine_panel-row">
+				<div class="col-prod-panel reimagine_prod_panel">
+					<div class="panel reimagine_panel-prod-item">
+						<div class="reimagine_panel-prod-image">
+							<!-- IF IN CART  -->
+							<!-- <span class="reimagine_in-cart-check">
+									<i class="fas fa-check-circle"></i>
+								</span> -->
+							<!-- IF FEATURED  -->
+							<div class="reimagine_panel-sm-ribbon primary-bg-color text-white">
+								FEATURED
+							</div>
+							<!-- IF REQUIRED MEMBERSHIP  -->
+							<!-- <div class="reimagine_panel-card_membership text-white">
+									Membership Required
+									<span><i class="far fa-question-circle"></i>
+								</div> -->
+							<img src="assets/sample-product-card-image.jpg" alt="Sample Image">
+						</div>
+						<div class="reimagine_panel_card_info-wrapper">
+							<p class="reimagine_card-vendor-name sm">
+								Jill's Happy Farm
+							</p>
+							<p class="reimagine_panel-card-title">
+								Amazing Bag of Green Parsley
+							</p>
+							<div class="reimagine_stars-review-row reimagine_stars-review-row-sm">
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span>3 Reviews</span>
+							</div>
+							<p class="reimagine_panel-card-product-price secondary-color">
+								$49.99
+								<!-- IF SALE  -->
+								<!-- <span class="reimagine_panel-card-product-regular-price">(was $59.99)</span> -->
+							</p>
+
+							<button class="reimagine_panel-card-button add-to-cart primary-color">
+								ADD TO CART
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-prod-panel reimagine_prod_panel">
+					<div class="panel reimagine_panel-prod-item">
+						<div class="reimagine_panel-prod-image">
+							<!-- IF IN CART  -->
+							<span class="reimagine_in-cart-check" data-toggle="tooltip" data-placement="right"
+								title="This item is in your cart">
+								<i class="fas fa-check-circle"></i>
+							</span>
+							<!-- IF FEATURED  -->
+							<!-- <div class="reimagine_panel-sm-ribbon primary-bg-color text-white">
+									FEATURED
+								</div> -->
+							<!-- IF REQUIRED MEMBERSHIP  -->
+							<div class="reimagine_panel-card_membership text-white">
+								Membership Required
+								<span><i class="far fa-question-circle"></i>
+							</div>
+							<img src="assets/sample-product-card-image.jpg" alt="Sample Image">
+						</div>
+						<div class="reimagine_panel_card_info-wrapper">
+							<p class="reimagine_card-vendor-name sm">
+								Jill's Happy Farm
+							</p>
+							<p class="reimagine_panel-card-title">
+								Amazing Bag of Green Parsley
+							</p>
+							<div class="reimagine_stars-review-row reimagine_stars-review-row-sm">
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span>3 Reviews</span>
+							</div>
+							<p class="reimagine_panel-card-product-price secondary-color">
+								$49.99
+								<span class="reimagine_panel-card-product-regular-price">(was $59.99)</span>
+							</p>
+
+							<button class="reimagine_panel-card-button in-cart secondary-color">
+								IN CART
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-prod-panel reimagine_prod_panel">
+					<div class="panel reimagine_panel-prod-item">
+						<div class="reimagine_panel-prod-image">
+							<!-- IF IN CART  -->
+							<!-- <span class="reimagine_in-cart-check">
+									<i class="fas fa-check-circle"></i>
+								</span> -->
+							<!-- IF FEATURED  -->
+							<div class="reimagine_panel-sm-ribbon light-grey-bg-color text-white">
+								SOLD OUT
+							</div>
+							<!-- IF REQUIRED MEMBERSHIP  -->
+							<!-- <div class="reimagine_panel-card_membership text-white">
+									Membership Required
+									<span><i class="far fa-question-circle"></i>
+								</div> -->
+							<img src="assets/sample-product-card-image.jpg" alt="Sample Image">
+						</div>
+						<div class="reimagine_panel_card_info-wrapper">
+							<p class="reimagine_card-vendor-name sm">
+								Jill's Happy Farm
+							</p>
+							<p class="reimagine_panel-card-title">
+								Amazing Bag of Green Parsley
+							</p>
+							<div class="reimagine_stars-review-row reimagine_stars-review-row-sm">
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span>3 Reviews</span>
+							</div>
+							<p class="reimagine_panel-card-product-price secondary-color">
+								$49.99
+								<!-- IF SALE  -->
+								<!-- <span class="reimagine_panel-card-product-regular-price">(was $59.99)</span> -->
+							</p>
+
+							<button class="reimagine_panel-card-button sold-out lighter-bg-grey text-white"
+								data-toggle="tooltip" data-placement="top" title="Notify me when it's back">
+								NOTIFY ME
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-prod-panel reimagine_prod_panel">
+					<div class="panel reimagine_panel-prod-item">
+						<div class="reimagine_panel-prod-image">
+							<!-- IF IN CART  -->
+							<!-- <span class="reimagine_in-cart-check">
+									<i class="fas fa-check-circle"></i>
+								</span> -->
+							<!-- IF FEATURED  -->
+							<!-- <div class="reimagine_panel-sm-ribbon primary-bg-color text-white">
+									FEATURED
+								</div> -->
+							<!-- IF REQUIRED MEMBERSHIP  -->
+							<!-- <div class="reimagine_panel-card_membership text-white">
+									Membership Required
+									<span><i class="far fa-question-circle"></i>
+								</div> -->
+							<img src="assets/sample-product-card-image.jpg" alt="Sample Image">
+						</div>
+						<div class="reimagine_panel_card_info-wrapper">
+							<p class="reimagine_card-vendor-name sm">
+								Jill's Happy Farm
+							</p>
+							<p class="reimagine_panel-card-title">
+								Parsley
+							</p>
+							<div class="reimagine_stars-review-row reimagine_stars-review-row-sm">
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span>3 Reviews</span>
+							</div>
+							<p class="reimagine_panel-card-product-price secondary-color">
+								$49.99
+								<!-- IF SALE  -->
+								<!-- <span class="reimagine_panel-card-product-regular-price">(was $59.99)</span> -->
+							</p>
+
+							<button class="reimagine_panel-card-button add-to-cart primary-color">
+								ADD TO CART
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-prod-panel reimagine_prod_panel">
+					<div class="panel reimagine_panel-prod-item">
+						<div class="reimagine_panel-prod-image">
+							<!-- IF IN CART  -->
+							<!-- <span class="reimagine_in-cart-check">
+									<i class="fas fa-check-circle"></i>
+								</span> -->
+							<!-- IF FEATURED  -->
+							<div class="reimagine_panel-sm-ribbon primary-bg-color text-white">
+								FEATURED
+							</div>
+							<!-- IF REQUIRED MEMBERSHIP  -->
+							<!-- <div class="reimagine_panel-card_membership text-white">
+									Membership Required
+									<span><i class="far fa-question-circle"></i>
+								</div> -->
+							<img src="assets/sample-product-card-image.jpg" alt="Sample Image">
+						</div>
+						<div class="reimagine_panel_card_info-wrapper">
+							<p class="reimagine_card-vendor-name sm">
+								Jill's Happy Farm
+							</p>
+							<p class="reimagine_panel-card-title">
+								Amazing Bag of Green Parsley actually it's a really big bag
+							</p>
+							<div class="reimagine_stars-review-row reimagine_stars-review-row-sm">
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span>3 Reviews</span>
+							</div>
+							<p class="reimagine_panel-card-product-price secondary-color">
+								$49.99
+								<!-- IF SALE  -->
+								<!-- <span class="reimagine_panel-card-product-regular-price">(was $59.99)</span> -->
+							</p>
+
+							<button class="reimagine_panel-card-button add-to-cart primary-color">
+								ADD TO CART
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-prod-panel reimagine_prod_panel">
+					<div class="panel reimagine_panel-prod-item">
+						<div class="reimagine_panel-prod-image">
+							<!-- IF IN CART  -->
+							<!-- <span class="reimagine_in-cart-check">
+									<i class="fas fa-check-circle"></i>
+								</span> -->
+							<!-- IF FEATURED  -->
+							<div class="reimagine_panel-sm-ribbon primary-bg-color text-white">
+								FEATURED
+							</div>
+							<!-- IF REQUIRED MEMBERSHIP  -->
+							<!-- <div class="reimagine_panel-card_membership text-white">
+									Membership Required
+									<span><i class="far fa-question-circle"></i>
+								</div> -->
+							<img src="assets/sample-product-card-image.jpg" alt="Sample Image">
+						</div>
+						<div class="reimagine_panel_card_info-wrapper">
+							<p class="reimagine_card-vendor-name">
+								Jill's Happy Farm
+							</p>
+							<p class="reimagine_panel-card-title">
+								Amazing Bag of Green Parsley
+							</p>
+							<div class="reimagine_stars-review-row reimagine_stars-review-row-sm">
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span><i class="fas fa-star"></i></span>
+								<span>3 Reviews</span>
+							</div>
+							<p class="reimagine_panel-card-product-price secondary-color">
+								$49.99
+								<!-- IF SALE  -->
+								<!-- <span class="reimagine_panel-card-product-regular-price">(was $59.99)</span> -->
+							</p>
+
+							<button class="reimagine_panel-card-button add-to-cart primary-color">
+								ADD TO CART
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<div class="container">
+		<section class="reimagine_section featured-products">
+			<h3 class="reimagine_section-header">
+				YOU MAY ALSO LIKE
 			</h3>
 			<div class="row display-flex reimagine_panel-row">
 				<div class="col-prod-panel reimagine_prod_panel">
@@ -1183,308 +1387,6 @@
 
 	</div>
 	<!-- END FEATURED CARD SECTION   -->
-
-	<!-- START SHOP BY CATEGORY  -->
-
-	<div class="container">
-		<section class="reimagine_section shop-category">
-			<h3 class="reimagine_section-header">
-				SHOP BY CATEGORY
-			</h3>
-
-			<div class="row category-row">
-				<div class="col-xs-6 col-sm-4 text-center category-wrapper">
-					<div class="category-img-wrapper fruits">
-						<a href="/Marketplace?ProdType=All&amp;SortBy=Name&amp;Category=Fruit&amp;View=grid-view"><img
-								src="assets/fruits-bowl.png" alt="Fruit"></a>
-					</div>
-					Fruit
-				</div>
-				<div class="col-xs-6 col-sm-4 text-center category-wrapper">
-					<div class="category-img-wrapper meat">
-						<a href="/Marketplace?ProdType=All&amp;Category=Meat-Seafood&amp;View=grid-view"><img
-								src="assets/meat.png" alt="Meat"></a>
-					</div>
-					Meat
-				</div>
-				<div class="col-xs-6 col-sm-4 text-center category-wrapper">
-					<div class="category-img-wrapper vegetables">
-						<a href="/Marketplace?ProdType=All&amp;SortBy=Name&amp;Category=Vegetables&amp;View=grid-view"><img
-								src="assets/veggies.png" alt="Vegetables"></a>
-					</div>
-					Vegetables
-				</div>
-				<div class="col-xs-6 col-sm-4 text-center category-wrapper">
-					<div class="category-img-wrapper honey">
-						<a
-							href="/Marketplace?ProdType=All&amp;SortBy=Name&amp;Category=Pantry_Honey&amp;View=grid-view"><img
-								src="assets/honey.png" alt="Honey"></a>
-					</div>
-					Honey
-				</div>
-				<div class="col-xs-6 col-sm-4 text-center category-wrapper">
-					<div class="category-img-wrapper oil-spices">
-						<a href="/Marketplace?ProdType=All&amp;SortBy=Name&amp;Category=Condiments&amp;View=grid-view"><img
-								src="assets/spices-oil.png" alt="Oil and Spices"></a>
-					</div>
-					Oil &amp; Spices
-				</div>
-				<div class="col-xs-6 col-sm-4 text-center category-wrapper">
-					<div class="category-img-wrapper tea">
-						<a href="/Marketplace?ProdType=All&amp;SortBy=Name&amp;Category=Pantry_Tea&amp;View=grid-view"><img
-								src="assets/tea.png" alt="Tea"></a>
-					</div>
-					Tea
-				</div>
-			</div>
-
-		</section>
-
-	</div>
-	<!-- END SHOP BY CATEGORY  -->
-
-	<!-- START TESTIMONIALS  -->
-	<div class="container">
-		<section class="reimagine_section featured-in">
-			<h3 class="reimagine_section-header">
-				WHY OUR CUSTOMERS LOVE US
-			</h3>
-			<div class="reimagine_testimonial-row display-flex">
-				<div class="item active">
-					<div class="reimagine_testimonial text-center lp-testimonial-col"> <img
-							class="img-circle lp-img-circle" src="assets/Rhiannon-Mairi-200px.jpg"
-							alt="Generic placeholder image" width="140" height="140">
-						<div class="reimagine_lp-testimonial-item-content">
-							<p>I had a fantastic experience with DirectFood.store! I missed the drop-off and they
-								rearranged
-								it
-								for me with no issue, whatsoever. The food is delicious, and I love that it’s local!
-								I’ll
-								definitely be purchasing from DirectFood.store in future.</p>
-							<h4>Rhiannon</h4>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="reimagine_testimonial text-center lp-testimonial-col"> <img
-							class="img-circle lp-img-circle" src="assets/chelsea-200px.jpg"
-							alt="Generic placeholder image" width="140" height="140">
-						<div class="reimagine_lp-testimonial-item-content">
-							<p>Absolutely loved my experience with DirectFood.store. Their products came on time and the
-								website
-								was super easy to navigate to place my order. The instructions were super easy as to
-								when my
-								order would come. All the product was super fresh and delicious! No complaints here!</p>
-							<h4>Chelsea</h4>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="reimagine_testimonial text-center lp-testimonial-col"> <img
-							class="img-circle lp-img-circle" src="assets/tina-200px.jpg" alt="Generic placeholder image"
-							width="140" height="140">
-						<div class="reimagine_lp-testimonial-item-content">
-							<p>Ordered a variety of items, everything was delivered within a few days. Delivery driver
-								was
-								very
-								friendly. Loved the variety and uniqueness of products offered. Especially love the farm
-								to
-								table concept and being able to support our community farmers. Will definitely order
-								again
-							</p>
-							<h4>Tina</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</section>
-
-	</div>
-	<!-- END TESTIMONIALS  -->
-
-	<!-- START LOCAL FARMS  -->
-	<div class="container">
-		<section class="reimagine_section farms">
-			<h3 class="reimagine_section-header">
-				OUR FARM PARTNERS
-			</h3>
-			<div class="reimagine_farms-row display-flex">
-				<div id="farm-carousel" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<!-- <ol class="carousel-indicators">
-						<li data-target="#farm-carousel" data-slide-to="0" class="active"></li>
-						<li data-target="#farm-carousel" data-slide-to="1"></li>
-						<li data-target="#farm-carousel" data-slide-to="2"></li>
-					</ol> -->
-
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-
-						<div class="item active">
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-						</div>
-						<div class="item">
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-						</div>
-						<div class="item">
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-							<div class="col col-xs-3 reimagine_farm-column">
-								<img src="assets/farm-sample.jpg" alt="Los Angeles">
-							</div>
-						</div>
-					</div>
-
-					<!-- Left and right controls -->
-					<!-- <a class="left carousel-control" href="#farm-carousel" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#farm-carousel" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-						<span class="sr-only">Next</span>
-					</a> -->
-				</div>
-			</div>
-
-		</section>
-
-	</div>
-	<!-- END LOCAL FARMS  -->
-
-	<!-- START MARKETING BLOCKS  -->
-	<div class="container">
-		<section class="reimagine_section featured-in">
-			<div class="row support-farmers-row">
-				<div class="col col-md-6 hp-direct-rewards lazy-loaded">
-					<div class="hp-direct-rewards-overlay">
-					</div>
-					<div class="hp-direct-rewards-wrapper">
-						<div class=" hp-direct-rewards-label">
-							Introducing</div>
-						<div class="hp-direct-rewards-logo img-responsive"><img
-								src="https://dfsdev.webnow.cc/Home/assets/DirectRewards-shadow.svg" alt="DirectRewards">
-						</div>
-						<p class="hp-direct-rewards-desc">
-							DirectRewards is a new way
-							to shop and earn
-							rewards for your purchases at
-							DirectFood.store. For every purchase you make, you earn reward points that you can redeem
-							and get more.
-							There is no signup or monthly fee to join the DirectRewards program.</p>
-						<p class="hp-direct-rewards-benefits-header">
-							BENEFITS
-						</p>
-						<p class="hp-direct-rewards-point-list-item">
-							<span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-									stroke-linejoin="round" class="feather feather-check-circle">
-									<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-									<polyline points="22 4 12 14.01 9 11.01"></polyline>
-								</svg></span> Earn rewards with every purchase</p>
-						<p class="hp-direct-rewards-point-list-item">
-							<span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-									stroke-linejoin="round" class="feather feather-check-circle">
-									<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-									<polyline points="22 4 12 14.01 9 11.01"></polyline>
-								</svg></span> Earn rewards when you refer your friends and family</p>
-						<p class="hp-direct-rewards-point-list-item">
-							<span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-									stroke-linejoin="round" class="feather feather-check-circle">
-									<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-									<polyline points="22 4 12 14.01 9 11.01"></polyline>
-								</svg></span> Redeem rewards for purchases on DirectFood.store</p>
-						<a href="#">
-							<p class="hp-direct-rewards-cta">
-								LEARN MORE ⟶
-							</p>
-						</a>
-					</div>
-				</div>
-				<div class="col col-md-6 promo-video-col reimagine_marketing-block">
-					<div class="reimagine_marketing-block-content-wrapper">
-						<h3>ARE YOU A LOCAL FARMER?<br>HERE'S WHY YOU SHOULD JOIN US</h3>
-						<p>
-							As a Direct Food Store seller, you sell direct to customers without having to deal with
-							distributors. We market your brand, take care of deliveries and more, while you enjoy an
-							online presence
-							that will help grow a loyal customers base. You get paid directly and immediately right into
-							your
-							own merchant account. Let us help you get started on your online journey.
-						</p>
-						<button class="reimagine_primary-btn" role="button">JOIN US</button>
-					</div>
-				</div>
-			</div>
-			<div class="row support-farmers-row">
-				<div class="col col-md-6 promo-video-col reimagine_marketing-block">
-					<div class="reimagine_marketing-block-content-wrapper">
-						<h3>SHOWCASING THE BEST OF OUR<br>INDIGENOUS & FIRST NATIONS<br>COMMUNITIES</h3>
-						<p>
-							Are you a member of a First Nations community? Take advantage of our one-of-a-kind platform
-							– get easy access and delivery of local, fresh produce and beautiful Indigenous crafts.
-							Bring your unique products online and securely sell to help build a thriving and sustainable
-							local Indigenous economy. Become part of a healthy lifestyle eco-system!
-						</p>
-						<!-- <button class="reimagine_primary-btn" role="button">JOIN US</button> -->
-					</div>
-
-				</div>
-				<div class="col col-md-6 promo-video-col">
-					<div class="img usa lazy-loaded reimagine_usa">
-						<div class="usa-overlay lazy-loaded"></div>
-						<div class="reimagine_usa-wrapper">
-							<div class="reimagine_marketing-block-content-wrapper USA">
-								<h3>EXPERIENCE THE BEST YOUR LOCAL<br>FARMERS HAVE TO OFFER</h3>
-								<p>
-									Directfood.store is excited to launch in Victoria, BC and our first location outside
-									of Canada in South Carolina soon to deliver local and fresh produce from your local
-									farmers to you.
-								</p>
-								<!-- <button class="reimagine_primary-btn" role="button">JOIN US</button> -->
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-			</div>
-		</section>
-
-	</div>
-	<!-- END MARKETING BLOCKS  -->
 
 
 
