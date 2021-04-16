@@ -69,6 +69,11 @@
 			-webkit-box-shadow: none;
 		}
 
+		input.reimagine_form-control.expiry,
+		input.reimagine_form-control.cw {
+			padding-top: 16px;
+		}
+
 		select.reimagine_form-control {
 			padding: .5rem 1rem;
 			font-size: 1.4rem;
@@ -79,7 +84,8 @@
 		}
 
 		select#countrySelect,
-		select#stateSelect {
+		select#stateSelect,
+		select#buildingSelect {
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			background: transparent;
@@ -91,7 +97,10 @@
 		}
 
 		.country-form-group>label,
-		.state-form-group>label {
+		.state-form-group>label,
+		.expiry-form-group>label,
+		.cw-form-group>label,
+		.building-form-group>label {
 			font-size: .7em;
 			color: var(--light-grey);
 			font-weight: 400;
@@ -102,14 +111,27 @@
 
 		.country-form-group,
 		.state-form-group,
-		.postal-form-control {
+		.postal-form-control,
+		.expiry-form-group,
+		.cw-form-group {
 			width: 33%;
+			display: inline-block;
 		}
 
 		.region-wrapper {
 			display: flex;
 			justify-content: space-between;
 		}
+
+		.credit-card-wrapper {
+			display: flex;
+			justify-content: flex-start;
+		}
+
+		.credit-card-wrapper>* {
+			margin-right: 15px;
+		}
+
 
 		.input-group.same-as-billing {
 			display: inline-block;
@@ -124,7 +146,9 @@
 			display: inline-block;
 		}
 
-
+		p.reimagine_cart-header.special {
+			margin-bottom: -10px;
+		}
 
 		@media (max-width: 992px) {
 			.checkout-row {
@@ -141,11 +165,14 @@
 
 			.country-form-group,
 			.state-form-group,
-			.postal-form-control {
+			.postal-form-control,
+			.expiry-form-group,
+			.cw-form-control {
 				width: 100%;
 			}
 
-			.region-wrapper {
+			.region-wrapper,
+			.credit-card-wrapper {
 				flex-direction: column;
 			}
 
@@ -668,7 +695,7 @@
 									</div>
 									<!-- End HTMLBlock -->
 									<!-- IF NOT CHECKED THEN THIS.  -->
-									<!-- START HTMLBlock ShippingDetailsFalse  -->
+									<!-- START HTMLBlock "ShippingDetailsFalse"  -->
 									<!-- POPULATE THIS FORM WITH FIELDS FROM BILLING  -->
 									<!-- START FORM  -->
 									<div class="wrapper">
@@ -1126,7 +1153,7 @@
 										</form>
 									</div>
 
-
+									<!-- START HTMLBlock "PaymentDetails"  -->
 									<p class="reimagine_cart-header mb-10">
 										PAYMENT DETAILS
 									</p>
@@ -1138,20 +1165,69 @@
 												<input class="form-control form-control-lg reimagine_form-control"
 													type="text" placeholder="Name as it appears on card">
 											</div>
+
 											<div class="form-group">
 												<input class="form-control form-control-lg reimagine_form-control"
-													type="text" placeholder="Card Number">
+													type="text" placeholder="Card Number" id="card-number">
+
 											</div>
+
+											<div class="credit-card-wrapper">
+												<div class="form-group expiry-form-group">
+													<label for="Expiry">Expiry</label>
+													<input
+														class="form-control form-control-lg reimagine_form-control expiry"
+														type="text" placeholder="MM/YYY" id="expiry">
+												</div>
+												<div class=" form-group cw-form-group">
+													<label for="cw">CW</label>
+													<input
+														class="form-control form-control-lg reimagine_form-control cw"
+														type="text" placeholder="" id="cw">
+
+												</div>
+
+											</div>
+										</div>
+									</form>
+									<!-- End HTMLBlock -->
+									<form class="reimagine_billing-form">
+										<p class="reimagine_cart-header special mb-10">
+											SPECIAL INSTRUCTIONS
+										</p>
+										<div class="form-group special-form-group">
 											<div class="form-group">
-												<input class="form-control form-control-lg reimagine_form-control"
-													type="text" placeholder="Apartment, suite, etc...">
-											</div>
-											<div class="form-group postal-form-group">
-												<input class="form-control form-control-lg reimagine_form-control"
-													type="text" placeholder="Postal/Zip Code">
+												<label for="specialInstructions"></label>
+												<textarea class="form-control special-instructions-form-control mb-15"
+													id="specialInstructions" rows="3"></textarea>
 											</div>
 
+											<div class="form-group telephone-form-group">
+												<input class="form-control form-control-lg reimagine_form-control"
+													type="text" placeholder="Alternate Telephone"
+													id="alternate-ph-number">
+											</div>
 
+											<div class="form-group building-form-group">
+												<label for="buildingSelect">Building Type</label>
+												<select class="form-control reimagine_form-control" id="buildingSelect"
+													placeholder="Alternate Telephone">
+													<option value="" selected="">
+													</option>
+													<option value="Apartment">Apartment
+													</option>
+													<option value="Condo">Condo
+													</option>
+													<option value="Townhouse">Townhouse
+													</option>
+													<option value="House">House
+													</option>
+													<option value="Farm">Farm/Acreage
+													</option>
+
+													</option>
+												</select>
+											</div>
 									</form>
 
 								</div>
