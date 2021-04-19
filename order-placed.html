@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>DFS 3.0 REIMAGINE</title>
+
+	<!-- ICONS  -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<!-- FONT  -->
+	<link rel="stylesheet" type="text/css" href="https://use.typekit.net/kun4hds.css" />
+	<!-- Bootstrap -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<!-- FOR LOCAL ENVIRONMENT ONLY. REMOVE THIS IN PRODUCTION  -->
+	<link rel="stylesheet" href="https://dfsdev.webnow.cc/Templates/App/css/custom.css">
+	<!-- ADD TO CUSTOM.CSS -->
+	<link rel="stylesheet" href="reimagine_nav.css">
+	<link rel="stylesheet" href="reimagine_hero.css">
+	<link rel="stylesheet" href="reimagine_cards.css">
+	<link rel="stylesheet" href="checkout.css">
+
+</head>
+
+<body style="display: block;">
+
+	<div class="container-fluid">
+		<div class="container checkout-container">
+			<div class="row reimagine_checkout-row">
+				<!--Sidebar-->
+				<div class="col-md-5 col-md-push-7 checkout-sidebar">
+					<div class="checkout-right-wrapper">
+						<div class="secure">
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+									stroke-linejoin="round" class="feather feather-lock">
+									<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+									<path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+								</svg>
+							</span>
+							Secure Checkout
+						</div>
+						<div class="checkout-show-details hide-me">
+							Show Details
+							<span id="show-details">
+								<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'
+									fill='none' stroke='currentColor' stroke-width='1' stroke-linecap='round'
+									stroke-linejoin='round' class='feather feather-chevron-down'>
+									<polyline points='6 9 12 15 18 9'></polyline>
+								</svg>
+							</span>
+						</div>
+						<div class="mobile-slide-down-wrapper">
+							<div class="order-details-wrapper order-placed">
+								<p class="reimagine_cart-header order-details">
+									ORDER DETAILS
+								</p>
+								<div class="order-details-item-row">
+									<div class="wrapper display-flex" style="align-items: center;">
+										<div class="order-details-item-row-img-wrapper">
+											<img src="assets/meat.png" alt="Product image">
+										</div>
+										<div class="order-details-desc line-clamp-1"> Lean Sirloin Steak</div>
+									</div>
+
+
+								</div>
+
+								<div class="order-details-item-row">
+									<div class="wrapper display-flex" style="align-items: center;">
+										<div class="order-details-item-row-img-wrapper">
+											<img src="assets/coffee.png" alt="Product image">
+										</div>
+										<div class="order-details-desc line-clamp-1">Italian Dark Roast from White Rock
+										</div>
+									</div>
+
+
+								</div>
+
+								<div class="order-details-item-row">
+									<div class="wrapper display-flex" style="align-items: center;">
+										<div class="order-details-item-row-img-wrapper">
+											<img src="assets/charity.png" alt="Product image">
+										</div>
+										<div class="order-details-desc line-clamp-1">Charity Donation</div>
+									</div>
+
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!--Main Content-->
+				<!-- HTMLBlock "Breadcrumbs"  -->
+				<div class="col-md-7 col-md-pull-5">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-7">
+								<h1 class="text-center mt-40">YOUR ORDER IS ON ITS WAY!</h1>
+								<p class="order-placed-confirmation text-center mt-30">Order Placed</p>
+								<p class="payment-method text-center">Payment Method: Direct Food Store Accepts Major
+									Credit Cards.
+									Information Never Stored.
+								</p>
+								<!-- END HTMLBlock -->
+
+								<!-- HTMLBlock "Confirmation"  -->
+								<p class="reimagine_cart-header fix-cart-header">
+									CONFIRMATION NUMBER FROM JILL'S FARM
+								</p>
+								<a href="" class="confirmation-number">
+									123456789123456789
+								</a>
+								<p class="reimagine_cart-header fix-cart-header">
+									CONFIRMATION NUMBER FROM CAM'S FARM
+								</p>
+								<a href="" class="confirmation-number">
+									123456789123456789
+								</a>
+								<p class="reimagine_cart-header fix-cart-header">
+									CONFIRMATION NUMBER FROM JEREMIAH'S FARM
+								</p>
+								<a href="" class="confirmation-number">
+									123456789123456789
+								</a>
+								<p class="reimagine_cart-header fix-cart-header">
+									SHIPPING ADDRESS <span
+										style="font-size: .7em; font-weight: 400; color: var(--primary-medium-grey);"><a
+											href="#">Change</a></span>
+								</p>
+								<p class="billing-summary">
+									coolguy@wisebox.solutions<br>
+									John Smith<br>
+									112-123456 Main Street<br>
+									Abbotsford, BC, V3G 2Y5<br>
+									778-555-1212
+								</p>
+								<p class="reimagine_cart-header fix-cart-header">
+									ESTIMATED DELIVERY
+								</p>
+								<p>
+									Thursday, April 29, 2021 before end of day
+								</p>
+								<p class="reimagine_cart-header fix-cart-header">
+									IMPORTANT INFORMATION
+								</p>
+								<p>
+									Your order requires a person, 19-years or older, to be present at delivery.
+								</p>
+
+								<p class="reimagine_cart-header fix-cart-header">
+									THANK YOU FOR SHOPPING AT <a style="border-bottom: 1px solid var(--primary-color);"
+										href="https://www.directfood.store">DIRECT FOOD
+										STORE</a>
+								</p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="bootstrap.min.js"></script>
+	<script src="main.js"></script>
+	<!-- CHANGE USER ICON TO X **** PLEASE IMPORT INTO MAIN.JS -->
+	<script>
+		$(document).ready(function () {
+			$('.reimagine_billing-form.shipping-form').hide();
+			$('.reimagine_billing-form.payment-form').hide();
+
+			$(".category-dropdown-close-icon").click(function () {
+
+				$(".category-tabs > li").removeClass("active");
+				$(tabContentSelector).removeClass("active");
+			});
+
+
+		});
+		$('#signedin-payment-collapse').prop('checked', true);
+		$('#signedin-payment-collapse:checkbox').change(function () {
+			// use the :checked selector to find any that are checked
+			if ($(':checked').length) {
+				$('.reimagine_billing-form.payment-form').slideToggle();
+			} else {
+				$('.reimagine_billing-form.payment-form').slideUp();
+			}
+		});
+
+		$('#same-as-billing').prop('checked', true);
+		$('#same-as-billing:checkbox').change(function () {
+			// use the :checked selector to find any that are checked
+			if ($(':checked').length) {
+				$('.reimagine_billing-form.shipping-form').slideToggle();
+			} else {
+				$('.reimagine_billing-form.shipping-form').slideUp();
+			}
+		});
+
+		$("#show-details").click(function () {
+			$(".mobile-slide-down-wrapper").slideToggle("slow", function () {
+				// Animation complete.
+			});
+		});
+
+		// USER ICON 
+		$('#nav-user-icon').click(function () {
+			$(this).toggleClass("zmdi zmdi-account zmdi zmdi-close");
+		});
+		// TOGGLE ICON 
+		$('.navbar-toggle-new').click(function () {
+			$(this).toggleClass("navbar-toggle-new-open navbar-toggle-new-close");
+		});
+	</script>
+</body>
+
+</html>

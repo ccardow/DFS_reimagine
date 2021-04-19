@@ -138,12 +138,8 @@
 								<!-- <button type="submit" class="place-order-btn active">PLACE ORDER</button> -->
 							</div>
 						</div>
-
-
 					</div>
-
 				</div>
-
 				<!--Main Content-->
 				<!-- HTMLBlock "Breadcrumbs"  -->
 				<div class="col-md-7 col-md-pull-5">
@@ -153,7 +149,7 @@
 								<h1 class="text-center mt-40">CHECKOUT</h1>
 								<p class="checkout-breadcrumbs display-flex">
 									<!-- GO BACK TO THE CART  -->
-									<a href="#">Cart&nbsp;&nbsp;</a>
+									<a href="cart.html">Cart&nbsp;&nbsp;</a>
 									<span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 											viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
 											stroke-linecap="round" stroke-linejoin="round"
@@ -181,12 +177,24 @@
 								<!-- END HTMLBlock -->
 								<!-- HTMLBlock "BillingInformation"  -->
 								<div class="checkout-table-wrapper mt-30">
-									<p class="have-account">Already have an account? <a href="#">Sign In</a></p>
-									<p class="reimagine_cart-header mb-10">
+									<p class="welcome-message">Welcome back, John Smith</p>
+									<p class="reimagine_cart-header signedin-billing">
 										BILLING INFORMATION
 									</p>
-									<!-- START FORM  -->
-									<form class="reimagine_billing-form">
+									<div class="billing-summary-wrapper">
+										<p class="edit-billing-info">
+											Edit
+										</p>
+										<p class="billing-summary">
+											coolguy@wisebox.solutions<br>
+											John Smith<br>
+											112-123456 Main Street<br>
+											Abbotsford, BC, V3G 2Y5<br>
+											778-555-1212
+										</p>
+									</div>
+									<!-- START FORM SHOW IF EDITING IS REQUESTED  -->
+									<!-- <form class="reimagine_billing-form">
 										<div class="form-group reimagine_form-group">
 
 											<input type="email"
@@ -627,12 +635,12 @@
 											</div>
 
 										</div>
-										<!-- ADD INFO ? IN LATER ITERATION. SEE XD design  -->
+										ADD INFO ? IN LATER ITERATION. SEE XD design
 										<div class="form-group telephone-form-group">
 											<input class="form-control form-control-lg reimagine_form-control"
 												type="text" placeholder="Telephone">
 										</div>
-									</form>
+									</form>  -->
 									<!-- END HTMLBlock  -->
 									<!-- START HTMLBlock ShippingDetailsTrue  -->
 									<p class="reimagine_cart-header mb-10 fix-cart-header">
@@ -1106,12 +1114,17 @@
 										</form>
 									</div>
 
-									<!-- START HTMLBlock "PaymentDetails"  -->
-									<p class="reimagine_cart-header mb-10">
+									<p class="reimagine_cart-header mb-10 fix-cart-header">
 										PAYMENT DETAILS
 									</p>
+									<div class="input-group same-as-billing">
+										<span class="input-group-addon same-as-billing">
+											<input type="checkbox" id="signedin-payment-collapse" aria-label="..."
+												checked><span>&nbsp;&nbsp;Card Ending in 9922</span>
+										</span>
+									</div>
 									<!-- START FORM  -->
-									<form class="reimagine_billing-form">
+									<form class="reimagine_billing-form payment-form">
 										<div class="form-group reimagine_form-group">
 
 											<div class="form-group">
@@ -1201,62 +1214,108 @@
 												</select>
 											</div>
 									</form>
+									<div class="form-group special-form-group">
+										<div class="form-group">
+											<label for="specialInstructions"></label>
+											<textarea class="form-control special-instructions-form-control mb-15"
+												id="specialInstructions" rows="3"></textarea>
+										</div>
 
+										<div class="form-group telephone-form-group">
+											<input class="form-control form-control-lg reimagine_form-control"
+												type="text" placeholder="Alternate Telephone" id="alternate-ph-number">
+										</div>
+
+										<div class="form-group building-form-group">
+											<label for="buildingSelect">Building Type</label>
+											<select class="form-control reimagine_form-control" id="buildingSelect"
+												placeholder="Alternate Telephone">
+												<option value="" selected="">
+												</option>
+												<option value="Apartment">Apartment
+												</option>
+												<option value="Condo">Condo
+												</option>
+												<option value="Townhouse">Townhouse
+												</option>
+												<option value="House">House
+												</option>
+												<option value="Farm">Farm/Acreage
+												</option>
+
+												</option>
+											</select>
+										</div>
+										</form>
+
+									</div>
+									<button type="submit" class="place-order-btn mobile disabled">PLACE ORDER</button>
+									<!-- PLACE ORDER ACTIVE  -->
+									<!-- <button type="submit" class="place-order-btn active">PLACE ORDER</button> -->
 								</div>
-								<button type="submit" class="place-order-btn mobile disabled">PLACE ORDER</button>
-								<!-- PLACE ORDER ACTIVE  -->
-								<!-- <button type="submit" class="place-order-btn active">PLACE ORDER</button> -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
 
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="bootstrap.min.js"></script>
-	<script src="main.js"></script>
-	<!-- CHANGE USER ICON TO X **** PLEASE IMPORT INTO MAIN.JS -->
-	<script>
-		$(document).ready(function () {
-			$('.reimagine_billing-form.shipping-form').hide();
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="bootstrap.min.js"></script>
+		<script src="main.js"></script>
+		<!-- CHANGE USER ICON TO X **** PLEASE IMPORT INTO MAIN.JS -->
+		<script>
+			$(document).ready(function () {
+				$('.reimagine_billing-form.shipping-form').hide();
+				$('.reimagine_billing-form.payment-form').hide();
 
-			$(".category-dropdown-close-icon").click(function () {
+				$(".category-dropdown-close-icon").click(function () {
 
-				$(".category-tabs > li").removeClass("active");
-				$(tabContentSelector).removeClass("active");
+					$(".category-tabs > li").removeClass("active");
+					$(tabContentSelector).removeClass("active");
+				});
+
+
 			});
+			$('#signedin-payment-collapse').prop('checked', true);
+			$('#signedin-payment-collapse:checkbox').change(function () {
+				// use the :checked selector to find any that are checked
+				if ($(':checked').length) {
+					$('.reimagine_billing-form.payment-form').slideToggle();
+				} else {
+					$('.reimagine_billing-form.payment-form').slideUp();
+				}
+			});
+
 			$('#same-as-billing').prop('checked', true);
-		});
-		$(':checkbox').change(function () {
-			// use the :checked selector to find any that are checked
-			if ($(':checked').length) {
-				$('.reimagine_billing-form.shipping-form').slideToggle();
-			} else {
-				$('.reimagine_billing-form.shipping-form').slideUp();
-			}
-		});
-
-		$("#show-details").click(function () {
-			$(".mobile-slide-down-wrapper").slideToggle("slow", function () {
-				// Animation complete.
+			$('#same-as-billing:checkbox').change(function () {
+				// use the :checked selector to find any that are checked
+				if ($(':checked').length) {
+					$('.reimagine_billing-form.shipping-form').slideToggle();
+				} else {
+					$('.reimagine_billing-form.shipping-form').slideUp();
+				}
 			});
-		});
 
-		// USER ICON 
-		$('#nav-user-icon').click(function () {
-			$(this).toggleClass("zmdi zmdi-account zmdi zmdi-close");
-		});
-		// TOGGLE ICON 
-		$('.navbar-toggle-new').click(function () {
-			$(this).toggleClass("navbar-toggle-new-open navbar-toggle-new-close");
-		});
-	</script>
+			$("#show-details").click(function () {
+				$(".mobile-slide-down-wrapper").slideToggle("slow", function () {
+					// Animation complete.
+				});
+			});
+
+			// USER ICON 
+			$('#nav-user-icon').click(function () {
+				$(this).toggleClass("zmdi zmdi-account zmdi zmdi-close");
+			});
+			// TOGGLE ICON 
+			$('.navbar-toggle-new').click(function () {
+				$(this).toggleClass("navbar-toggle-new-open navbar-toggle-new-close");
+			});
+		</script>
 </body>
 
 </html>
