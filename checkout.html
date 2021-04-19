@@ -23,12 +23,27 @@
 	<link rel="stylesheet" href="reimagine_hero.css">
 	<link rel="stylesheet" href="reimagine_cards.css">
 	<style>
+		.checkout-container {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
 		.checkout-sidebar {
 			background: rgb(232, 235, 237);
 			background: linear-gradient(130deg, rgba(232, 235, 237, .8) 3%, rgb(255, 255, 255) 30%);
 			border-left: 1px solid var(--off-white-1);
 			height: 100vh;
 			color: var(--primary-dark-grey);
+			padding: 30px;
+			;
+		}
+
+		.secure {
+			display: inline-block;
+		}
+
+		.checkout-show-details {
+			float: right;
 		}
 
 		.checkout-breadcrumbs,
@@ -150,13 +165,132 @@
 			margin-bottom: -10px;
 		}
 
+		.checkout-right-wrapper {
+			position: fixed;
+			width: 375px;
+		}
+
+		.order-details-wrapper {
+			margin-top: 90px;
+			border-bottom: 1px solid var(--lighter-grey);
+			padding-bottom: 40px;
+		}
+
+		.subtotal-wrapper {
+			border-bottom: 1px solid var(--lighter-grey);
+			padding-bottom: 40px;
+		}
+
+		.coupon-wrapper {
+			padding-top: 30px;
+			border-bottom: 1px solid var(--lighter-grey);
+			padding-bottom: 20px;
+		}
+
+		.total-wrapper {
+			margin-top: 30px;
+		}
+
+		.order-details-item-row {
+			display: flex;
+			align-items: center;
+			flex: 1 1 auto;
+			justify-content: space-between;
+			margin-bottom: 15px;
+		}
+
+		.order-details-item-row-img-wrapper {
+			border: 1px solid var(--lighter-grey);
+			border-radius: 8px;
+			margin-right: 15px;
+		}
+
+		.order-details-item-row-img-wrapper img {
+			width: 64px;
+			height: 64px;
+		}
+
+		p.reimagine_cart-header.order-details {
+			margin-bottom: 15px;
+		}
+
+		.subtotal-fee {
+			font-weight: 700;
+		}
+
+		.coupon-btn {
+			height: 50px;
+			background-color: var(--light-grey);
+			color: #fff;
+			margin-left: 15px;
+			padding: 0 20px;
+			border-radius: 4px;
+		}
+
+		.place-order-btn {
+			height: 50px;
+			color: #fff;
+			border-radius: 4px;
+			text-align: center;
+			display: block;
+			width: 100%;
+			margin-top: 30px;
+		}
+
+		.place-order-btn.active {
+			background-color: var(--primary-color);
+		}
+
+		.place-order-btn.disabled {
+			background-color: var(--lighter-grey);
+		}
+
+		.total-price {
+			font-size: 20px;
+			font-weight: 600;
+		}
+
+		.line-clamp-1 {
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		.order-details-desc {
+			max-width: 64%;
+		}
+
+		@media (min-width: 991px) {
+			.place-order-btn.mobile {
+				display: none;
+			}
+
+			.mobile-slide-down-wrapper {
+				display: block;
+			}
+		}
+
 		@media (max-width: 992px) {
+			.checkout-container {
+				margin: 0;
+				width: 100%;
+			}
+
 			.checkout-row {
 				flex-direction: column;
 			}
 
 			.checkout-sidebar {
 				height: unset;
+				background: linear-gradient(130deg, rgba(232, 235, 237, .8) 30%, rgb(255, 255, 255) 80%);
+			}
+
+
+			.checkout-right-wrapper {
+				position: relative;
+				width: 100%;
+
 			}
 
 			.reimagine_billing-form {
@@ -176,6 +310,34 @@
 				flex-direction: column;
 			}
 
+			.checkout-show-details {
+				display: inline-flex;
+			}
+
+			.place-order-btn.desktop {
+				display: none;
+			}
+
+			.mobile-slide-down-wrapper {
+				display: none;
+			}
+		}
+
+		@media (max-width: 600px) {
+			.checkout-right-wrapper {
+				width: unset;
+			}
+
+			.secure,
+			.checkout-show-details {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.checkout-show-details {
+				float: none;
+			}
 		}
 	</style>
 </head>
@@ -183,12 +345,119 @@
 <body style="display: block;">
 
 	<div class="container-fluid">
-		<div class="container">
+		<div class="container checkout-container">
 			<div class="row reimagine_checkout-row">
 				<!--Sidebar-->
-
 				<div class="col-md-5 col-md-push-7 checkout-sidebar">
-					Sidebar
+					<div class="checkout-right-wrapper">
+						<div class="secure">
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+									stroke-linejoin="round" class="feather feather-lock">
+									<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+									<path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+								</svg>
+							</span>
+							Secure Checkout
+						</div>
+						<div class="checkout-show-details hide-me">
+							Show Details
+							<span id="show-details">
+								<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'
+									fill='none' stroke='currentColor' stroke-width='1' stroke-linecap='round'
+									stroke-linejoin='round' class='feather feather-chevron-down'>
+									<polyline points='6 9 12 15 18 9'></polyline>
+								</svg>
+							</span>
+						</div>
+						<div class="mobile-slide-down-wrapper">
+							<div class="order-details-wrapper">
+								<p class="reimagine_cart-header order-details">
+									ORDER DETAILS
+								</p>
+								<div class="order-details-item-row">
+									<div class="wrapper display-flex" style="align-items: center;">
+										<div class="order-details-item-row-img-wrapper">
+											<img src="assets/meat.png" alt="Product image">
+										</div>
+										<div class="order-details-desc line-clamp-1"> Lean Sirloin Steak</div>
+									</div>
+
+									<div class="order-details-price">$72.00</div>
+								</div>
+
+								<div class="order-details-item-row">
+									<div class="wrapper display-flex" style="align-items: center;">
+										<div class="order-details-item-row-img-wrapper">
+											<img src="assets/coffee.png" alt="Product image">
+										</div>
+										<div class="order-details-desc line-clamp-1">Italian Dark Roast from White Rock
+										</div>
+									</div>
+
+									<div class="order-details-price">$12.00</div>
+								</div>
+
+								<div class="order-details-item-row">
+									<div class="wrapper display-flex" style="align-items: center;">
+										<div class="order-details-item-row-img-wrapper">
+											<img src="assets/charity.png" alt="Product image">
+										</div>
+										<div class="order-details-desc line-clamp-1">Charity Donation</div>
+									</div>
+
+									<div class="order-details-price">$12.00</div>
+								</div>
+							</div>
+
+							<div class="subtotal-wrapper">
+								<div class="subtotal-item-row">
+									<p class="reimagine_cart-header order-details">
+										SUBTOTAL
+									</p>
+									<div class="wrapper display-flex"
+										style="justify-content: space-between; margin-bottom: 12px;">
+										<div class="subtotal-item">Item Subtotal</div>
+										<div class="subtotal-fee">$12.00</div>
+									</div>
+									<div class="wrapper display-flex"
+										style="justify-content: space-between; margin-bottom: 12px;">
+										<div class="order-details-desc">Shipping</div>
+										<div class="order-details-price">$0.00</div>
+									</div>
+									<div class="wrapper display-flex"
+										style="justify-content: space-between; margin-bottom: 12px;">
+										<div class="order-details-desc">Taxes</div>
+										<div class="order-details-price">$0.00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="coupon-wrapper">
+								<div class="form-group coupon-form-group display-flex">
+									<input class="form-control form-control-lg reimagine_form-control" type="text"
+										placeholder="Gift Card or Discount Code" id="gift-card">
+									<button type="submit" class="coupon-btn">Apply</button>
+								</div>
+							</div>
+
+							<div class="total-wrapper">
+								<div class="wrapper display-flex"
+									style="justify-content: space-between; margin-bottom: 12px; align-items: center;">
+									<div class="order-details-desc">Total</div>
+									<div class="total-price">$76.00</div>
+								</div>
+								<!-- PLACE ORDER DISABLED UNTIL ALL FIELDS FILLED  -->
+								<button type="submit" class="place-order-btn desktop disabled">PLACE ORDER</button>
+								<!-- PLACE ORDER ACTIVE  -->
+								<!-- <button type="submit" class="place-order-btn active">PLACE ORDER</button> -->
+							</div>
+						</div>
+
+
+					</div>
+
 				</div>
 
 				<!--Main Content-->
@@ -1231,6 +1500,9 @@
 									</form>
 
 								</div>
+								<button type="submit" class="place-order-btn mobile disabled">PLACE ORDER</button>
+								<!-- PLACE ORDER ACTIVE  -->
+								<!-- <button type="submit" class="place-order-btn active">PLACE ORDER</button> -->
 							</div>
 						</div>
 					</div>
@@ -1265,6 +1537,12 @@
 			} else {
 				$('.reimagine_billing-form.shipping-form').slideUp();
 			}
+		});
+
+		$("#show-details").click(function () {
+			$(".mobile-slide-down-wrapper").slideToggle("slow", function () {
+				// Animation complete.
+			});
 		});
 
 		// USER ICON 
