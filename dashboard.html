@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>DFS 3.0 REIMAGINE</title>
+
+	<!-- ICONS  -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<!-- FONT  -->
+	<link rel="stylesheet" type="text/css" href="https://use.typekit.net/kun4hds.css" />
+	<!-- Bootstrap -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<!-- FOR LOCAL ENVIRONMENT ONLY. REMOVE THIS IN PRODUCTION  -->
+	<link rel="stylesheet" href="https://dfsdev.webnow.cc/Templates/App/css/custom.css">
+	<!-- ADD TO CUSTOM.CSS -->
+	<link rel="stylesheet" href="reimagine_nav.css">
+	<link rel="stylesheet" href="reimagine_hero.css">
+	<link rel="stylesheet" href="reimagine_cards.css">
+	<link rel="stylesheet" href="checkout.css">
+	<style>
+		.container-fluid.dashboard-account {
+			background-color: var(--off-white-1);
+		}
+
+		.container-fluid.admin-account {
+			background-color: var(--light-grey);
+		}
+
+
+
+		.dashboard-header {
+			color: #000;
+			font-size: 5.6em;
+		}
+
+		.dashboard-header span {
+			color: var(--primary-color);
+		}
+
+		.dashboard-subheader {
+			font-size: 2em;
+			font-weight: 300;
+			color: var(--primary-medium-grey);
+			margin-top: -22px;
+		}
+
+		.dashboard-section-header {
+			font-size: 1.8em;
+			font-weight: 300;
+
+		}
+
+		.dashboard-panel {
+			padding: 12px 16px 16px 24px;
+			min-height: 220px;
+		}
+
+		.dashboard-panel-body {
+			display: flex;
+			flex-direction: column;
+		}
+
+		p.dashboard-panel-title {
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 1.4em;
+		}
+
+		.dashboard-panel-text {
+			color: var(--light-grey);
+			line-height: 1.6;
+			font-size: 1.1em;
+		}
+	</style>
+
+</head>
+
+<body style="display:block">
+	<div class="container-fluid dashboard-account">
+		<h1 class="dashboard-header text-center mt-60">
+			DIRECTFOOD<span>.</span>STORE
+		</h1>
+		<p class="dashboard-subheader text-center">
+			DASHBOARD
+		</p>
+		<div class="container account-container">
+			<p class="dashboard-section-header mt-50">
+				YOUR ACCOUNT
+			</p>
+			<div class="row dashboard-row mb-50">
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Admin</p>
+							<p class="panel-text dashboard-panel-text">Customize your site, add pages, upload
+								files and more.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Profile</p>
+							<p class="panel-text dashboard-panel-text">Add your profile here to help us serve you better
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Password</p>
+							<p class="panel-text dashboard-panel-text">Change your password. We recommend the use of
+								strong passwords that cannot be easily guessed.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Set Two factor Sign In</p>
+							<p class="panel-text dashboard-panel-text"><strong>For Advanced Users.</strong><br>
+								Two Factor Login allows you to tie your account login to a particular device.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Access Control</p>
+							<p class="panel-text dashboard-panel-text">
+								Join or leave an organization within the Directfood Store community.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Direct Rewards</p>
+							<p class="panel-text dashboard-panel-text">
+								View your DirectRewards points and refer friends to get more points.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<p class="dashboard-section-header mt-50">
+				YOUR BUSINESS
+			</p>
+			<div class="row dashboard-row mb-50">
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Memberships</p>
+							<p class="panel-text dashboard-panel-text">View your memberships</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Manage Business</p>
+							<p class="panel-text dashboard-panel-text">Everything you need to manage your DirectFood
+								Store online business.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Manage Associations</p>
+							<p class="panel-text dashboard-panel-text">Manage your associations</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid admin-account">
+
+		<div class="container account-container">
+			<p class="dashboard-section-header text-white mt-50">
+				REPORTING
+			</p>
+			<div class="row dashboard-row mb-50">
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Reports</p>
+							<p class="panel-text dashboard-panel-text">See what's selling and check the status of your
+								business</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Deliveries</p>
+							<p class="panel-text dashboard-panel-text">Add your delivery preferences here.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">Support</p>
+							<p class="panel-text dashboard-panel-text">Contact our support team for online help.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col-sm-6 col-md-4">
+					<div class="panel dashboard-panel display-flex">
+						<div class="panel-body dashboard-panel-body">
+							<p class="panel-title dashboard-panel-title">User Content</p>
+							<p class="panel-text dashboard-panel-text">Edit reviews and more.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
