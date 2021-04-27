@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>DFS 3.0 REIMAGINE</title>
+
+	<!-- ICONS  -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<!-- FONT  -->
+	<link rel="stylesheet" type="text/css" href="https://use.typekit.net/kun4hds.css" />
+	<!-- Bootstrap -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<!-- FOR LOCAL ENVIRONMENT ONLY. REMOVE THIS IN PRODUCTION  -->
+	<link rel="stylesheet" href="https://dfsstage.webnow.cc/Templates/App/css/custom.css">
+	<!-- ADD TO CUSTOM.CSS -->
+	<link rel="stylesheet" href="reimagine_nav.css">
+	<link rel="stylesheet" href="reimagine_hero.css">
+	<link rel="stylesheet" href="reimagine_cards.css">
+	<style>
+		img.reimagine_blog-image {
+			width: 100%;
+		}
+
+		h3.reimagine_blog-title {
+			font-weight: 400;
+		}
+
+		p.reimagine_blog-type {
+			display: inline-block;
+			padding: 10px 20px;
+			border-top: 1px solid var(--lighter-grey);
+			border-bottom: 1px solid var(--lighter-grey);
+		}
+	</style>
+</head>
+
+<body>
+	<!-- START NAV  -->
+	<nav class="navbar navbar-fixed-top reimagine_navbar">
+		<div>
+			<div class="reimagine_header_container container">
+				<!-- CATEGORY PILLS STARTS  -->
+				<div class="reimagine_category-pills-container"
+					style="order: 2; flex: 1 1 auto; display: flex; align-items: center; align-content: center; width: 100%;">
+					<div class="container-fluid category-container category-pills-fixer reimagine_category-container"
+						id="tablist">
+						<div class="hide-mobile-p">
+							<div class="col-12">
+								<div class="tabbable">
+									<div class="category-tabs-wrap">
+										<ul
+											class="nav nav-tabs justify-content-center category-tabs reimagine_category-tabs">
+											<li> <a class="trigger" data-target="#tab" data-toggle="tab"
+													role="button">New Arrivals</a> </li>
+											<li> <a class="trigger" data-target="#tab-Fruit" data-toggle="tab"
+													role="button">Fruit</a> </li>
+											<li> <a class="trigger" data-target="#tab-Meat-Dairy" data-toggle="tab"
+													role="button">Meat &amp; Dairy</a> </li>
+											<li> <a class="trigger" data-target="#tab-Miscellaneous" data-toggle="tab"
+													role="button">Miscellaneous</a> </li>
+											<li> <a class="trigger" data-target="#tab-Pantry" data-toggle="tab"
+													role="button">Pantry</a> </li>
+											<li class=""> <a class="trigger" data-target="#tab-PetFood"
+													data-toggle="tab" role="button" aria-expanded="false">Pet
+													Food</a> </li>
+											<li class=""> <a class="trigger" data-target="#tab-Seafood"
+													data-toggle="tab" role="button" aria-expanded="false">Seafood</a>
+											</li>
+											<li class=""> <a class="trigger" data-target="#tab-Vegetables"
+													data-toggle="tab" role="button" aria-expanded="true">Vegetables</a>
+											</li>
+										</ul>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Fruit">
+											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon"> <svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=Fruit">All
+															Fruit</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Apples">Apples</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Apricots">Apricots</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Blueberries">Blueberries</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Cherries-pie">Cherries
+																(pie)</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Crab-Apples">Crab
+																Apples</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Cranberries">Cranberries</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Currants">Currants</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Grapes">Grapes</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Kiwi">Kiwi</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Melons">Melons</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Peaches">Peaches</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Raspberries">Raspberries</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Fruit_Strawberries">Strawberries</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img src="Home/assets/menu-Fruit.svg">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Meat-Dairy">
+											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=Meat-Dairy">All
+															Meat &amp; Dairy</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Beef">Beef</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Dairy-Products">Dairy
+																Products</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Eggs">Eggs</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Goat">Goat</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Lamb">Lamb</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Pork">Pork</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-and-Dairy_Salmon">Salmon</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Meat-Dairy_Turkey">Turkey</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img
+														src="Home/assets/menu-Meat-Dairy.svg"> </div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Miscellaneous">
+											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
+												<div class="menu-content-left">
+													<p class="all"><a
+															href="?ProdType=All&amp;Category=Miscellaneous">All
+															Miscellaneous</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Miscellaneous_Grains">Grains</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Miscellaneous_Mushrooms">Mushrooms</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Miscellaneous_Nuts">Nuts</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img
+														src="Home/assets/menu-Miscellaneous.svg"> </div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Pantry">
+											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=Pantry">All
+															Pantry</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Honey">Honey</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Jam">Jam</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Oil">Oil</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Rice">Rice</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Spices">Spices</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Tea">Tea</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Pantry_Vinegar">Vinegar</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img src="Home/assets/menu-Pantry.svg">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-PetFood">
+											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=PetFood">All Pet
+															Food</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=PetFood_CatFood">Cat
+																Food</a></li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img
+														src="Home/assets/menu-PetFood.svg"> </div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Seafood">
+											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=Seafood">All
+															Seafood</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Seafood_Crab">Crab</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Seafood_Herring">Herring</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img
+														src="Home/assets/menu-Seafood.svg"> </div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-content" id="tab-content">
+										<div class="tab-pane reimagine_tab-pane collapse" id="tab-Vegetables">
+											<div class="menu-content-wrapper">
+												<div class="category-dropdown-close-icon"><svg
+														xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none" stroke="var(--lighter-grey)"
+														stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+														class="feather feather-x">
+														<line x1="18" y1="6" x2="6" y2="18"></line>
+														<line x1="6" y1="6" x2="18" y2="18"></line>
+													</svg></div>
+												<div class="menu-content-left">
+													<p class="all"><a href="?ProdType=All&amp;Category=Vegetables">All
+															Vegetables</a></p>
+													<ul>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Artichokes">Artichokes</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Beets">Beets</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Carrots">Carrots</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Corn">Corn</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Cucumbers">Cucumbers</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Leeks">Leeks</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Lettuce">Lettuce</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Mushrooms">Mushrooms</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Parsley">Parsley</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Potatoes-Red-Russet-Yellow">Potatoes
+																- Red/Russet/Yellow</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Potatoes-White">Potatoes
+																- White</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Pumpkin">Pumpkin</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Radishes">Radishes</a>
+														</li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Salad-Greens">Salad
+																Greens</a></li>
+														<li><a
+																href="/Marketplace?ProdType=All&amp;Category=Vegetables_Tomatoes">Tomatoes</a>
+														</li>
+													</ul>
+												</div>
+												<div class="menu-content-right"> <img
+														src="Home/assets/menu-Vegetables.svg"> </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END OF CATEGORY PILLS -->
+
+				<!-- START NAVBAR ICON GROUP  -->
+				<div class="reimagine_icon-group"> <span class="nav-rewards-icon-wrapper"> 999 <span><i
+								class="zmdi zmdi-star"></i></span></span>
+
+					<span id="nav-user-icon" data-toggle="collapse" data-target="#reimagine_navbar-profile"
+						aria-expanded="true" aria-controls="navbar"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+							height="20" viewBox="0 0 24 24" fill="none" stroke="var(--secondary-color)"
+							stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"
+							class="feather feather-user">
+							<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+							<circle cx="12" cy="7" r="4"></circle>
+						</svg></span>
+
+					<span class="nav-cart-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+							stroke="var(--secondary-color)" stroke-width="1.3" stroke-linecap="round"
+							stroke-linejoin="round" class="feather feather-shopping-bag">
+							<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+							<line x1="3" y1="6" x2="21" y2="6"></line>
+							<path d="M16 10a4 4 0 0 1-8 0"></path>
+						</svg>
+						<span class="cart-items-ticker">20</span>
+					</span>
+
+					<span class="nav-search-icon" data-toggle="collapse" data-target="#navbar-search"
+						aria-expanded="true" aria-controls="navbar"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+							height="20" viewBox="0 0 24 24" fill="none" stroke="var(--secondary-color)"
+							stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"
+							class="feather feather-search">
+							<circle cx="11" cy="11" r="8"></circle>
+							<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+						</svg></span>
+
+					<!-- HAMBURGER			 -->
+					<div type="button" data-toggle="collapse" data-target="#reimagine_navbar-menu" aria-expanded="true"
+						aria-controls="navbar" class="navbar-toggle-new"> <span class="sr-only">Toggle
+							navigation</span> <span class="icon-bar_middle"> </span> </div>
+				</div>
+				<!-- END NAVBAR ICON GROUP  -->
+
+				<!-- NAVBAR BRAND LOGO  -->
+				<a class="navbar-brand reimagine_navbar-brand" href="#"><img src="default_300px.png" alt="Logo"></a>
+			</div>
+			<!-- DROPDOWN MENU Profile Sign Up and Sign IN  -->
+			<div id="reimagine_navbar-profile" aria-expanded="false" class="navbar collapse">
+				<ul class="reimagine_menu reimagine_menu-profile">
+					<li><a href="/Login">Sign In</a></li>
+					<li><a href="/Sign Up">Sign Up</a></li>
+				</ul>
+			</div>
+			<!-- DROPDOWN MENU Basic Nav  -->
+			<div id="reimagine_navbar-menu" aria-expanded="false" class="navbar collapse">
+				<ul class="reimagine_menu">
+					<li><a href="/FarmDirectory">Farm Directory</a></li>
+					<li><a href="/SellDirect">Sell Direct</a></li>
+					<li><a href="/Restaurants">Restaurants</a></li>
+				</ul>
+			</div>
+			<!-- DROPDOWN MENU SEARCH  -->
+			<div id="navbar-search" aria-expanded="false" class="navbar collapse reimagine_navbar-search">
+				<form class="navbar-form reimagine_navbar-form">
+					<div class="form-group reimagine_form_group">
+						<input type="search" placeholder="What are you looking for?"
+							class="form-control reimagine_form_control">
+					</div>
+				</form>
+			</div>
+			<!--/.navbar-collapse -->
+		</div>
+	</nav>
+	<!-- END NAV  -->
+
+	<h1 class="text-center mt-40">BLOGS</h1>
+	<p class="blog-subhead text-center light-grey">
+		Stuff you need to read about if you love food as much as we do.
+	</p>
+
+	<div class="container blogs-container">
+		<div class="row blogs-row mt-40">
+
+			<div class="col col-sm-6 col-md-4 mb-30">
+				<div class="reimagine_blog-wrapper text-center">
+					<div class="reimagine_blog-image">
+						<img src="/assets/food-1-450px.jpg" alt="" class="reimagine_blog-image">
+					</div>
+					<p class="reimagine_blog-date text-center light-grey mt-20">APRIL 29, 2021</p>
+					<h3 class="reimagine_blog-title text-center primary-medium-grey">
+						A REALLY COOL BLOG WITH A REALLY LONG TITLE THAT MAKE YOU WONDER WHY WOULD SOMEONE WRITE SUCH A
+						LONG TITLE
+					</h3>
+					<p class="reimagine_blog-type text-center light-grey mt-20">
+						BLOG
+					</p>
+				</div>
+			</div>
+
+			<div class="col col-sm-6 col-md-4 mb-30">
+				<div class="reimagine_blog-wrapper text-center">
+					<div class="reimagine_blog-image">
+						<img src="/assets/food-2-450px.jpg" alt="" class="reimagine_blog-image">
+					</div>
+					<p class="reimagine_blog-date text-center light-grey mt-20">APRIL 29, 2021</p>
+					<h3 class="reimagine_blog-title text-center primary-medium-grey">
+						A REALLY COOL BLOG WITH A REALLY LONG TITLE THAT MAKE YOU WONDER WHY WOULD SOMEONE WRITE SUCH A
+						LONG TITLE
+					</h3>
+					<p class="reimagine_blog-type text-center light-grey mt-20">
+						RECIPE
+					</p>
+				</div>
+			</div>
+
+			<div class="col col-sm-6 col-md-4 mb-30">
+				<div class="reimagine_blog-wrapper text-center">
+					<div class="reimagine_blog-image">
+						<img src="/assets/food-3-450px.jpg" alt="" class="reimagine_blog-image">
+					</div>
+					<p class="reimagine_blog-date text-center light-grey mt-20">APRIL 29, 2021</p>
+					<h3 class="reimagine_blog-title text-center primary-medium-grey">
+						A REALLY COOL BLOG WITH A REALLY LONG TITLE THAT MAKE YOU WONDER WHY WOULD SOMEONE WRITE SUCH A
+						LONG TITLE
+					</h3>
+					<p class="reimagine_blog-type text-center light-grey mt-20">
+						RECIPE
+					</p>
+				</div>
+			</div>
+
+			<div class="col col-sm-6 col-md-4 mb-30">
+				<div class="reimagine_blog-wrapper text-center">
+					<div class="reimagine_blog-image">
+						<img src="/assets/food-1-450px.jpg" alt="" class="reimagine_blog-image">
+					</div>
+					<p class="reimagine_blog-date text-center light-grey mt-20">APRIL 29, 2021</p>
+					<h3 class="reimagine_blog-title text-center primary-medium-grey">
+						A REALLY COOL BLOG WITH A REALLY LONG TITLE THAT MAKE YOU WONDER WHY WOULD SOMEONE WRITE SUCH A
+						LONG TITLE
+					</h3>
+					<p class="reimagine_blog-type text-center light-grey mt-20">
+						BLOG
+					</p>
+				</div>
+			</div>
+
+			<div class="col col-sm-6 col-md-4 mb-30">
+				<div class="reimagine_blog-wrapper text-center">
+					<div class="reimagine_blog-image">
+						<img src="/assets/food-2-450px.jpg" alt="" class="reimagine_blog-image">
+					</div>
+					<p class="reimagine_blog-date text-center light-grey mt-20">APRIL 29, 2021</p>
+					<h3 class="reimagine_blog-title text-center primary-medium-grey">
+						A REALLY COOL BLOG WITH A REALLY LONG TITLE THAT MAKE YOU WONDER WHY WOULD SOMEONE WRITE SUCH A
+						LONG TITLE
+					</h3>
+					<p class="reimagine_blog-type text-center light-grey mt-20">
+						RECIPE
+					</p>
+				</div>
+			</div>
+
+			<div class="col col-sm-6 col-md-4 mb-30">
+				<div class="reimagine_blog-wrapper text-center">
+					<div class="reimagine_blog-image">
+						<img src="/assets/food-3-450px.jpg" alt="" class="reimagine_blog-image">
+					</div>
+					<p class="reimagine_blog-date text-center light-grey mt-20">APRIL 29, 2021</p>
+					<h3 class="reimagine_blog-title text-center primary-medium-grey">
+						A REALLY COOL BLOG WITH A REALLY LONG TITLE THAT MAKE YOU WONDER WHY WOULD SOMEONE WRITE SUCH A
+						LONG TITLE
+					</h3>
+					<p class="reimagine_blog-type text-center light-grey mt-20">
+						RECIPE
+					</p>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="bootstrap.min.js"></script>
+	<script src="main.js"></script>
+	<!-- CHANGE USER ICON TO X **** PLEASE IMPORT INTO MAIN.JS -->
+	<script>
+		$(document).ready(function () {
+
+			$(".category-dropdown-close-icon").click(function () {
+
+				$(".category-tabs > li").removeClass("active");
+				$(tabContentSelector).removeClass("active");
+			});
+		});
+		// USER ICON 
+		$('#nav-user-icon').click(function () {
+			$(this).toggleClass("zmdi zmdi-account zmdi zmdi-close");
+		});
+		// TOGGLE ICON 
+		$('.navbar-toggle-new').click(function () {
+			$(this).toggleClass("navbar-toggle-new-open navbar-toggle-new-close");
+		});
+	</script>
+</body>
+
+</html>
