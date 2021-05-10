@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>DFS 3.0 REIMAGINE</title>
+
+	<!-- ICONS  -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<!-- FONT  -->
+	<link rel="stylesheet" type="text/css" href="https://use.typekit.net/kun4hds.css" />
+	<!-- Bootstrap -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<!-- FOR LOCAL ENVIRONMENT ONLY. REMOVE THIS IN PRODUCTION  -->
+	<link rel="stylesheet" href="https://dfsdev.webnow.cc/Templates/App/css/custom.css">
+	<!-- ADD TO CUSTOM.CSS -->
+	<link rel="stylesheet" href="reimagine_nav.css">
+	<link rel="stylesheet" href="reimagine_hero.css">
+	<link rel="stylesheet" href="reimagine_cards.css">
+	<link rel="stylesheet" href="checkout.css">
+	<link rel="stylesheet" href="driver-signup.css">
+
+
+</head>
+
+<body style="display: block;">
+
+	<!-- HERO and SIGN-UP FORM -->
+	<div class="jumbotron driver-signup-jumbotron img-responsive">
+		<div class="driver-overlay"></div>
+		<div class="dfs-branding">
+			<img src="/assets/DFS logo-white.svg" alt="DFS-Logo">
+		</div>
+		<div class="container driver-hero-container">
+			<div class="row driver-hero-row mt-60">
+				<div class="col col-lg-6 driver-left-column">
+					<h1 class="driver-hero-headline">
+						DELIVER WITH<br>DIRECTFOOD<span>.</span>STORE
+					</h1>
+					<p class="driver-hero-subhead">
+						Lorem ipsum dolor sit amet consecteturexercitationem accusantium minus aperiam molestiae
+						praesentium, accusamus?
+					</p>
+				</div>
+				<div class="col col-lg-6 driver-right-column">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- END HERO and SIGN-UP FORM -->
+
+	<!-- KEY BENEFITS ICONS SECTION  -->
+	<!-- END KEY BENEFITS ICONS SECTION  -->
+
+	<!-- BENEFITS OF JOINING  -->
+	<!-- END BENEFITS OF JOINING  -->
+
+	<!-- STEPS  -->
+	<!-- END STEPS  -->
+
+	<!-- FAQ  -->
+	<!-- END FAQ  -->
+
+	<!-- CTA  -->
+	<!-- END CTA  -->
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="bootstrap.min.js"></script>
+	<script src="main.js"></script>
+	<!-- CHANGE USER ICON TO X **** PLEASE IMPORT INTO MAIN.JS -->
+	<script>
+		$(document).ready(function () {
+			$('.reimagine_billing-form.shipping-form').hide();
+
+			$(".category-dropdown-close-icon").click(function () {
+
+				$(".category-tabs > li").removeClass("active");
+				$(tabContentSelector).removeClass("active");
+			});
+			$('#same-as-billing').prop('checked', true);
+		});
+		$(':checkbox').change(function () {
+			// use the :checked selector to find any that are checked
+			if ($(':checked').length) {
+				$('.reimagine_billing-form.shipping-form').slideToggle();
+			} else {
+				$('.reimagine_billing-form.shipping-form').slideUp();
+			}
+		});
+
+		$("#show-details").click(function () {
+			$(".mobile-slide-down-wrapper").slideToggle("slow", function () {
+				// Animation complete.
+			});
+		});
+
+		// USER ICON 
+		$('#nav-user-icon').click(function () {
+			$(this).toggleClass("zmdi zmdi-account zmdi zmdi-close");
+		});
+		// TOGGLE ICON 
+		$('.navbar-toggle-new').click(function () {
+			$(this).toggleClass("navbar-toggle-new-open navbar-toggle-new-close");
+		});
+	</script>
+</body>
+
+</html>
