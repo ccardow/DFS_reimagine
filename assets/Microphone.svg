@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.334" height="41.839" viewBox="0 0 20.334 41.839">
+  <g id="Microphone" transform="translate(-27.289 -40.217)">
+    <path id="Path_135" data-name="Path 135" d="M134.4,239.026a10.173,10.173,0,0,1-9.4-10.139h1.271a8.9,8.9,0,1,0,17.792,0h1.271a10.173,10.173,0,0,1-9.4,10.139v6.637h6.354a.508.508,0,0,1,0,1.017H128.05a.508.508,0,0,1,0-1.017H134.4v-6.637Z" transform="translate(-97.711 -164.624)" fill="#c2c7cc" fill-rule="evenodd"/>
+    <rect id="Rectangle_299" data-name="Rectangle 299" width="16" height="32" rx="8" transform="translate(29.142 40.217)" fill="#c2c7cc"/>
+    <path id="Rectangle_298" data-name="Rectangle 298" d="M0,0H5.5A.5.5,0,0,1,6,.5v0a.5.5,0,0,1-.5.5H0A0,0,0,0,1,0,1V0A0,0,0,0,1,0,0Z" transform="translate(29.142 53.217)" fill="#fff"/>
+    <path id="Rectangle_300" data-name="Rectangle 300" d="M0,0H5.5A.5.5,0,0,1,6,.5v0a.5.5,0,0,1-.5.5H0A0,0,0,0,1,0,1V0A0,0,0,0,1,0,0Z" transform="translate(29.142 51.217)" fill="#fff"/>
+    <path id="Rectangle_301" data-name="Rectangle 301" d="M0,0H5.5A.5.5,0,0,1,6,.5v0a.5.5,0,0,1-.5.5H0A0,0,0,0,1,0,1V0A0,0,0,0,1,0,0Z" transform="translate(29.142 49.217)" fill="#fff"/>
+  </g>
+</svg>
