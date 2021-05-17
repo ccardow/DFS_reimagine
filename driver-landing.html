@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="reimagine_hero.css">
 	<link rel="stylesheet" href="reimagine_cards.css">
 	<link rel="stylesheet" href="checkout.css">
-	<link rel="stylesheet" href="driver-signup.css">
+	<link rel="stylesheet" href="driver-landing.css">
 
 
 </head>
@@ -37,46 +37,325 @@
 			<img src="/assets/DFS logo-white.svg" alt="DFS-Logo">
 		</div>
 		<div class="container driver-hero-container">
-			<div class="row driver-hero-row mt-60">
-				<div class="col col-lg-6 driver-left-column">
+			<div class="row driver-hero-row mt-60" style="display: flex;">
+				<div class="col col-md-6 driver-right-column">
+					<p style="font-size: 1em; font-weight: 500; margin-top: 30px;">
+						Already have an account? <a href="#"
+							style="border-bottom: 2px solid var(--primary-color);">Login</a>
+					</p>
+					<p class="sign-up-now">
+						Sign Up Now
+					</p>
+					<!-- START FORM  -->
+					<form class="reimagine_driver-sign-up-form">
+						<div class="form-group reimagine_form-group">
+
+							<input type="email" class="form-control form-control-lg reimagine_form-control"
+								id="exampleFormControlInput1" placeholder="name@example.com">
+						</div>
+						<div class="display-flex" style="justify-content: space-between;">
+							<div class="form-group" style="width: calc(50% - 7.5px);">
+								<input class="form-control form-control-lg reimagine_form-control" type="text"
+									placeholder="First Name" style="flex: 1 1 auto;">
+							</div>
+							<div class="form-group" style="width: calc(50% - 7.5px);">
+								<input class="form-control form-control-lg reimagine_form-control" type="text"
+									placeholder="Last Name" style="flex: 1 1 auto;">
+							</div>
+						</div>
+						<div class="form-group telephone-form-group">
+							<input class="form-control form-control-lg reimagine_form-control" type="text"
+								placeholder="Mobile Phone">
+						</div>
+
+						<div class=" form-group">
+							<input class="form-control form-control-lg reimagine_form-control" type="text"
+								placeholder="Street Address">
+						</div>
+						<div class="form-group">
+							<input class="form-control form-control-lg reimagine_form-control" type="text"
+								placeholder="City">
+						</div>
+
+						<div class="form-group language-pref-form-group">
+							<label for="langSelect">Preferred Language</label>
+							<select class="form-control reimagine_form-control" id="langSelect"
+								style="background-color: #fff;">
+								<option>English</option>
+								<option>French</option>
+								<option>Punjabi</option>
+								<option>Chinese</option>
+								<option>Spanish</option>
+								<option>Hindi</option>
+								<option>Arabic</option>
+							</select>
+						</div>
+					</form>
+					<div class="agreement-wrapper" style="padding: 20px;">
+						<div class="input-group courier-agreement mb-15">
+							<span class="input-group-addon courier-agreement">
+								<input type="checkbox" id="courier-agreement" aria-label="..."><span>&nbsp;&nbsp;I have
+									read,
+									and agree to the <a href="#" style="color: var(--primary-color);">Courier
+										Agreement</a>
+								</span>
+							</span>
+						</div>
+
+						<div class="input-group courier-agreement">
+							<span class="input-group-addon courier-agreement">
+								<input type="checkbox" id="courier-agreement" aria-label="..."><span>&nbsp;&nbsp;I have
+									read,
+									and agree to the <a href="#"
+										style="color: var(--primary-color); line-height: 1.5em;">Privacy Policy</a>
+									<br>and the <a href="#" style="color: var(--primary-color);">Terms of Service</a>
+								</span>
+							</span>
+						</div>
+
+						<a href="#">
+							<div class="reimagine_round-ghost-btn-thick primary-color" role="button"
+								style="margin: 40px auto;">
+								CREATE ACCOUNT
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col col-md-6 driver-left-column">
 					<h1 class="driver-hero-headline">
-						DELIVER WITH<br>DIRECTFOOD<span>.</span>STORE
+						DELIVER WITH<br>DIRECTFOOD.STORE
 					</h1>
 					<p class="driver-hero-subhead">
-						Lorem ipsum dolor sit amet consecteturexercitationem accusantium minus aperiam molestiae
-						praesentium, accusamus?
+						Create your own schedule and be your own boss at DirectFood.store.
 					</p>
 				</div>
-				<div class="col col-lg-6 driver-right-column">
 
-				</div>
 			</div>
 		</div>
 	</div>
 
-
-
-
 	<!-- END HERO and SIGN-UP FORM -->
 
 	<!-- KEY BENEFITS ICONS SECTION  -->
+	<div class="container">
+
+		<div class="row mt-40 mb-40">
+			<div class="col col-sm-6 text-center">
+				<img src="assets/Calendar-Icon-trasparent.png" alt="Calendar"
+					style="height: 164px; text-align: center;">
+				<p class="section-header mt-20" style="font-size: 200%; font-weight: 700;">
+					Your Car, your time
+				</p>
+				<p class="section body" style="max-width: 75%; margin: auto; font-size: 125%; line-height: 1.8;">
+					Enjoy the beautiful scenery driving across the Lower Mainland. We will even provide you with a
+					pre-mapped delivery route, so there’s no hassle finding your way around.
+				</p>
+			</div>
+			<div class="col col-sm-6 text-center">
+				<img src="assets/Dollaricon-transparent.png" alt="Calendar" style="height: 164px; text-align: center;">
+				<p class="section-header mt-20" style="font-size: 200%; font-weight: 700;">
+					Make money on the go
+				</p>
+				<p class="section body" style="max-width: 75%; margin: auto; font-size: 125%; line-height: 1.8;">
+					With us, you will be independently contracted so you can earn a more competitive wage and enjoy
+					getting paid weekly. This helps, and we know it will make all the difference!
+				</p>
+			</div>
+		</div>
+
+	</div>
+
 	<!-- END KEY BENEFITS ICONS SECTION  -->
 
 	<!-- BENEFITS OF JOINING  -->
+	<div class="container-fluid">
+		<div class="row mt-60" style="background-color: var(--off-white-1);">
+			<div class="col col-sm-6 text-center"
+				style="display: flex; flex-direction: column; min-height: 400px; margin: auto; padding: 30px; justify-content: flex-end;">
+
+				<p class="section-header mt-20" style="font-size: 200%; font-weight: 700;">
+					It’s not just any place to work
+				</p>
+				<p class="section body" style="max-width: 75%; margin: 0 auto; font-size: 125%; line-height: 1.8;">
+					We are passionate about bringing people and communities closer to fresh, local and healthy
+					food.
+					We
+					support our local BC farmers and vendors, all while helping us reduce our carbon footprint.
+					We
+					believe together, we can make a change - be a part of the Truly Farm to Table movement.
+				</p>
+			</div>
+			<div class="col col-sm-6">
+				<img src="assets/DFSEmployee.jpg" alt="" class="img-responsive">
+			</div>
+		</div>
+
+	</div>
 	<!-- END BENEFITS OF JOINING  -->
 
 	<!-- STEPS  -->
+	<div class="container-fluid" style="background-color: var(--primary-medium-grey);">
+		<div class="container text-center text-white">
+			<p class="section-header mt-20 text-white" style="font-size: 200%; font-weight: 700;">
+				How to get started
+			</p>
+			<div class="col col-sm-4">
+				<div class="step-circle mt-30"
+					style="background-color: var(--off-white-1); font-size: 40px; color: var(--primary-color); font-weight: 800; display: inline-block; height: 64px; width: 64px; line-height: 64px; border-radius: 50%;">
+					1
+				</div>
+				<p class="section body" style="max-width: 75%; margin: 20px auto; font-size: 125%; line-height: 1.8;">
+					Complete the sign-up and validation process
+				</p>
+			</div>
+			<div class="col col-sm-4">
+				<div class="step-circle mt-30"
+					style="background-color: var(--off-white-1); font-size: 40px; color: var(--primary-color); font-weight: 800; display: inline-block; height: 64px; width: 64px; line-height: 64px; border-radius: 50%;">
+					2
+				</div>
+				<p class="section body" style="max-width: 75%; margin: 20px auto; font-size: 125%; line-height: 1.8;">
+					A member of our team will reach out to provide you with your route, training material and any other
+					necessary equipment
+				</p>
+			</div>
+			<div class="col col-sm-4">
+				<div class="step-circle mt-30"
+					style="background-color: var(--off-white-1); font-size: 40px; color: var(--primary-color); font-weight: 800; display: inline-block; height: 64px; width: 64px; line-height: 64px; border-radius: 50%;">
+					3
+				</div>
+				<p class="section body" style="max-width: 75%; margin: 20px auto; font-size: 125%; line-height: 1.8;">
+					You will be then officially on board and a part of our exciting team!
+				</p>
+			</div>
+		</div>
+		<a href="#">
+			<div class="reimagine_round-ghost-btn-thick primary-color" role="button" style="margin: 40px auto;">
+				CREATE ACCOUNT
+			</div>
+		</a>
+	</div>
 	<!-- END STEPS  -->
 
 	<!-- FAQ  -->
+	<div class="container">
+		<p class="section-header mt-40" style="font-size: 200%; font-weight: 700;">
+			Frequently Asked Questions
+		</p>
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="Question-1-heading"
+					style="background-color: var(--off-white-1);">
+					<p class="panel-title" style="color: var(--primary-medium-grey);">
+						<a role="button" data-toggle="collapse" href="#Question-1" aria-expanded="true"
+							aria-controls="Question-1">
+							<i class="more-less glyphicon glyphicon-plus" style="font-size: 28px;"></i>
+							So, how much money will I make?
+						</a>
+					</p>
+				</div>
+				<div id="Question-1" class="panel-collapse collapse" role="tabpanel"
+					aria-labelledby="Question-1-heading">
+					<div class="panel-body">
+						<p class="faqs-description"></p>
+						<p>Once on-boarded, we will provide you with a pre-mapped, optimized delivery route for the day.
+							The amount of money you earn depends on a few factors, such as the distance and time it
+							takes to complete your deliveries.&nbsp;</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="Question-2-heading"
+					style="background-color: var(--off-white-1);">
+					<p class="panel-title" style="color: var(--primary-medium-grey);">
+						<a role="button" data-toggle="collapse" href="#Question-2" aria-expanded="true"
+							aria-controls="Question-2">
+							<i class="more-less glyphicon glyphicon-plus" style="font-size: 28px;"></i>
+							When will I get paid?
+						</a>
+					</p>
+				</div>
+				<div id="Question-2" class="panel-collapse collapse" role="tabpanel"
+					aria-labelledby="Question-2-heading">
+					<div class="panel-body">
+						<p class="faqs-description"></p>
+						<p>You will be paid directly into your bank account on a weekly basis.&nbsp;</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="Question-3-heading"
+					style="background-color: var(--off-white-1);">
+					<p class="panel-title" style="color: var(--primary-medium-grey);">
+						<a role="button" data-toggle="collapse" href="#Question-3" aria-expanded="true"
+							aria-controls="Question-3">
+							<i class="more-less glyphicon glyphicon-plus" style="font-size: 28px;"></i>
+							What are the requirements?
+						</a>
+					</p>
+				</div>
+				<div id="Question-3" class="panel-collapse collapse" role="tabpanel"
+					aria-labelledby="Question-3-heading">
+					<div class="panel-body">
+						<p class="faqs-description"></p>
+						<p>To qualify, you must have a valid driver’s license, vehicle insurance, registration and pass
+							a background check. We also require you to have a smartphone, data plan, phone charger, a
+							reliable vehicle with working air conditioner and a 12v power outlet fuse for the provided
+							electric cooler bags. In addition, you must follow all COVID related protocols and be
+							certified to serve alcohol in the delivery areas. &nbsp;</p>
+						<p>
+							Please note we may require additional documentation to prove your eligibility to work in
+							Canada.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="Question-4-heading"
+					style="background-color: var(--off-white-1);">
+					<p class="panel-title" style="color: var(--primary-medium-grey);">
+						<a role="button" data-toggle="collapse" href="#Question-4" aria-expanded="true"
+							aria-controls="Question-4">
+							<i class="more-less glyphicon glyphicon-plus" style="font-size: 28px;"></i>
+							How soon can I start?
+						</a>
+					</p>
+				</div>
+				<div id="Question-4" class="panel-collapse collapse" role="tabpanel"
+					aria-labelledby="Question-4-heading">
+					<div class="panel-body">
+						<p class="faqs-description"></p>
+						<p>Once the sign up and validation process are complete, a member of our team will contact you
+							with your pre-optimized delivery route, training material and any other necessary equipment,
+							i.e. refrigerated bags etc.&nbsp;</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- END FAQ  -->
 
 	<!-- CTA  -->
+	<div class="container-fluid text-white text-center" style="background-color: var(--primary-dark-grey);">
+		<p class="section-header mt-60 text-white text-center"
+			style="font-size: 200%; font-weight: 800; text-transform: uppercase;">
+			JOIN OUR TEAM
+		</p>
+		<a href="#">
+			<div class="reimagine_round-ghost-btn-thick primary-color" role="button"
+				style="margin: 20px auto 60px auto;">
+				APPLY NOW
+			</div>
+		</a>
+	</div>
 	<!-- END CTA  -->
 
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="bootstrap.min.js"></script>
 	<script src="main.js"></script>

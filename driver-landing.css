@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
+
+.driver-signup-jumbotron {
+	background-color: var(--light-grey);
+	background-image: url("assets/MainBanner-DFSDriver.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-position: top;
+}
+
+.dfs-branding {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.driver-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/* background: rgba(0, 0, 0, 0.2); */
+}
+
+h1.driver-hero-headline {
+	color: #fff;
+	font-family: "Montserrat", sans-serif;
+	font-size: 290%;
+	font-weight: 900;
+}
+h1.driver-hero-headline span {
+	color: var(--primary-color);
+}
+
+p.driver-hero-subhead {
+	color: #fff;
+	font-weight: 500;
+}
+
+.driver-right-column {
+	border: 1px solid var(--primary-medium-grey);
+	border-radius: 12px;
+	background-color: #fff;
+}
+
+.driver-left-column {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+
+p.sign-up-now {
+	font-weight: 700;
+	font-size: 200%;
+}
+
+.language-pref-form-group > label {
+	font-size: 0.7em;
+	color: var(--light-grey);
+	font-weight: 400;
+	position: absolute;
+	left: 15px;
+	top: 4px;
+}
+
+select#langSelect {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: transparent;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='5 0 40 40' fill='none' stroke='grey' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+	background-repeat: no-repeat;
+	background-position-x: 100%;
+	background-position-y: 10px;
+	border-left: 1px solid var(--light-grey);
+}
+
+.input-group-addon.courier-agreement {
+	background-color: transparent;
+	background: transparent;
+	border: none;
+	padding: 0 8px 0 0;
+	display: inline-block;
+}
+
+.reimagine_round-ghost-btn-thick {
+	border: 2px solid var(--primary-color);
+	border-radius: 30px;
+	font-weight: 500;
+	padding: 12px 30px;
+	text-align: center;
+	max-width: 200px;
+}
+
+.reimagine_round-ghost-btn-thick:hover {
+	background-color: #fadbbb24;
+}
+
+.center-me-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media (min-width: 1200px) {
+	.driver-left-column,
+	.driver-right-column {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 30px;
+	}
+}
+
+@media (max-width: 992px) {
+	.driver-hero-row {
+		flex-direction: column-reverse;
+	}
+	.driver-signup-jumbotron {
+		background-image: url("assets/MainBanner-DFSDriver-mobile.jpg");
+		background-size: 100%;
+	}
+
+	h1.driver-hero-headline {
+		margin-top: 50%;
+		text-align: center;
+	}
+
+	p.driver-hero-subhead {
+		margin-top: 10px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.driver-right-column {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+}
+
+@media (max-width: 600px) {
+	h1.driver-hero-headline {
+		font-size: 270%;
+	}
+}
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+	h1.driver-hero-headline {
+		font-size: 350%;
+	}
+}
