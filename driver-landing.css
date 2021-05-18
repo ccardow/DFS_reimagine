@@ -81,7 +81,7 @@ select#langSelect {
 	background: transparent;
 	border: none;
 	padding: 0 8px 0 0;
-	display: inline-block;
+	white-space: normal;
 }
 
 .reimagine_round-ghost-btn-thick {
