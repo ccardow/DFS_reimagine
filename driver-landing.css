@@ -144,7 +144,10 @@ select#langSelect {
 
 @media (max-width: 600px) {
 	h1.driver-hero-headline {
-		font-size: 270%;
+		font-size: 211%;
+	}
+	p.driver-hero-subhead {
+		font-size: 16px;
 	}
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
