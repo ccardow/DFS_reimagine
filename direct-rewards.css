@@ -90,6 +90,12 @@ p.masonry-header {
 .points-content-image {
 	text-align: left;
 }
+.points-content-image img {
+	width: 100%;
+	margin: 0 auto;
+	max-height: 240px;
+	object-fit: scale-down;
+}
 
 .dr-btn {
 	background-color: var(--primary-color);
@@ -170,8 +176,10 @@ p.masonry-header {
 	}
 	.points-content-image {
 		text-align: center;
-		max-height: 200px;
 		object-fit: scale-down;
+		width: 50%;
+		text-align: center;
+		margin: 0 auto;
 	}
 
 	.rewards-right-graphic {
