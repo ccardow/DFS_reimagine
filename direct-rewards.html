@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>DFS 3.0 REIMAGINE</title>
+
+	<!-- ICONS  -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<!-- FONT  -->
+	<link rel="stylesheet" type="text/css" href="https://use.typekit.net/kun4hds.css" />
+	<!-- Bootstrap -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<!-- FOR LOCAL ENVIRONMENT ONLY. REMOVE THIS IN PRODUCTION  -->
+	<link rel="stylesheet" href="https://dfsdev.webnow.cc/Templates/App/css/custom.css">
+	<!-- ADD TO CUSTOM.CSS -->
+	<link rel="stylesheet" href="reimagine_nav.css">
+	<link rel="stylesheet" href="reimagine_hero.css">
+	<link rel="stylesheet" href="reimagine_cards.css">
+	<link rel="stylesheet" href="checkout.css">
+	<link rel="stylesheet" href="driver-landing.css">
+	<link rel="stylesheet" href="direct-rewards.css">
+
+	<style>
+		.direct-reward-nav-tabs {
+			font-size: 1.8em;
+			font-weight: 600;
+		}
+
+		.direct-reward-nav-tabs>li {
+			margin: 0 40px;
+		}
+
+		.nav.nav-tabs.direct-reward-nav-tabs>li>a {
+			border-bottom: 4px solid transparent;
+		}
+
+		.nav.nav-tabs.direct-reward-nav-tabs:hover a,
+		.nav.nav-tabs.direct-reward-nav-tabs>li.hover>a,
+		.nav.nav-tabs.direct-reward-nav-tabs:focus a,
+		.nav.nav-tabs.direct-reward-nav-tabs>li.focus>a,
+		.nav.nav-tabs.direct-reward-nav-tabs:active a,
+		.nav.nav-tabs.direct-reward-nav-tabs>li.active>a,
+		.nav.nav-tabs.direct-reward-nav-tabs:visited a,
+		.nav.nav-tabs.direct-reward-nav-tabs>li.visited>a,
+		.nav.nav-tabs.direct-reward-nav-tabs:target a,
+		.nav.nav-tabs.direct-reward-nav-tabs>li.target>a {
+			background-color: unset;
+			border: unset;
+			border-bottom: 4px solid transparent;
+		}
+
+		.nav.nav-tabs.direct-reward-nav-tabs>li.active>a {
+			border-bottom: 4px solid var(--primary-color);
+		}
+	</style>
+
+</head>
+
+<body style="display: block;">
+
+	<!-- HERO MASON GRID -->
+	<div class="masonry">
+		<div class="masonry-brick one">
+			<p class="masonry-header">
+				SHOP.
+			</p>
+		</div>
+		<div class="masonry-brick two">
+			<p class="masonry-header" style="position: absolute; bottom: 20px">
+				EARN.
+			</p>
+		</div>
+		<div class="masonry-brick three">
+			3
+		</div>
+		<div class="masonry-brick">
+			<div class="direct-rewards-cta-wrapper">
+				<p class="direct-rewards-header">
+					DirectRewards
+				</p>
+				<p class="direct-rewards-sub-header">
+					Yeld a Bountiful Harvest
+				</p>
+				<a href="#">
+					<button class="dr-btn">
+						SIGN UP
+					</button>
+				</a>
+			</div>
+		</div>
+		<div class="masonry-brick five">
+
+		</div>
+		<div class="masonry-brick six">
+		</div>
+		<div class="masonry-brick seven">
+			<p class="masonry-header">
+				REDEEM.
+			</p>
+		</div>
+	</div>
+
+	<!-- END HERO MASON GRID -->
+
+	<!-- STEPS  -->
+	<div class="container-fluid">
+		<div class="container text-center mb-60">
+			<p class="section-header mt-60" style="font-size: 200%; font-weight: 500; margin-bottom: 0;">
+				Get started, it's easy!
+			</p>
+			<p class="section-body">
+				Earn DirectRewards as soon as you sign up.
+			</p>
+			<div class="col col-sm-4">
+				<div class="step-circle mt-30"
+					style="font-size: 40px ; font-weight: 600; display: inline-block; height: 64px; width: 64px; line-height: 64px; border-radius: 50%; border: 1px solid var(--secondary-color">
+					1
+				</div>
+				<p class="section-header" style="margin: 20px 0 0 0; font-size: 1.6em; font-weight: 500;">
+					Create an account
+				</p>
+				<p class="section-body" style="max-width: 90%;">
+					To get started, create a DirectFood.store account and redeem your first 50 points.
+				</p>
+			</div>
+			<div class="col col-sm-4">
+				<div class="step-circle mt-30"
+					style="font-size: 40px ; font-weight: 600; display: inline-block; height: 64px; width: 64px; line-height: 64px; border-radius: 50%; border: 1px solid var(--secondary-color">
+					2
+				</div>
+				<p class="section-header" style="margin: 20px 0 0 0; font-size: 1.6em; font-weight: 500;">
+					Start collecting
+				</p>
+				<p class="section-body" style="max-width: 90%;">
+					Once you sign up, start collecting DirectRewards through activities on our website.
+				</p>
+			</div>
+			<div class="col col-sm-4">
+				<div class="step-circle mt-30"
+					style="font-size: 40px ; font-weight: 600; display: inline-block; height: 64px; width: 64px; line-height: 64px; border-radius: 50%; border: 1px solid var(--secondary-color">
+					3
+				</div>
+				<p class="section-header" style="margin: 20px 0 0 0; font-size: 1.6em; font-weight: 500;">
+					Spend rewards
+				</p>
+				<p class="section-body" style="max-width: 90%;">
+					Earn and collect DirectRewards points and start using them for future purchases.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- END STEPS  -->
+
+	<!-- POINTS SYSTEM  -->
+	<div class="container-fluid" style="background-color: #fadbbb4f; padding: 0;">
+		<div class="text-center">
+			<p class="section-header mt-60" style="font-size: 200%; font-weight: 500; margin-bottom: 40px;">
+				How does it work?
+			</p>
+			<div class="tabbable-panel">
+				<div class="tabbable-line">
+					<ul class="nav nav-tabs direct-reward-nav-tabs" style="display: flex; justify-content: center;">
+						<li class="active">
+							<a href="#tab_default_1" data-toggle="tab">
+								5 <span style="color: var(--primary-color); font-size: .8em;"><i
+										class="fas fa-star"></i></span> </a>
+						</li>
+						<li>
+							<a href="#tab_default_2" data-toggle="tab">
+								50 <span style="color: var(--primary-color); font-size: .8em;"><i
+										class="fas fa-star"></i></span> </a>
+						</li>
+						<li>
+							<a href="#tab_default_3" data-toggle="tab">
+								625 <span style="color: var(--primary-color); font-size: .8em;"><i
+										class="fas fa-star"></i></span> </a>
+						</li>
+					</ul>
+					<div class="tab-content rewards-tab-content" style="min-height: 264px;">
+						<div class="tab-pane active" id="tab_default_1"
+							style="background-color: var(--branded-peach); min-height: 264px;">
+
+							<div class="rewards-container" style="max-width: 700px; margin: 30px auto;">
+
+
+								<div class="row">
+									<div class="col col-md-6 points-content-image">
+										<img src="assets/tea.png" alt="Tea" style="max-width: 50%;">
+									</div>
+									<div class="col col-md-6">
+										<div class="points-content-wrapper text-left">
+											<ul>
+												<li style="list-style:disc; font-size:1.4em;">Spend $10.00</li>
+												<li style="list-style:disc; font-size:1.4em;">Featured vendor purchase
+												</li>
+												<li style="list-style:disc; font-size:1.4em;">Make a donation</li>
+												<li style="list-style:disc; font-size:1.4em;">Review a product</li>
+												<li style="list-style:disc; font-size:1.4em;">Newsletter subscription
+												</li>
+												<li style="list-style:disc; font-size:1.4em;">Review a vendor</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="tab-pane" id="tab_default_2"
+							style="background-color: var(--branded-peach); min-height: 264px;">
+							<div class="rewards-container" style="max-width: 700px; margin: 30px auto;">
+
+								<div class="row">
+									<div class="col col-md-6 points-content-image">
+										<img src="assets/veggies.png" alt="Vegetables" style="max-width: 50%;">
+									</div>
+									<div class="col col-md-6">
+										<div class="points-content-wrapper" style="display: flex; align-items: center;">
+											<div style="font-size: 1.4em;">
+												Sign up with DirectFood.store
+												and receive 50 points
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="tab-pane" id="tab_default_3"
+							style="background-color: var(--branded-peach); min-height: 264px;">
+
+							<div class="rewards-container" style="max-width: 700px; margin: 30px auto;">
+
+								<div class="row">
+									<div class="col col-md-6 points-content-image">
+										<img src="assets/fruits-bowl.png" alt="Fruits" style="max-width: 50%;">
+									</div>
+									<div class="col col-md-6">
+										<div class="points-content-wrapper" style="display: flex; align-items: center;">
+											<div style="font-size: 1.4em;">
+												Refer a friend and when they sign
+												up you'll both receive 625 points!
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END POINTS SYSTEM  -->
+
+	<!-- ALTERNATE GRAPHICS SECTION -->
+
+	<div class="container mt-40 mb-40">
+		<div class="row">
+			<div class="col col-sm-6 col-md-4 text-center">
+				<img src="/assets/rewards-phone.png" alt="Who doesn't like savings">
+			</div>
+			<div class="col col-sm-6 col-md-8">
+				<p class="section-header mt-60" style="font-size: 200%; font-weight: 500;">
+					And, who doesn't like savings?
+				</p>
+				<p class="section-body">
+					It's important to get the most out of your dollar, right? That's why we've designed DirectRewards to
+					reward you for every action you take with us! Best of all, you'll earn 625 points for referring a
+					friend that signs up, and make your friends happy with 625 points for joining too. It’s a win-win!
+					And, when you collect 1,250 points you’ll receive $10 off your next order of $55 or more.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container mt-40 mb-40">
+		<div class="row rewards-right-graphic">
+			<div class="col col-sm-6 col-md-8 left-order">
+				<p class="section-header mt-60" style="font-size: 200%; font-weight: 500;">
+					Make a difference while you shop
+				</p>
+				<p class="section-body">
+					With a mission to bring you closer to real food, we’ve created an online grocery platform that
+					enables you to buy directly from your local farmers and vendors, cutting out the middleman and
+					eliminating mass production.
+				</p>
+				<p class="section-body">
+					Get direct access to fresh, healthy and local products, amazing stuff like fresh produce, dairy and
+					free-range eggs, ethically raised meats, organic flours, specialty ingredients and much more!
+				</p>
+				<p class="section-body">
+					Support local, reduce your environmental impact and get an authentic truly farm-to-table experience
+					from the comfort of your home. Not only are you supporting healthy competition, you are also
+					supporting sustainable practices that contribute toward the conservation of our natural resources
+					and, ultimately, reduce the burden on the environment
+				</p>
+			</div>
+			<div class="col col-sm-6 col-md-4 text-center right-order">
+				<img src="/assets/rewards-meal.png" alt="Make a difference">
+			</div>
+		</div>
+	</div>
+
+
+	<!-- END ALTERNATE GRAPHICS SECTION -->
+
+
+	<!-- CTA  -->
+	<div class="container-fluid text-white text-center" style="background-color: var(--primary-dark-grey);">
+		<p class="section-header mt-60 text-white text-center" style="font-size: 1.6em; font-weight: 600;">
+			Are you ready to shop truly farm to table?
+		</p>
+		<a href="#">
+			<div class="reimagine_round-ghost-btn-thick primary-color" role="button"
+				style="margin: 20px auto 60px auto; white-space: nowrap; min-width: 240px;">
+				Sign up and shop now
+			</div>
+		</a>
+	</div>
+	<!-- END CTA  -->
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="bootstrap.min.js"></script>
+	<script src="main.js"></script>
+	<!-- CHANGE USER ICON TO X **** PLEASE IMPORT INTO MAIN.JS -->
+	<script>
+		$(document).ready(function () {
+			$('.reimagine_billing-form.shipping-form').hide();
+
+			$(".category-dropdown-close-icon").click(function () {
+
+				$(".category-tabs > li").removeClass("active");
+				$(tabContentSelector).removeClass("active");
+			});
+			$('#same-as-billing').prop('checked', true);
+		});
+		$(':checkbox').change(function () {
+			// use the :checked selector to find any that are checked
+			if ($(':checked').length) {
+				$('.reimagine_billing-form.shipping-form').slideToggle();
+			} else {
+				$('.reimagine_billing-form.shipping-form').slideUp();
+			}
+		});
+
+		$("#show-details").click(function () {
+			$(".mobile-slide-down-wrapper").slideToggle("slow", function () {
+				// Animation complete.
+			});
+		});
+
+		// USER ICON 
+		$('#nav-user-icon').click(function () {
+			$(this).toggleClass("zmdi zmdi-account zmdi zmdi-close");
+		});
+		// TOGGLE ICON 
+		$('.navbar-toggle-new').click(function () {
+			$(this).toggleClass("navbar-toggle-new-open navbar-toggle-new-close");
+		});
+	</script>
+</body>
+
+</html>

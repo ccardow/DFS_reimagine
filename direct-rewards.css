@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
+
+body {
+	margin: 0;
+}
+
+.masonry {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+}
+
+.masonry-brick {
+	flex: auto;
+	min-height: 35vh;
+	min-width: 150px;
+	margin: 0;
+	position: relative;
+}
+
+.masonry-brick > * {
+	display: flex;
+}
+
+.masonry-brick:nth-child(1) {
+	width: 24%;
+	background-color: #ecdcf5;
+}
+.masonry-brick:nth-child(2) {
+	width: 46%;
+	background-color: #ddf0b6;
+}
+.masonry-brick:nth-child(3) {
+	width: 30%;
+	background-color: #d4ecf7;
+}
+.masonry-brick:nth-child(4) {
+	width: 24%;
+	background-color: #faefbb;
+	min-width: 264px;
+}
+.masonry-brick:nth-child(5) {
+	width: 23%;
+}
+.masonry-brick:nth-child(6) {
+	width: 23%;
+}
+.masonry-brick:nth-child(7) {
+	width: 30%;
+	background-color: #fad9d9;
+}
+
+p.masonry-header {
+	margin: 30px;
+}
+
+.direct-rewards-cta-wrapper {
+	flex-direction: column;
+	position: absolute;
+	left: 20px;
+	bottom: 40px;
+}
+.direct-rewards-header {
+	margin: 0;
+}
+.direct-rewards-sub-header {
+	margin: 0 0 8px 0;
+}
+
+.direct-rewards-header,
+.masonry-header {
+	font-size: 2em;
+	font-weight: 600;
+}
+
+.masonry-header {
+	color: var(--primary-color);
+}
+
+.points-content-wrapper {
+	text-align: left;
+	min-height: 170px;
+}
+
+.section-body {
+	font-size: 1.2em;
+	line-height: 1.6;
+}
+
+.points-content-image {
+	text-align: left;
+}
+
+.dr-btn {
+	background-color: var(--primary-color);
+	color: #fff;
+	font-size: 1.4em;
+	font-weight: 500;
+	padding: 8px 20px;
+	border-radius: 2px;
+}
+
+.rewards-right-graphic {
+	display: flex;
+	align-items: center;
+}
+
+.masonry-brick.one {
+	background-image: url("assets/one.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.masonry-brick.two {
+	background-image: url("assets/dose-juice-RU4kAzVwzZw-unsplash.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.masonry-brick.three {
+	background-image: url("assets/food-photographer-jennifer-pallian-FT7fjyEyqv0-unsplash.jpg");
+	background-size: cover;
+	background-position: bottom;
+}
+
+.masonry-brick.five {
+	background-image: url("assets/five.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.masonry-brick.six {
+	background-image: url("assets/six.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.masonry-brick.seven {
+	background-image: url("assets/alison-marras-ElGnfom4tIw-unsplash.jpg");
+	background-size: cover;
+	background-position: bottom;
+}
+
+@media (max-width: 768px) {
+	.masonry-brick:nth-child(1) {
+		width: 100%;
+		order: 1;
+	}
+	.masonry-brick:nth-child(2) {
+		width: 50%;
+		order: 2;
+	}
+	.masonry-brick:nth-child(7) {
+		width: 50%;
+		order: 3;
+	}
+	.masonry-brick:nth-child(4) {
+		width: 50%;
+		order: 4;
+	}
+	.masonry-brick:nth-child(3),
+	.masonry-brick:nth-child(5),
+	.masonry-brick:nth-child(6) {
+		display: none;
+	}
+	.points-content-wrapper {
+		text-align: center;
+		max-width: 90%;
+		margin: 0 auto;
+		min-height: unset;
+	}
+	.points-content-image {
+		text-align: center;
+		max-height: 200px;
+		object-fit: scale-down;
+	}
+
+	.rewards-right-graphic {
+		flex-direction: column;
+	}
+	.left-order {
+		order: 2;
+	}
+	.right-order {
+		order: 1;
+	}
+}
+
+@media (max-width: 600px) {
+	.masonry-brick:nth-child(3),
+	.masonry-brick:nth-child(5),
+	.masonry-brick:nth-child(6) {
+		display: none;
+	}
+}
