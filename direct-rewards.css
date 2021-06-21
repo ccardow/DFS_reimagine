@@ -112,36 +112,36 @@ p.masonry-header {
 }
 
 .masonry-brick.one {
-	background-image: url("assets/one.jpg");
+	background-image: url("assets/dr/one.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
 .masonry-brick.two {
-	background-image: url("assets/dose-juice-RU4kAzVwzZw-unsplash.jpg");
+	background-image: url("assets/dr/two-1.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
 .masonry-brick.three {
-	background-image: url("assets/food-photographer-jennifer-pallian-FT7fjyEyqv0-unsplash.jpg");
+	background-image: url("assets/dr/three.jpg");
 	background-size: cover;
 	background-position: bottom;
 }
 
 .masonry-brick.five {
-	background-image: url("assets/five.jpg");
+	background-image: url("assets/dr/five.jpg");
 	background-size: cover;
 	background-position: center;
 }
 .masonry-brick.six {
-	background-image: url("assets/six.jpg");
+	background-image: url("assets/dr/six.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
 .masonry-brick.seven {
-	background-image: url("assets/alison-marras-ElGnfom4tIw-unsplash.jpg");
+	background-image: url("assets/dr/seven-1.jpg");
 	background-size: cover;
 	background-position: bottom;
 }

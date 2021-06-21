@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>DFS 3.0 REIMAGINE</title>
+
+	<!-- ICONS  -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<!-- FONT  -->
+	<link rel="stylesheet" type="text/css" href="https://use.typekit.net/kun4hds.css" />
+	<!-- Bootstrap -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<!-- FOR LOCAL ENVIRONMENT ONLY. REMOVE THIS IN PRODUCTION  -->
+	<link rel="stylesheet" href="https://dfsdev.webnow.cc/Templates/App/css/custom.css">
+	<!-- ADD TO CUSTOM.CSS -->
+	<link rel="stylesheet" href="reimagine_nav.css">
+	<link rel="stylesheet" href="reimagine_hero.css">
+	<link rel="stylesheet" href="reimagine_cards.css">
+	<link rel="stylesheet" href="checkout.css">
+
+	<style>
+		.select-user-container {
+			height: 100vh;
+			background-color: #71B2FE;
+		}
+
+		.onboarding-left-col {
+			background-color: #F2F2F2;
+			text-align: center;
+			font-weight: 600;
+			padding: 20px;
+		}
+
+		.shop-pagination.onboarding>li>a {
+			height: 12px;
+			width: 12px;
+		}
+
+		.select-user-type-row {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			padding-bottom: 40px;
+		}
+
+		@media (min-width: 768px) {
+			.select-user-type-row {
+				flex-direction: row;
+			}
+		}
+
+
+
+		@media (min-width: 992px) {
+			.select-user-type {
+				min-height: 650px;
+			}
+
+			.onboarding-left-col {
+				min-height: 650px;
+				border-radius: 12px 0 0 12px;
+			}
+
+			.onboarding-right-col {
+				min-height: 650px;
+				border-radius: 0 12px 12px 0;
+			}
+
+			.name-group {
+				display: flex;
+				justify-content: space-between;
+
+			}
+
+			.name-group>* {
+				width: 49%;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.user-type-col {
+				padding: 0 30%;
+			}
+
+			.select-user-container {
+				height: 120vh;
+			}
+		}
+	</style>
+
+</head>
+
+<body style="display:block;">
+
+	<div class="container-fluid select-user-container">
+		<div class="container mt-60"
+			style="max-width: 1170px; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,.2); position: relative;">
+			<div class="row">
+
+				<div class="col text-center select-user-type" style="background-color: #fff; border-radius: 12px;">
+					<p style="padding-top: 60px; font-size: 3rem; font-weight: 600;">
+						SELECT USER TYPE
+					</p>
+
+					<div class="row select-user-type-row">
+						<div class="col col-sm-3 user-type-col">
+							<img src="assets/consumer@3x.png" alt="Consumer" style="width: 100%;">
+							<p style="font-size: 1.6em; font-weight: 600;">Consumer</p>
+							<p style="color: #7F7F7F">
+								I'd like to support small businesses by shopping locally
+							</p>
+						</div>
+
+						<div class="col col-sm-3 user-type-col">
+							<img src="assets/business@3x.png" alt="Business" style="width: 100%;">
+							<p style="font-size: 1.6em; font-weight: 600;">Business</p>
+							<p style="color: #7F7F7F">
+								I'd like to sell my products on the local marketplace and/or join a chamber
+							</p>
+						</div>
+						<div class="col col-sm-3 user-type-col">
+							<img src="assets/chamber@3x.png" alt="Chamber" style="width: 100%;">
+							<p style="font-size: 1.6em; font-weight: 600;">Chamber</p>
+							<p style="color: #7F7F7F">
+								I'd like to join the provincial marketplace, and provide my members with a platform to
+								list their products and services
+							</p>
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+
+				<ul class=" shop-pagination onboarding text-center"
+					style="background-color: #fff; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+					<li class="active"><a href="#" class="page-nav-link"></a></li>
+
+					<li><a href="#" class="page-nav-link"></a></li>
+
+					<li><a href="#" class="page-nav-link"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

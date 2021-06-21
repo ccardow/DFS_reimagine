@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>DFS 3.0 REIMAGINE</title>
+
+	<!-- ICONS  -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<!-- FONT  -->
+	<link rel="stylesheet" type="text/css" href="https://use.typekit.net/kun4hds.css" />
+	<!-- Bootstrap -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<!-- FOR LOCAL ENVIRONMENT ONLY. REMOVE THIS IN PRODUCTION  -->
+	<link rel="stylesheet" href="https://dfsdev.webnow.cc/Templates/App/css/custom.css">
+	<!-- ADD TO CUSTOM.CSS -->
+	<link rel="stylesheet" href="reimagine_nav.css">
+	<link rel="stylesheet" href="reimagine_hero.css">
+	<link rel="stylesheet" href="reimagine_cards.css">
+	<link rel="stylesheet" href="checkout.css">
+
+	<style>
+		.onboarding-left-col {
+			background-color: #F2F2F2;
+			text-align: center;
+			font-weight: 600;
+			padding: 20px;
+		}
+
+		.shop-pagination.onboarding>li>a {
+			height: 12px;
+			width: 12px;
+
+		}
+
+		@media (min-width: 992px) {
+			.onboarding-left-col {
+				min-height: 650px;
+				border-radius: 12px 0 0 12px;
+			}
+
+			.onboarding-right-col {
+				min-height: 650px;
+				border-radius: 0 12px 12px 0;
+			}
+
+			.name-group {
+				display: flex;
+				justify-content: space-between;
+
+			}
+
+			.name-group>* {
+				width: 49%;
+			}
+		}
+	</style>
+
+</head>
+
+<body style="display:block;">
+
+	<div class="container-fluid" style="background-color: #71B2FE; height: 100vh;">
+		<div class="container mt-60"
+			style="max-width: 1170px; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,.2); position: relative;">
+			<div class="row">
+				<div class="col col-md-3 onboarding-left-col">
+					<p style="text-align: center; font-size: 2rem;">MEMBER<br>APPLICATION</p>
+					<div class="steps"
+						style="width: 80px; height: 80px; border: 1px solid #71B2FE; border-radius: 50%; text-align: center; line-height: 80px; font-size: 3rem; font-weight: 600; margin: 0 auto;">
+						1
+					</div>
+					<p style="text-align: center; margin-top: 8px; font-weight: 400;">About you</p>
+				</div>
+
+				<div class="col col-md-9 onboarding-right-col" style="background-color: #fff; padding: 20px">
+
+
+					<!-- START FORM  -->
+
+					<form class="reimagine_billing-form" style="margin-top: unset; margin-bottom: 40px;">
+						<div class="form-group reimagine_form-group pt-40">
+							<input type="email" class="form-control form-control-lg reimagine_form-control mt-40"
+								id="onboard-email" placeholder="Email">
+						</div>
+
+						<div class="name-group">
+
+							<div class="form-group reimagine_form-group col-md-6" style="padding: unset;">
+								<input type="text" class="form-control form-control-lg reimagine_form-control"
+									id="onboard-firstName" placeholder="First Name">
+							</div>
+							<div class="form-group reimagine_form-group col-md-6" style="padding: unset;">
+								<input type="text" class="form-control form-control-lg reimagine_form-control"
+									id="onboard-lastName" placeholder="Last Name">
+							</div>
+
+						</div>
+
+						<div class="form-group reimagine_form-group">
+							<input type="text" class="form-control form-control-lg reimagine_form-control"
+								id="onboard-optional" placeholder="How did you hear about us? (optional)">
+						</div>
+
+						<div class="form-group reimagine_form-group">
+							<input type="text" class="form-control form-control-lg reimagine_form-control"
+								id="onboard-username" placeholder="Username">
+						</div>
+
+						<div class="form-group reimagine_form-group">
+							<input type="password" class="form-control form-control-lg reimagine_form-control"
+								id="onboard-password" placeholder="Password">
+						</div>
+
+						<div class="input-group same-as-billing mb-20">
+							<span class="input-group-addon same-as-billing">
+								<input type="checkbox" id="same-as-billing" aria-label="..."><span>&nbsp;&nbsp;I have
+									read the <a href="#">Terms &
+										Conditions</a></span>
+							</span>
+						</div>
+
+						<div class="onboarding-button-row"
+							style="display: flex; align-items: center; justify-content: space-between;">
+							<div role="button"
+								style="max-width: 260px; height: 60px; background-color: #71B2FE; margin-top: 30px; color: #fff; font-size: 2rem; display: flex; justify-content: center; align-items: center; border-radius: 4px; padding: 0 40px;">
+								<span style="display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+										height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+										stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+										class="feather feather-arrow-left">
+										<line x1="19" y1="12" x2="5" y2="12"></line>
+										<polyline points="12 19 5 12 12 5"></polyline>
+									</svg></span>BACK
+							</div>
+							<div role="button"
+								style="max-width: 260px; height: 60px; background-color: #71B2FE; margin-top: 30px; color: #fff; font-size: 2rem; display: flex; justify-content: center; align-items: center; border-radius: 4px; padding: 0 40px;">
+								NEXT <span style="display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg"
+										width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+										stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+										class="feather feather-arrow-right">
+										<line x1="5" y1="12" x2="19" y2="12"></line>
+										<polyline points="12 5 19 12 12 19"></polyline>
+									</svg></span>
+							</div>
+						</div>
+
+					</form>
+
+					<!-- END FORM  -->
+				</div>
+
+				<ul class="shop-pagination onboarding text-center"
+					style="background-color: #fff; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
+					<li class="active"><a href="#" class="page-nav-link"></a></li>
+
+					<li><a href="#" class="page-nav-link"></a></li>
+
+					<li><a href="#" class="page-nav-link"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
