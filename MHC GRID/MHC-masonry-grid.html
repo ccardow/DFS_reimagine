@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>DFS 3.0 REIMAGINE</title>
+
+	<!-- ICONS  -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<!-- FONT  -->
+	<link rel="stylesheet" type="text/css" href="https://use.typekit.net/kun4hds.css" />
+	<!-- Bootstrap -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<!-- FOR LOCAL ENVIRONMENT ONLY. REMOVE THIS IN PRODUCTION  -->
+	<link rel="stylesheet" href="https://dfsdev.webnow.cc/Templates/App/css/custom.css">
+	<!-- ADD TO CUSTOM.CSS -->
+	<link rel="stylesheet" href="reimagine_nav.css">
+	<link rel="stylesheet" href="reimagine_hero.css">
+	<link rel="stylesheet" href="reimagine_cards.css">
+	<link rel="stylesheet" href="checkout.css">
+
+	<style>
+		.MHC-grid-wrapper>* {
+			flex: 1 1 30%;
+			background-color: rgb(170, 170, 170);
+			margin: 4px;
+		}
+
+		.MHC-grid-wrapper>div>img {
+			width: 100%;
+			object-fit: cover;
+			display: flex;
+			position: relative;
+		}
+
+		.MHC-grid-wrapper>div {
+			position: relative;
+		}
+
+		.MHC-grid-wrapper>div>div {
+			color: #fff;
+			font-weight: 800;
+			font-size: 3vw;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			white-space: nowrap;
+			z-index: 2;
+		}
+
+		.MHC-grid-wrapper>div::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			background-color: rgba(93, 126, 101, 0.4);
+		}
+
+		@media (max-width: 600px) {
+			.MHC-grid-wrapper>* {
+				flex: unset;
+				width: 100%;
+			}
+
+			.MHC-grid-wrapper>div>img {
+				height: 90px;
+			}
+		}
+	</style>
+
+</head>
+
+<body style="display:block;">
+
+
+	<div class="MHC-grid-wrapper" style="display: flex; width: 100%; margin: auto; flex-wrap: wrap; padding:  0 15px;">
+		<div><img src="assets/mhc-grid-1.jpg" alt="">
+			<div>LATEST NEWS</div>
+
+		</div>
+
+		<div><img src="assets/mhc-grid-2.jpg" alt="">
+			<div>EVENTS</div>
+		</div>
+		<div><img src="assets/mhc-grid-3.jpg" alt="">
+			<div>COACHING</div>
+		</div>
+		<div><img src="assets/mhc-grid-4.jpg" alt="">
+			<div>LEARN TO RIDE</div>
+		</div>
+		<div><img src="assets/mhc-grid-5.jpg" alt="">
+			<div>MEMBERSHIP</div>
+		</div>
+		<div><img src="assets/mhc-grid-6.jpg" alt="">
+			<div>MHC FACILITY</div>
+		</div>
+
+	</div>
+
+
+</body>
+
+</html>
